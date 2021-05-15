@@ -5,6 +5,7 @@ import { getCheckoutId, checkoutId, setCheckoutId } from '../utils/checkoutId'
 
 type CheckoutContextType = {
   cartCheckoutId: checkoutId
+  GinId: string
 }
 
 type CheckoutUpdateContextType ={
@@ -22,7 +23,7 @@ const useCartId = () => {
   // only thing that doesnt work is that the Id is set correctly
   const [ cartCheckoutId, setCartCheckoutId] = React.useState(getCheckoutId())
 
-
+  const GinId = "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY2MjI0NTk1NjAxMTU="
   
   const addId = () =>{
     console.log("adding")
@@ -31,8 +32,7 @@ const useCartId = () => {
         .then((checkout) => {
           setCheckoutId(checkout.id)
           setCartCheckoutId(getCheckoutId)
-          console.log("setting should have happend")
-          console.log(cartCheckoutId, checkout.id)
+          console.log(checkout)
         })
     }
   }
@@ -46,6 +46,7 @@ const useCartId = () => {
 
   return {
     cartCheckoutId,
+    GinId,
     addId,
     clearId
   }
@@ -53,12 +54,13 @@ const useCartId = () => {
 
 const CheckoutIdProvider = ({ children }: {children: React.ReactNode}): React.ReactElement => {
   const { cartCheckoutId,
+        GinId, 
         addId, 
         clearId
       } = useCartId()
 
   return (
-    <CheckoutContext.Provider value={{cartCheckoutId}}>
+    <CheckoutContext.Provider value={{cartCheckoutId, GinId}}>
       <CheckoutDispatchContext.Provider value={{
         addId,
         clearId

@@ -2,17 +2,29 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
-
+import React, { useEffect } from 'react'
 import {useCheckout, useCheckoutUpdate} from '../src/hooks/useCheckoutId'
+import { useCartContext, useCartUpdateContext } from '../src/hooks/useCartStorage'
+
 
 import { useQuery, gql } from '@apollo/client';
 
 
 export default function Home() {
 
-  const {cartCheckoutId} = useCheckout()
-  const {addId, clearId} = useCheckoutUpdate()
+  const {cart} = useCartContext()
 
+    const {addCartValue,
+        clearCart,
+        removeCartValue,
+        setCart,
+        updateItemsQuantities } = useCartUpdateContext()
+
+
+  
+  const {cartCheckoutId, GinId} = useCheckout()
+  const {addId, clearId} = useCheckoutUpdate()
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -30,24 +42,44 @@ export default function Home() {
             Main Gin
         </Link>
         <br/>
-        <Link href="/products">
+        <Link href="/products/test">
             dynamic products (not implemented)
         </Link>
         
-        <div>
+        
+        <div className="content-center flex-col flex">
           <h2>
             Testing Buttons
           </h2>
 
-          <p>CheckoutId: {cartCheckoutId}</p>
-
-          <button onClick={addId}>
+          <p>CheckoutId: {cartCheckoutId || null}</p>
+          <p>GinId : {GinId || null}</p>
+          <button onClick={addId} className="bg-green-300">
               AddId
           </button>
           <br/>
-          <button onClick={clearId}>
+          <button onClick={clearId} className="bg-pink-300">
               clearId
           </button>
+
+          <div className="ml-40">
+            <h3 >cart testing</h3>
+            { cart && cart.map((el)=> {
+              <p>{el.title}</p>
+            })}
+          </div>
+            {/* <button 
+            onClick={addCartValue({
+              productId: GinId,
+              image:"",
+              title: "schexis Gin",
+              price: 5,
+
+            })} 
+            className="bg-purple-400">
+              add cart
+            </button> */}
+          
         </div>
       </main>
 
@@ -55,3 +87,4 @@ export default function Home() {
     </div>
   )
 }
+

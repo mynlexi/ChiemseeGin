@@ -1,1 +1,1 @@
-export const query =""
+export const ProductGinId = ""

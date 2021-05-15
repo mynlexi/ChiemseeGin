@@ -4,6 +4,7 @@ import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { gql } from '@apollo/client';
 
 import CheckoutIdProvider from '../src/hooks/useCheckoutId'
+import CartProvider from "../src/hooks/useCartStorage";
 import { AppProps } from "next/dist/next-server/lib/router/router";
 import { useApollo } from "../src/apollo_files/apolloClient";
 
@@ -31,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
 
   return(
     <ApolloProvider client={apolloClient}>
-        <Providers components={[CheckoutIdProvider]}>
+        <Providers components={[CheckoutIdProvider, CartProvider]}>
           <Component {...pageProps} />
         </Providers>
       
