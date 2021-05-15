@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Image from 'next/image'
 
 import { initApollo } from "../../src/apollo_files/apolloClient"
-import {ALL_RECIPES, RECIPE_INFO, RECIPE_TITLES} from "../../src/apollo_files/queries"
+import {ALL_RECIPES, RECIPE_INFO, RECIPE_TITLES} from "../../src/apollo_files/queries/recipes"
 
 type Recipe = any
 
