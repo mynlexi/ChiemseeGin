@@ -11,18 +11,20 @@ const recipesLink = new HttpLink({
   uri: process.env.NEXT_PUBLIC_GRAPHCMS,
 });
 
-// const usersLink = new HttpLink({
-//   uri: process.env.NEXT_PUBLIC_HASURA_API,
-// });
+const shopifyLink = new HttpLink({
+  uri: process.env.NEXT_PUBLIC_SHOPIFY_STORE,
+  credentials: process.env.NEXT_PUBLIC_SHOPIFY_TOKEN
+});
 
 const createApolloClient = () => {
   return new ApolloClient({
       ssrMode: typeof window === "undefined",
-      link: recipesLink
-      // ApolloLink.split( //////// here i have to add logic for shopify
-      //     operation => operation.getContext().clientName === "users",
-      //     usersLink,
-      // )
+      link: 
+      ApolloLink.split( //////// here i have to add logic for shopify
+          operation => operation.getContext().api === "shopify",
+          shopifyLink,
+          recipesLink
+      )
       ,    
       
       cache: new InMemoryCache({

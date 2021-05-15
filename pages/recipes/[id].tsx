@@ -14,7 +14,7 @@ interface RecipeId {
 
 const Recipe: NextPage<any> = ({ initialApolloState, params}) => {
   console.log({ initialApolloState , params})
-  let key = params?.id?.split("-").join(" ")
+
   console.log(initialApolloState.ROOT_QUERY, params)
   const recipe = initialApolloState.ROOT_QUERY[params]
   // const recipe = initialApolloState[ref]
@@ -60,7 +60,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { id: recipe.title.split(" ").join("-")}
     
   }))
-console.log("paths", paths) // works until here
+
   return {
     paths,
     fallback: false
@@ -80,7 +80,7 @@ export const getStaticProps: GetStaticProps = async ({params}) =>{
     })
   }
   const queryParams = `recipe({"where":{"title":"${id}"}})`
-  console.log("params", queryParams)
+ 
   return {
     props: {
       initialApolloState: apolloClient.cache.extract(),

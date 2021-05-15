@@ -3,38 +3,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
+import {useCheckout, useCheckoutUpdate} from '../src/hooks/useCheckoutId'
+
 import { useQuery, gql } from '@apollo/client';
-// import  ALL_RECIPES from '../src/apollo_files/queries';
 
-// const ALL_RECIPES = gql`
-// query AllRecipes {
-//   recipes {
-//     id
-//     recipeIngredients
-//     recipePicture {
-//       height
-//       size
-//       url
-//       width
-//     }
-//     recipeInstructions {
-//       markdown
-//     }
-//     title
-//   }
-// }
-// `
-
-// function Recipes() {
-//   const { loading, error, data } = useQuery(ALL_RECIPES);
-//   console.log(data)
-//   if (loading) return <p>Loading...</p>;
-//   if (error) return <p>Error :(</p>;
-
-//   return (<p>success</p>) ;
-// }
 
 export default function Home() {
+
+  const {cartCheckoutId} = useCheckout()
+  const {addId, clearId} = useCheckoutUpdate()
+
   return (
     <div className={styles.container}>
       <Head>
@@ -44,8 +22,33 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Link href="/recipes">recipes
+        <Link href="/recipes">
+            recipes
         </Link>
+        <br/>
+        <Link href="/mainGin">
+            Main Gin
+        </Link>
+        <br/>
+        <Link href="/products">
+            dynamic products (not implemented)
+        </Link>
+        
+        <div>
+          <h2>
+            Testing Buttons
+          </h2>
+
+          <p>CheckoutId: {cartCheckoutId}</p>
+
+          <button onClick={addId}>
+              AddId
+          </button>
+          <br/>
+          <button onClick={clearId}>
+              clearId
+          </button>
+        </div>
       </main>
 
 
