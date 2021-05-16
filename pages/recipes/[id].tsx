@@ -18,7 +18,7 @@ const Recipe: NextPage<any> = ({ initialApolloState, params}) => {
   console.log(initialApolloState.ROOT_QUERY, params)
   const recipe = initialApolloState.ROOT_QUERY[params]
   // const recipe = initialApolloState[ref]
-  console.log("next page")
+
   const router = useRouter()
 
   const {

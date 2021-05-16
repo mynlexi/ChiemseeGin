@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { client as shopifyClient } from '../utils/shopify'
-import { getCheckoutId, checkoutId, setCheckoutId } from '../utils/checkoutId'
+import { getCheckoutInfo, checkoutId, setCheckoutInfo } from '../utils/checkoutInfo'
 
 type CheckoutContextType = {
-  cartCheckoutId: checkoutId
+  cartCheckoutInfo: checkoutId | null
   GinId: string
 }
 
@@ -21,17 +21,17 @@ export const useCheckoutUpdate = (): CheckoutUpdateContextType | undefined => Re
 
 const useCartId = () => {
   // only thing that doesnt work is that the Id is set correctly
-  const [ cartCheckoutId, setCartCheckoutId] = React.useState(getCheckoutId())
-
+  const [ cartCheckoutInfo, setCartCheckoutInfo] = React.useState(getCheckoutInfo())
+ 
   const GinId = "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY2MjI0NTk1NjAxMTU="
   
-  const addId = () =>{
+  const addId = (force?: boolean) =>{
     console.log("adding")
-    if (cartCheckoutId === null || cartCheckoutId.length < 2 ) {
+    if (cartCheckoutInfo === null || cartCheckoutInfo.length < 2 || force ) {
       shopifyClient.checkout.create()
         .then((checkout) => {
-          setCheckoutId(checkout.id)
-          setCartCheckoutId(getCheckoutId)
+          setCheckoutInfo([checkout.id, checkout.webUrl])
+          setCartCheckoutInfo([checkout.id, checkout.webUrl])
           console.log(checkout)
         })
     }
@@ -39,13 +39,19 @@ const useCartId = () => {
 
   const clearId = () => {
     console.log("clearing")
-    setCartCheckoutId("x")
-    setCheckoutId("x")
+    setCartCheckoutInfo([])
+    setCheckoutInfo([])
+    console.log("setting timeout")
+    setTimeout(()=> {
+      console.log("waiting")
+      addId(true)
+    }, 1000)
+    
     
   }
 
   return {
-    cartCheckoutId,
+    cartCheckoutInfo,
     GinId,
     addId,
     clearId
@@ -53,14 +59,15 @@ const useCartId = () => {
 }
 
 const CheckoutIdProvider = ({ children }: {children: React.ReactNode}): React.ReactElement => {
-  const { cartCheckoutId,
+  const { 
+        cartCheckoutInfo,
         GinId, 
         addId, 
         clearId
       } = useCartId()
 
   return (
-    <CheckoutContext.Provider value={{cartCheckoutId, GinId}}>
+    <CheckoutContext.Provider value={{cartCheckoutInfo, GinId}}>
       <CheckoutDispatchContext.Provider value={{
         addId,
         clearId

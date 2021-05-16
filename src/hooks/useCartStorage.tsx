@@ -1,10 +1,12 @@
 import React from "react";
+import { removeLineItems } from "../utils/cartCheckout";
 
 import { getCartStorage, setCartStorage, ProductStorage } from "../utils/cartStorage";
+import { getCheckoutInfo, setCheckoutInfo } from "../utils/checkoutInfo";
 
 
 type CartStorageContextType = {
-  cart: Array<ProductStorage> | null;
+  cart: Array<ProductStorage> ;
 }
 
 type CartStorageUpdateContextType = {
@@ -13,6 +15,7 @@ type CartStorageUpdateContextType = {
   removeCartValue: (event: React.MouseEvent<HTMLButtonElement>) => void;
   setCart: React.Dispatch<React.SetStateAction<ProductStorage[] | null>>;
   updateItemsQuantities: (cartQuantities: number[]) => void;
+ 
 }
 
 const CartStorageContext = React.createContext<CartStorageContextType | undefined>(undefined);
@@ -74,13 +77,15 @@ const useCart = () => {
   const clearCart = () => {
     setCartStorage([]),
     setCart([])
+  
+    
   }
 
   const removeCartValue =(event: React.MouseEvent<HTMLButtonElement>) => {
     const items = getCartStorage()!;
 
     const productElementId =(event.target as HTMLElement).closest('li')?.id;
-
+    
     const newCart = items?.filter(item => item.productId !== productElementId)
 
     setCartStorage(newCart)

@@ -3,7 +3,7 @@ export interface ProductStorage {
   image: string,
   title: string,
   price: number,
-  quantity?: number
+  quantity: number
 }
 
 export const setCartStorage = (value: Array<ProductStorage>): void => {

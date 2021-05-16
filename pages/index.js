@@ -14,15 +14,11 @@ export default function Home() {
 
   const {cart} = useCartContext()
 
-    const {addCartValue,
-        clearCart,
-        removeCartValue,
-        setCart,
-        updateItemsQuantities } = useCartUpdateContext()
+ 
 
 
   
-  const {cartCheckoutId, GinId} = useCheckout()
+  const {cartCheckoutInfo, GinId} = useCheckout()
   const {addId, clearId} = useCheckoutUpdate()
   
   return (
@@ -52,7 +48,7 @@ export default function Home() {
             Testing Buttons
           </h2>
 
-          <p>CheckoutId: {cartCheckoutId || null}</p>
+          <p>CheckoutId: {cartCheckoutInfo && cartCheckoutInfo[0]}</p>
           <p>GinId : {GinId || null}</p>
           <button onClick={addId} className="bg-green-300">
               AddId
