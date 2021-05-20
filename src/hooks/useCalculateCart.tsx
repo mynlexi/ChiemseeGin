@@ -19,18 +19,21 @@ const useCalculateTotal = (price?: number): CartCalculation => {
     const products = getCartStorage()
 
     if (products && products.length) {
-      return products.map(product => product.price / 100 )
+      return products.map(product => product.price )
         .reduce((accum, curVal) => accum + curVal)
     } else {
       return 0;
     }
   })
 
-  const getItemSubTotal = (inputAsString: string) => {
-    const convertToNumber = parseInt(inputAsString);
+  const getItemSubTotal = (inputAsString: string, from?: number) => {
+    let convertToNumber = parseInt(inputAsString);
 
     if (convertToNumber < 0) {
         return 0;
+    }
+    if(from){
+      convertToNumber += from
     }
 
     return convertToNumber * price!;
@@ -51,15 +54,21 @@ const useCalculateTotal = (price?: number): CartCalculation => {
 
   const handleQtyIncrease = (event: React.MouseEvent<HTMLButtonElement>) => {
     const inputElement = (event.target as HTMLButtonElement).previousElementSibling as HTMLInputElement;
-    const itemSubTotal = getItemSubTotal(inputElement.value)
+    if(inputElement){
+      const itemSubTotal = getItemSubTotal(inputElement.value, 1)
     setItemPrice(itemSubTotal)
+    }
   }
 
   
   const handleQtyDecrease = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const inputElement = (event.target as HTMLButtonElement).previousElementSibling as HTMLInputElement;
-    const itemSubTotal = getItemSubTotal(inputElement.value)
+    const inputElement = (event.target as HTMLButtonElement).nextElementSibling as HTMLInputElement;
+    if(inputElement){
+      const itemSubTotal = getItemSubTotal(inputElement.value, -1)
+      console.log(inputElement.value)
     setItemPrice(itemSubTotal)
+    }
+    
   }
   
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {

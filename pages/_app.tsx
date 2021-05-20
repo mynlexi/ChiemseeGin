@@ -7,6 +7,7 @@ import CheckoutIdProvider from '../src/hooks/useCheckoutId'
 import CartProvider from "../src/hooks/useCartStorage";
 import { AppProps } from "next/dist/next-server/lib/router/router";
 import { useApollo } from "../src/apollo_files/apolloClient";
+import Layout from "../src/components/Layout.tsx";
 
 interface IProviders {
   components: React.JSXElementConstructor<React.PropsWithChildren<any>>[];
@@ -33,7 +34,9 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
   return(
     <ApolloProvider client={apolloClient}>
         <Providers components={[CheckoutIdProvider, CartProvider]}>
-          <Component {...pageProps} />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
         </Providers>
       
     </ApolloProvider>
