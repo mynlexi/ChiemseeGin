@@ -16,6 +16,7 @@ import {
 } from "../../hooks/useCartStorage";
 import CartItem from './cartItem'
 import useCalculateTotal from "../../hooks/useCalculateCart";
+import Router from "next/router";
 
 
 
@@ -26,8 +27,56 @@ const SideCart = () => {
     cart = [];
   }
 
-  
+  const { updateItemsQuantities } = useCartUpdateContext()!;
+  const { total, handleTotalCalculation } = useCalculateTotal()!;
+  const [ isDisabled, setIsDisabled ] = React.useState(false);
 
+
+  const handleCheckoutProceed = () => {
+    // const quantitiyElements: HTMLInputElement[] = Array.from(document.querySelectorAll(".item-qty"));
+    // const cartQuantities = quantitiyElements.map((input) => parseInt(input.value));
+    console.log("handle","quantitiyElements", "quantitiyElements", "cart quant", "cartQuantities")
+    // updateItemsQuantities(cartQuantities, cartCheckoutInfo[0]);   
+
+  };
+  
+  const checkout = () => {
+    // handleCheckoutProceed()
+    console.log("now url")
+    // Router.replace(cartCheckoutInfo[1]);
+  };
+
+  const handleToggleDisable = (value: boolean) => setIsDisabled(value);
+
+  React.useEffect(() => {
+      if (total <= 0) {
+          handleToggleDisable(true);
+      } else {
+          handleToggleDisable(false);
+      }
+  }, [ total ]);
+
+  React.useEffect(() => {
+    const itemPriceElements = Array.from(document.querySelectorAll(".cart-item__total"));
+
+    const handleUpdateTotal = (event: MouseEvent) => {
+        if ((event.target as HTMLButtonElement).classList.contains("qty-change")
+        || (event.target as HTMLButtonElement).classList.contains("cart-item--remove")) {
+          
+            handleTotalCalculation(itemPriceElements);
+            console.log("change total price")
+        }
+    };
+    
+    window.addEventListener("click", handleUpdateTotal);
+
+    return () => {
+      window.removeEventListener("click", handleUpdateTotal);
+    };
+  }); 
+
+  
+  //button stuff
   const [sideCartOpen, setSideCartOpen] = useState(false);
 
   const toggleSideCart = () => setSideCartOpen(!sideCartOpen);
@@ -129,7 +178,9 @@ const SideCart = () => {
           aria-hidden={!sideCartOpen}
           tabIndex={sideCartOpen ? 1 : -1}
         >
-          <nav ref={navRef}>
+         
+          <nav ref={navRef}> 
+            <h1>Order Summary</h1>
             {cart.map((product) => {
             
               return (
@@ -138,14 +189,20 @@ const SideCart = () => {
                     id={product.productId}
                     title={product.title}
                     price={product.price}
-                    
-                  
                   />
               );
             })}
             <ol>
             <a href="" className="hidden">
-              Go to Checkout
+              <p>{cartCheckoutInfo && cartCheckoutInfo[1]}</p>
+              <div
+              id="cart-total"
+                >
+                    €{total.toFixed(2)}
+                    </div>
+                <button className="bg-indigo-500" onClick={checkout} disabled={isDisabled}>
+                  {isDisabled ? "add items" : "checkout"}
+              </button>
             </a></ol>
           </nav>
         </StyledSidebar>

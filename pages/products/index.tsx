@@ -70,13 +70,13 @@ function Product({product}) {
 
 
   return (
-    
-    <Link href={`products/${title.split(" ").join("-")}`} key={id}><a>
-   <div >
+    <div key={id}>
+    <Link href={`products/${title.split(" ").join("-")}`} ><a>
+   
       <p>{title}</p>
       <img src={imageUrl} style={{height: "100px"}} className="mx-auto mt-10" />
-     </div>
-   </a></Link>
+     
+   </a></Link></div>
 
     ) 
 }

@@ -29,20 +29,19 @@ const CartItem = ({
         itemPrice } = useCalculateTotal(price);
 
     return (
-
-      <div key={id}>
+      <div key={`cart ${id}`}>
       <p>{title}</p>
       <QuantityInput id={id} pQuantity={quantity}
         handleQtyDecrease={handleQtyDecrease}
         handleQtyIncrease={handleQtyIncrease} />
    
       <li id={id}>
-        <button onClick={removeCartValue} className="bg-blue-600">
+        <button onClick={removeCartValue} className="cart-item--remove bg-blue-600">
           remove this product
         </button>
       </li>
 
-      <p> Total: €{itemPrice ? itemPrice : 0}</p>
+      <p className="cart-item__total"> Total: €{itemPrice ? itemPrice : 0}</p>
     </div>
 
     )

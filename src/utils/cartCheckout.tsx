@@ -19,13 +19,18 @@ export const addProductsCheckout = (items: ProductStorage[], checkoutId) => {
 }
 
 
-export const updateProductsCheckout = (item: ProductStorage, checkoutId) => {
-    shopifyClient.checkout.updateLineItems(checkoutId, [{
+export const updateProductsCheckout = (items: ProductStorage[], checkoutId) => {
+  let updated = []
+  console.log("updating checkout")
+  items.map((item) => {
+    updated.push({
       id: item.productId,
       quantity: item.quantity
-    }])
+    })
+})
+    shopifyClient.checkout.updateLineItems(checkoutId, updated)
     .then((checkout) => {
-      console.log(checkout)
+      console.log("checkout", checkout)
     })
 }
 

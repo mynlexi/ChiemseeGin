@@ -10,8 +10,8 @@ export const StyledMenu = styled.div`
 `;
 
 export const StyledHamburgerButton = styled.button`
-  display: flex;
- 
+  
+    outline: none;
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -30,7 +30,7 @@ export const StyledHamburgerButton = styled.button`
     transition-property: opacity, filter;
   
   
-  }
+  
 `;
 
 export const StyledSidebar = styled.aside`
@@ -102,9 +102,8 @@ export const StyledSidebar = styled.aside`
     &:active,
     &:focus {
       color: var(--green);
-      outline: 0;
-    }
-      
+      outline: none;
+      }
     }
   }
   .resume-link {

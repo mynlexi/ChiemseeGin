@@ -21,9 +21,11 @@ const useCalculateTotal = (price?: number): CartCalculation => {
     if (products && products.length) {
       return products.map(product => product.price )
         .reduce((accum, curVal) => accum + curVal)
+        
     } else {
       return 0;
     }
+    
   })
 
   const getItemSubTotal = (inputAsString: string, from?: number) => {
@@ -42,11 +44,12 @@ const useCalculateTotal = (price?: number): CartCalculation => {
   const handleTotalCalculation = (input: Element[]) => {
     if (!input.length) {
         setTotal(0);
+    
         return null;
     } else {
         const currentTotal = input.map(element => parseFloat(element.textContent!.replace("Total: €", "")))
         .reduce((accum, curValue) => accum + curValue, 0);
-
+       
         setTotal(currentTotal);
         return null;
     }
