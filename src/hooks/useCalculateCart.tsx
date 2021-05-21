@@ -40,11 +40,11 @@ const useCalculateTotal = (price?: number): CartCalculation => {
 
     return convertToNumber * price!;
   };
-
+  // watch this with language settings (naming of sub-total fields)
   const handleTotalCalculation = (input: Element[]) => {
     if (!input.length) {
         setTotal(0);
-    
+      
         return null;
     } else {
         const currentTotal = input.map(element => parseFloat(element.textContent!.replace("Sub-Total: €", "")))
