@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Image from 'next/image'
 
 import { initApollo } from "../../src/apollo_files/apolloClient"
-import {ALL_RECIPES, RECIPE_INFO, RECIPE_TITLES} from "../../src/apollo_files/queries"
+import {ALL_RECIPES, RECIPE_INFO, RECIPE_TITLES} from "../../src/apollo_files/queries/recipes"
 
 type Recipe = any
 
@@ -13,12 +13,10 @@ interface RecipeId {
 }
 
 const Recipe: NextPage<any> = ({ initialApolloState, params}) => {
-  console.log({ initialApolloState , params})
-  let key = params?.id?.split("-").join(" ")
-  console.log(initialApolloState.ROOT_QUERY, params)
+
   const recipe = initialApolloState.ROOT_QUERY[params]
   // const recipe = initialApolloState[ref]
-  console.log("next page")
+
   const router = useRouter()
 
   const {
@@ -60,7 +58,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { id: recipe.title.split(" ").join("-")}
     
   }))
-console.log("paths", paths) // works until here
+
   return {
     paths,
     fallback: false
@@ -80,7 +78,7 @@ export const getStaticProps: GetStaticProps = async ({params}) =>{
     })
   }
   const queryParams = `recipe({"where":{"title":"${id}"}})`
-  console.log("params", queryParams)
+ 
   return {
     props: {
       initialApolloState: apolloClient.cache.extract(),
