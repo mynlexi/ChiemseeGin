@@ -47,7 +47,7 @@ const useCalculateTotal = (price?: number): CartCalculation => {
     
         return null;
     } else {
-        const currentTotal = input.map(element => parseFloat(element.textContent!.replace("Total: €", "")))
+        const currentTotal = input.map(element => parseFloat(element.textContent!.replace("Sub-Total: €", "")))
         .reduce((accum, curValue) => accum + curValue, 0);
        
         setTotal(currentTotal);

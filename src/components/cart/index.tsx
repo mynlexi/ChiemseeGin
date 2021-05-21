@@ -203,7 +203,7 @@ const SideCart = () => {
               <div
               id="cart-total"
                 >
-                    €{total.toFixed(2)}
+                    €{total}
                     </div></ol>
             <button className="bg-indigo-500" onClick={checkout} >
                   {isDisabled ? "add items" : "checkout"}
