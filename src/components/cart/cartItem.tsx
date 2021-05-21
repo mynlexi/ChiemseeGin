@@ -41,7 +41,7 @@ const CartItem = ({
         </button>
       </li>
 
-      <p className="cart-item__total"> Total: €{itemPrice ? itemPrice : 0}</p>
+      <p className="cart-item__total"> Sub-Total: €{itemPrice ? itemPrice : 0}</p>
     </div>
 
     )

@@ -6,86 +6,65 @@ import { useQuery, gql } from '@apollo/client';
 import  {ALL_RECIPES, RECIPE_INFO, RECIPE_TITLES} from '../../src/apollo_files/queries/recipes';
 import { initApollo } from '../../src/apollo_files/apolloClient';
 import {client as shopifyClient} from '../../src/utils/shopify'
-
-// const ALL_PRODUCTS = gql`
-
-// `
-
-
-
-// function Props({title}){
-//   const { loading, error, data } = useQuery(RECIPE_INFO, {
-//     variables: { title: title }
-//   });
-//   if (loading) return <p>Loading...</p>;
-//   if (error) return <p>Error :(</p>;
-//     console.log(data)
-//   return (
-//     <>
-//     props
-//     <div>
-//      {data.recipe.recipeIngredients}
-//     </div>
-//     </>
-//   )
-// }
-
-
-// function Paths() {
-//   const { loading, error, data } = useQuery(RECIPE_TITLES);
-//   if (loading) return <p>Loading...</p>;
-//   if (error) return <p>Error :(</p>;
-//     console.log(data)
-//   return (
-//     <>
-//     paths
-//     <div>
-//       {data.recipes.map((recipe) => {
-     
-//         return(
-//           <div key={recipe.title}>
-//           <p>
-//             {recipe.title.split(" ").join("-")}
-//           </p>
-//           <Props title={recipe.title} />
-//         </div>
-//         )
-        
-//       })}
-//     </div>
-//     </>
-//   )
-// }
+import { useCartContext, useCartUpdateContext } from '../../src/hooks/useCartStorage';
 
 
 
 
 
-function Product({product}) {
+function Product({product, cart}) {
   const {
     id = product.Id,
     title = product.title,
-    imageUrl = product.images[0].src
+    imageUrl = product.images[0].src,
+    variantId = product.variants[0].id,
+    price = parseInt(product.variants[0].price),
+    handle = product.handle,
+    quantity = 1
   } = product
 
+  const {addCartValue} = useCartUpdateContext()
+
+  const addProduct = () => {
+    addCartValue({
+      productId: id,
+      variantId: variantId,
+      image: imageUrl,
+      title: title,
+      price: price,
+      quantity: quantity
+    })
+  }
 
   return (
     <div key={id}>
-    <Link href={`products/${title.split(" ").join("-")}`} ><a>
+    <Link href={`products/${handle.toLowerCase()}`} ><a>
    
       <p>{title}</p>
       <img src={imageUrl} style={{height: "100px"}} className="mx-auto mt-10" />
      
-   </a></Link></div>
+   </a></Link>
+   <button onClick={addProduct} 
+    className="bg-purple-900">
+      {cart?.some(item => item.productId === id) ? "In Cart" : "Add To Cart"}
+    </button>
+   </div>
 
     ) 
 }
 
 
 
-export default function ProductsMain({products}) {
-  console.log(products)
+export default function ProductsMain({collections}) {
+  
+  
+  const gins = collections[0]
+  const accessoires = collections[1]
 
+  let {cart} = useCartContext()
+  if (cart === null) {
+      cart = []
+  }
   return (
     <div className="{styles.container}">
       <Head>
@@ -95,13 +74,26 @@ export default function ProductsMain({products}) {
       </Head>
    
       <div className="centered m-auto p-12">
-        {products.map(product => {
-          return (
-            <Product product={product} />
-          )
-        })}
-      
-   
+        <div>
+          <h2>{gins.description}</h2>
+        
+          {gins.products.map(product => {
+            return (
+              <Product product={product} cart={cart} />
+            )
+          })}
+        </div>
+
+        <div className="mt-20">
+          <h2>{accessoires.description}</h2>
+        
+          {accessoires.products.map(product => {
+            return (
+              <Product product={product} cart={cart} />
+            )
+          })}
+        </div>
+        
       </div>
 
 
@@ -112,10 +104,13 @@ export default function ProductsMain({products}) {
 
 export async function getStaticProps() {
 
-  const products = await shopifyClient.product.fetchAll()
+  // const products = await shopifyClient.product.fetchAll()
+  const collections = await shopifyClient.collection.fetchAllWithProducts()
+
+  
+  
  
   
-  return { props: { products: JSON.parse(JSON.stringify(products))  } }
+  return { props: { collections: JSON.parse(JSON.stringify(collections))  } }
 
 }
-//: JSON.parse(JSON.stringify(products))

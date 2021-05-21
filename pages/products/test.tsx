@@ -56,10 +56,7 @@ const ProductTest: NextPage<any> = ({props}) => {
   const productId = GinId
   return(
     <div>
-      <Link href="/" ><a className="bg-green-400">
-        home
-      </a>
-      </Link>
+      
 
       <div className="ml-40">
             <h3 >cart testing</h3>

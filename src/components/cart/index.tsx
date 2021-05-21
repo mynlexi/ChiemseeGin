@@ -198,13 +198,13 @@ const SideCart = () => {
               );
             })}
             <ol>
-            <a href="" className="hidden">
-              <p>{cartCheckoutInfo && cartCheckoutInfo[1]}</p>
+            
+  
               <div
               id="cart-total"
                 >
                     €{total.toFixed(2)}
-                    </div></a></ol>
+                    </div></ol>
             <button className="bg-indigo-500" onClick={checkout} >
                   {isDisabled ? "add items" : "checkout"}
              </button>
