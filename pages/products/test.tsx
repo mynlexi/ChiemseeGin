@@ -27,17 +27,19 @@ const ProductTest: NextPage<any> = ({props}) => {
 
   const updateCartStatus=() =>{
     addCartValue({
-      productId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zOTU5MDgzMzYxOTEyMw==",
+      productId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY2MjI0NTk1NjAxMTU=",
+      variantId: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zOTU5MDgzMzYxOTEyMw==",
       image:"",
       title: "schexis Gin",
       price: 5,
       quantity: 1
     })
   }
+ 
   
-  const updateCheckout =() => {
-    addProductsCheckout(cart, cartCheckoutInfo[0])
-  }
+  // const updateCheckout =() => {
+  //   addProductsCheckout(cart, cartCheckoutInfo[0])
+  // }
   
   const checkout = () => {
         Router.replace(cartCheckoutInfo[1]);
@@ -105,10 +107,10 @@ const ProductTest: NextPage<any> = ({props}) => {
     </button>
     <br/>
     <br/>
-    <button  onClick={updateCheckout}
+    {/* <button  onClick={updateCheckout}
     className="bg-purple-400">
       update checkout
-    </button> 
+    </button>  */}
     <br />
     <p>{cartCheckoutInfo && cartCheckoutInfo[1]}</p>
     <button className="bg-indigo-500" onClick={checkout}>

@@ -18,7 +18,7 @@ export const StyledHamburgerButton = styled.button`
     -webkit-box-align: center;
     align-items: center;
     position: relative;
-    z-index: 15;
+    z-index: 100;
     margin-right: -15px;
     padding: 15px;
     border: 0;
@@ -66,6 +66,7 @@ export const StyledSidebar = styled.aside`
     color: var(--lightest-slate);
     font-family: var(--font-mono);
     text-align: center;
+    
   }
   ol {
     padding: 0;

@@ -1,5 +1,6 @@
 export interface ProductStorage {
   productId: string,
+  variantId: string,
   image: string,
   title: string,
   price: number,
@@ -16,13 +17,13 @@ export const setCartStorage = (value: Array<ProductStorage>): void => {
 }
 
 export const getCartStorage = (): Array<ProductStorage> | null => {
-  console.log("incoming")
+
   if (typeof window === "undefined") {
     console.log("undefined")
     return null;
   }
 
   const storedItems = window.localStorage.getItem("cart")
-  console.log("stored")
+
   return storedItems ? JSON.parse(storedItems): [];
 }

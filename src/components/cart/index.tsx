@@ -9,19 +9,20 @@ import {
 // import { navLinks } from '../../config';
 import { KEY_CODES } from "../../utils/keyCodes";
 import { useOnClickOutside } from "../../hooks";
-import { useCheckout } from "../../hooks/useCheckoutId";
+import { useCheckout, useCheckoutUpdate } from "../../hooks/useCheckoutId";
 import {
   useCartContext,
   useCartUpdateContext,
 } from "../../hooks/useCartStorage";
 import CartItem from './cartItem'
 import useCalculateTotal from "../../hooks/useCalculateCart";
-import Router from "next/router";
+
 
 
 
 const SideCart = () => {
-  const { cartCheckoutInfo, GinId } = useCheckout();
+  const {clearId} = useCheckoutUpdate()
+  const { cartCheckoutInfo } = useCheckout();
   let { cart } = useCartContext();
   if (cart === null) {
     cart = [];
@@ -33,17 +34,19 @@ const SideCart = () => {
 
 
   const handleCheckoutProceed = () => {
-    // const quantitiyElements: HTMLInputElement[] = Array.from(document.querySelectorAll(".item-qty"));
-    // const cartQuantities = quantitiyElements.map((input) => parseInt(input.value));
-    console.log("handle","quantitiyElements", "quantitiyElements", "cart quant", "cartQuantities")
-    // updateItemsQuantities(cartQuantities, cartCheckoutInfo[0]);   
+    
+    const quantitiyElements: HTMLInputElement[] = Array.from(document.querySelectorAll(".item-qty"));
+    const cartQuantities = quantitiyElements.map((input) => parseInt(input.value));
+    updateItemsQuantities(cartQuantities, cartCheckoutInfo);   
 
   };
   
   const checkout = () => {
-    // handleCheckoutProceed()
+    handleCheckoutProceed()
     console.log("now url")
-    // Router.replace(cartCheckoutInfo[1]);
+
+    clearId()
+    
   };
 
   const handleToggleDisable = (value: boolean) => setIsDisabled(value);
@@ -64,7 +67,7 @@ const SideCart = () => {
         || (event.target as HTMLButtonElement).classList.contains("cart-item--remove")) {
           
             handleTotalCalculation(itemPriceElements);
-            console.log("change total price")
+          
         }
     };
     
@@ -91,9 +94,9 @@ const SideCart = () => {
   const setFocusables = () => {
     // have to adjust this probably
     menuFocusables = [
-      buttonRef.current,
-      ...Array.from(navRef.current.querySelectorAll("a")),
-    ];
+    //   buttonRef.current,
+    //   ...Array.from(navRef.current.querySelectorAll("a")),
+     ];
     firstFocusableEl = menuFocusables[0];
     lastFocusableEl = menuFocusables[menuFocusables.length - 1];
   };
@@ -162,14 +165,15 @@ const SideCart = () => {
 
   return (
     <StyledMenu>
-      <div ref={wrapperRef}>
+      <div ref={wrapperRef} >
         <StyledHamburgerButton
           onClick={toggleSideCart}
           sideCartOpen={sideCartOpen}
           ref={buttonRef}
+          className="highlighter"
         >
           <ShoppingBag
-            color={`${sideCartOpen ? "var(--green)" : "var(--slate)"}`}
+            
           />
         </StyledHamburgerButton>
 
@@ -177,6 +181,7 @@ const SideCart = () => {
           sideCartOpen={sideCartOpen}
           aria-hidden={!sideCartOpen}
           tabIndex={sideCartOpen ? 1 : -1}
+       
         >
          
           <nav ref={navRef}> 
@@ -199,11 +204,12 @@ const SideCart = () => {
               id="cart-total"
                 >
                     €{total.toFixed(2)}
-                    </div>
-                <button className="bg-indigo-500" onClick={checkout} disabled={isDisabled}>
+                    </div></a></ol>
+            <button className="bg-indigo-500" onClick={checkout} >
                   {isDisabled ? "add items" : "checkout"}
-              </button>
-            </a></ol>
+             </button>
+            
+         
           </nav>
         </StyledSidebar>
       </div>

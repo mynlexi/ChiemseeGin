@@ -14,11 +14,13 @@ export default function Home() {
 
   const {cart} = useCartContext()
 
- 
-
-
-  
   const {cartCheckoutInfo, GinId} = useCheckout()
+
+
+  React.useEffect(() => {
+    addId()
+  }, [])
+  
   const {addId, clearId} = useCheckoutUpdate()
   
   return (
