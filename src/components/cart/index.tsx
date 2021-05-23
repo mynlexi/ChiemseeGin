@@ -16,7 +16,7 @@ import {
 } from "../../hooks/useCartStorage";
 import CartItem from './cartItem'
 import useCalculateTotal from "../../hooks/useCalculateCart";
-
+import { useSideCart, useSideCartUpdate } from "../../hooks/useOpenSidebar";
 
 
 
@@ -34,19 +34,14 @@ const SideCart = () => {
 
 
   const handleCheckoutProceed = () => {
-    
     const quantitiyElements: HTMLInputElement[] = Array.from(document.querySelectorAll(".item-qty"));
     const cartQuantities = quantitiyElements.map((input) => parseInt(input.value));
     updateItemsQuantities(cartQuantities, cartCheckoutInfo);   
-
   };
   
   const checkout = () => {
     handleCheckoutProceed()
-    console.log("now url")
-
     clearId()
-    
   };
 
   const handleToggleDisable = (value: boolean) => setIsDisabled(value);
@@ -63,12 +58,14 @@ const SideCart = () => {
     const itemPriceElements = Array.from(document.querySelectorAll(".cart-item__total"));
 
     const handleUpdateTotal = (event: MouseEvent) => {
-        if ((event.target as HTMLButtonElement).classList.contains("qty-change")
+        if ((event.target as HTMLButtonElement).classList.contains("qty-change" )
         || (event.target as HTMLButtonElement).classList.contains("cart-item--remove")) {
-          
             handleTotalCalculation(itemPriceElements);
-          
         }
+        if((event.target as HTMLButtonElement).classList.contains("cart-item--remove")) {
+          handleTotalCalculation(itemPriceElements);
+        }
+        
     };
     
     window.addEventListener("click", handleUpdateTotal);
@@ -80,9 +77,10 @@ const SideCart = () => {
 
   
   //button stuff
-  const [sideCartOpen, setSideCartOpen] = useState(false);
+  let {sideCartOpen} = useSideCart();
+  const {setSideCartOpen, toggleSideCart} = useSideCartUpdate()
 
-  const toggleSideCart = () => setSideCartOpen(!sideCartOpen);
+  // const toggleSideCart = () => setSideCartOpen(!sideCartOpen);
 
   const buttonRef = useRef(null);
   const navRef = useRef(null);
@@ -172,7 +170,7 @@ const SideCart = () => {
           ref={buttonRef}
           className="highlighter"
         >
-          <ShoppingBag
+          <ShoppingBag color={cart.length ?  "var(--green)": "var(--slate)"}
             
           />
         </StyledHamburgerButton>
@@ -184,7 +182,7 @@ const SideCart = () => {
        
         >
          
-          <nav ref={navRef}> 
+          <nav ref={navRef} className="hidden"> 
             <h1>Order Summary</h1>
             {cart.map((product) => {
             

@@ -68,7 +68,6 @@ const useCalculateTotal = (price?: number): CartCalculation => {
     const inputElement = (event.target as HTMLButtonElement).nextElementSibling as HTMLInputElement;
     if(inputElement){
       const itemSubTotal = getItemSubTotal(inputElement.value, -1)
-      console.log(inputElement.value)
     setItemPrice(itemSubTotal)
     }
     

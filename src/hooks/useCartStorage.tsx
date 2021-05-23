@@ -30,7 +30,7 @@ export const useCartUpdateContext = (): CartStorageUpdateContextType | undefined
 
 const useCart = () => {
   const [cart, setCart] = React.useState(getCartStorage)
-  console.log("initial cart",cart)
+
   const addCartValue =(value: ProductStorage) => {
     const items = getCartStorage()
 
@@ -52,7 +52,7 @@ const useCart = () => {
       }
     }
     setCart(items)
-  
+   
   }
 
   const updateItemsQuantities = (quantities: number[], checkout: string[]) => {

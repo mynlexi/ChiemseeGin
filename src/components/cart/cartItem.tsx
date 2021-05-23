@@ -23,6 +23,7 @@ const CartItem = ({
   title, 
   price }: ICartItem): React.ReactElement => {
     const { removeCartValue } = useCartUpdateContext()!;
+    
     const { 
         handleQtyIncrease, 
         handleQtyDecrease,

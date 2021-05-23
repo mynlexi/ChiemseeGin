@@ -5,7 +5,7 @@ import { getCheckoutInfo, checkoutId, setCheckoutInfo } from '../utils/checkoutI
 
 type CheckoutContextType = {
   cartCheckoutInfo: checkoutId | null
-  GinId: string
+
 }
 
 type CheckoutUpdateContextType ={
@@ -23,10 +23,10 @@ const useCartId = () => {
   // only thing that doesnt work is that the Id is set correctly
   const [ cartCheckoutInfo, setCartCheckoutInfo] = React.useState(getCheckoutInfo())
  
-  const GinId = "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY2MjI0NTk1NjAxMTU="
+
   
   const addId = (force?: boolean) =>{
-    console.log("adding")
+
     if (cartCheckoutInfo === null || cartCheckoutInfo.length < 2 || force ) {
       shopifyClient.checkout.create()
         .then((checkout) => {
@@ -38,12 +38,12 @@ const useCartId = () => {
   }
 
   const clearId = () => {
-    console.log("clearing")
+  
     setCartCheckoutInfo([])
     setCheckoutInfo([])
-    console.log("setting timeout")
+  
     setTimeout(()=> {
-      console.log("waiting")
+  
       addId(true)
     }, 1000)
     
@@ -52,7 +52,6 @@ const useCartId = () => {
 
   return {
     cartCheckoutInfo,
-    GinId,
     addId,
     clearId
   }
@@ -61,13 +60,12 @@ const useCartId = () => {
 const CheckoutIdProvider = ({ children }: {children: React.ReactNode}): React.ReactElement => {
   const { 
         cartCheckoutInfo,
-        GinId, 
         addId, 
         clearId
       } = useCartId()
 
   return (
-    <CheckoutContext.Provider value={{cartCheckoutInfo, GinId}}>
+    <CheckoutContext.Provider value={{cartCheckoutInfo}}>
       <CheckoutDispatchContext.Provider value={{
         addId,
         clearId
