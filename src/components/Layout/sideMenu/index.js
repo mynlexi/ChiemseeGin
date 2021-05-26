@@ -124,6 +124,20 @@ const Menu = () => {
                     </a>
                   </Link>
                 </li>
+                <li >
+                  <Link href="/products">
+                    <a>
+                      Products
+                    </a>
+                  </Link>
+                </li>
+                <li >
+                  <Link href="/recipes">
+                    <a>
+                      Recipes
+                    </a>
+                  </Link>
+                </li>
               </ol>
             {/* )} */}
 

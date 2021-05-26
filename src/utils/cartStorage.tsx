@@ -5,6 +5,7 @@ export interface ProductStorage {
   title: string,
   price: number,
   quantity: number
+  subTotal: number
 }
 
 export const setCartStorage = (value: Array<ProductStorage>): void => {

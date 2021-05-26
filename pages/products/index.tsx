@@ -34,7 +34,8 @@ function Product({product, cart}) {
       image: imageUrl,
       title: title,
       price: price,
-      quantity: quantity
+      quantity: quantity,
+      subTotal: (quantity*price)
     })
     setSideCartOpen(true)
   }

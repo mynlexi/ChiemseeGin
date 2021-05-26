@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ShoppingBag } from "react-feather";
+import { ShoppingCart } from "react-feather";
 
 import {
   StyledMenu,
@@ -27,16 +27,36 @@ const SideCart = () => {
   if (cart === null) {
     cart = [];
   }
+ 
 
   const { updateItemsQuantities } = useCartUpdateContext()!;
-  const { total, handleTotalCalculation } = useCalculateTotal()!;
+  const { handleTotalCalculation, updateTotal } = useCalculateTotal();
+ 
+  const [total, setTotal] = React.useState(updateTotal)
   const [ isDisabled, setIsDisabled ] = React.useState(false);
+
+
+
+  const handleQuantity = (action: number, id: string) => {
+  
+    const quantitiyElements: HTMLInputElement[] = Array.from(document.querySelectorAll(".item-qty"));
+    const cartQuantities = quantitiyElements.map((input) => parseInt(input.value));
+    
+    updateItemsQuantities(cartQuantities, cartCheckoutInfo, false, action, id);  
+    
+    setTotal(updateTotal)
+  };
+
+  const handleTotal = () => {
+    setTotal(updateTotal)
+  }
+  
 
 
   const handleCheckoutProceed = () => {
     const quantitiyElements: HTMLInputElement[] = Array.from(document.querySelectorAll(".item-qty"));
     const cartQuantities = quantitiyElements.map((input) => parseInt(input.value));
-    updateItemsQuantities(cartQuantities, cartCheckoutInfo);   
+    updateItemsQuantities(cartQuantities, cartCheckoutInfo, true);   
   };
   
   const checkout = () => {
@@ -54,26 +74,33 @@ const SideCart = () => {
       }
   }, [ total ]);
 
-  React.useEffect(() => {
-    const itemPriceElements = Array.from(document.querySelectorAll(".cart-item__total"));
+  
+  // React.useEffect(() => {
+  //   const itemPriceElements = Array.from(document.querySelectorAll(".cart-item__total"));
+  
 
-    const handleUpdateTotal = (event: MouseEvent) => {
-        if ((event.target as HTMLButtonElement).classList.contains("qty-change" )
-        || (event.target as HTMLButtonElement).classList.contains("cart-item--remove")) {
-            handleTotalCalculation(itemPriceElements);
-        }
-        if((event.target as HTMLButtonElement).classList.contains("cart-item--remove")) {
-          handleTotalCalculation(itemPriceElements);
-        }
+  //   const handleUpdateTotal = (event: MouseEvent) => {
+  //       if ((event.target as HTMLButtonElement).classList.contains("qty-change" )
+  //       || (event.target as HTMLButtonElement).classList.contains("cart-item--remove")) {
+            
+  //           handleTotalCalculation(itemPriceElements);
+  //           console.log("updating total")
+  //       
+  //           setTotal(updateTotal)
+            
+  //        }
         
-    };
+   
+  //   }
     
-    window.addEventListener("click", handleUpdateTotal);
+  //   window.addEventListener("click", handleUpdateTotal);
 
-    return () => {
-      window.removeEventListener("click", handleUpdateTotal);
-    };
-  }); 
+  //   return () => {
+  //     window.removeEventListener("click", handleUpdateTotal);
+  //   };
+  // }); 
+
+  
 
   
   //button stuff
@@ -170,7 +197,7 @@ const SideCart = () => {
           ref={buttonRef}
           className="highlighter"
         >
-          <ShoppingBag color={cart.length ?  "var(--green)": "var(--slate)"}
+          <ShoppingCart color={cart.length ?  "var(--green)": "var(--slate)"}
             
           />
         </StyledHamburgerButton>
@@ -190,8 +217,12 @@ const SideCart = () => {
                   <CartItem 
                     quantity={product.quantity}
                     id={product.productId}
+                    updateQhandle={handleQuantity}
+                    handleTotal={handleTotal}
                     title={product.title}
                     price={product.price}
+                    image={product.image}
+                   
                   />
               );
             })}

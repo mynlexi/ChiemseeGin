@@ -1,4 +1,6 @@
 import React from "react";
+import useCalculateTotal from "../../hooks/useCalculateCart";
+import handleQtyIncreaseC from '../../hooks/useCartStorage'
 
 type handlerFunction = (event: React.MouseEvent<HTMLButtonElement>) => void;
 
@@ -16,13 +18,18 @@ function QuantityInput({
 }) {
   const [quantity, setQuantity] = React.useState(pQuantity);
 
-  function increment(event){
+  
+  const increment = () =>{
     setQuantity(quantity + 1);
-    handleQtyIncrease(event)
+    handleQtyIncrease(quantity)
+    
+  
   };
-  function decrement(event) {
+  const decrement= () => {
     setQuantity(quantity - 1)
-    handleQtyDecrease(event)
+    handleQtyDecrease(quantity)
+
+  
   };
   return (
     
@@ -30,7 +37,7 @@ function QuantityInput({
         <button
           data-action="decrement"
           className="qty-change bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none"
-          onClick={(event) => decrement(event)}
+          onClick={decrement}
         >
           <span className="m-auto text-2xl font-thin">−</span>
         </button>
@@ -47,7 +54,7 @@ function QuantityInput({
         <button
           data-action="increment"
           className="qty-change bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer"
-          onClick={(event) => increment(event)}
+          onClick={increment}
         >
           <span className="m-auto text-2xl font-thin">+</span>
         </button>

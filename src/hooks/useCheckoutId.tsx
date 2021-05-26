@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import { client as shopifyClient } from '../utils/shopify'
 import { getCheckoutInfo, checkoutId, setCheckoutInfo } from '../utils/checkoutInfo'
+import { ProductStorage } from '../utils/cartStorage'
 
 type CheckoutContextType = {
   cartCheckoutInfo: checkoutId | null
@@ -11,6 +12,7 @@ type CheckoutContextType = {
 type CheckoutUpdateContextType ={
   clearId: () => void
   addId: () => void
+  updateTotalPrice: (cart: ProductStorage[]) => void
 }
 
 const CheckoutContext = React.createContext<CheckoutContextType | undefined>(undefined)
@@ -30,8 +32,8 @@ const useCartId = () => {
     if (cartCheckoutInfo === null || cartCheckoutInfo.length < 2 || force ) {
       shopifyClient.checkout.create()
         .then((checkout) => {
-          setCheckoutInfo([checkout.id, checkout.webUrl])
-          setCartCheckoutInfo([checkout.id, checkout.webUrl])
+          setCheckoutInfo([checkout.id, checkout.webUrl, 0])
+          setCartCheckoutInfo([checkout.id, checkout.webUrl, 0])
           console.log(checkout)
         })
     }
@@ -47,13 +49,26 @@ const useCartId = () => {
       addId(true)
     }, 1000)
     
+  }
+
+  const updateTotalPrice = (cart: ProductStorage[]) => {
+    let totalPrice = cart.reduce((acc, val)=>{
+      let product = val.price * val.quantity
+
+      return product + acc
+    }, 0).toString()
+    cartCheckoutInfo.push(totalPrice)
+
+    setCheckoutInfo(cartCheckoutInfo)
+    setCartCheckoutInfo(cartCheckoutInfo)
     
   }
 
   return {
     cartCheckoutInfo,
     addId,
-    clearId
+    clearId,
+    updateTotalPrice
   }
 }
 
@@ -61,14 +76,16 @@ const CheckoutIdProvider = ({ children }: {children: React.ReactNode}): React.Re
   const { 
         cartCheckoutInfo,
         addId, 
-        clearId
+        clearId,
+        updateTotalPrice
       } = useCartId()
 
   return (
     <CheckoutContext.Provider value={{cartCheckoutInfo}}>
       <CheckoutDispatchContext.Provider value={{
         addId,
-        clearId
+        clearId,
+        updateTotalPrice
       }}>
         {children}
 

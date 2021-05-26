@@ -127,6 +127,7 @@ export const StyledSidebar = styled.aside`
       margin: 0 auto 20px;
       counter-increment: item 1;
       font-size: clamp(var(--fz-sm), 4vw, var(--fz-lg));
+      visibility: ${props => (props.menuOpen ? 'visible' : 'hidden')};
       @media (max-width: 600px) {
         margin: 0 auto 10px;
       }

@@ -30,7 +30,8 @@ const Product: NextPage<any> = ({product}) => {
       image: imageUrl,
       title: title,
       price: price,
-      quantity: quantity
+      quantity: quantity,
+      subTotal: (quantity*price)
     })
     setSideCartOpen(true)
   }

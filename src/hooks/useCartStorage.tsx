@@ -14,7 +14,10 @@ type CartStorageUpdateContextType = {
   clearCart: () => void;
   removeCartValue: (event: React.MouseEvent<HTMLButtonElement>) => void;
   setCart: React.Dispatch<React.SetStateAction<ProductStorage[] | null>>;
-  updateItemsQuantities: (cartQuantities: number[], checkout: string[]) => void;
+  updateItemsQuantities: (cartQuantities: number[], checkout: string[], checkoutFlag?: boolean, action?: number, id?: string) => void;
+  // handleQtyDecrease: (id: string) => void;
+  // handleQtyIncreaseC: (id: string) => void;
+  // setCartItemQuantityAndPrize: (id: string, newQuantity: number) => number;
  
 }
 
@@ -55,27 +58,35 @@ const useCart = () => {
    
   }
 
-  const updateItemsQuantities = (quantities: number[], checkout: string[]) => {
+  const updateItemsQuantities = (quantities: number[], checkout: string[], checkoutFlag?: boolean, action?: number, id?: string) => {
     const items = getCartStorage()!;
 
     let updatedItems: any = items;
-
+   
     if(items) {
       updatedItems = items.flatMap((item, index) => {
         if (quantities[index] < 1) {
           return [];
         }
+        if(id === item.productId){
+          quantities[index] += action
+       
+        }
         return {
           ...item,
-          quantity: quantities[index]
+          quantity: quantities[index],
+          subTotal: quantities[index] * item.price
         }
       })
         
-       
-        addProductsCheckout(updatedItems, checkout[0])
+       if(checkoutFlag){
+         addProductsCheckout(updatedItems, checkout[0])
+       }
+       setCart(updatedItems) 
+       setCartStorage(updatedItems)
     }
     
-    setCart(updatedItems)
+    
     
      
   }
@@ -99,6 +110,24 @@ const useCart = () => {
 
   }
 
+  const setCartItemQuantityAndPrize = (id: string, action: number) => {
+    let itemIndex = cart.findIndex(el => el.productId = id)
+  
+    console.log(cart)
+    if(itemIndex>-1){
+    let item = cart[itemIndex]
+    item.quantity += action
+    // item.subTotal = item.quantity*item.price
+    cart[itemIndex] = item
+    console.log(cart)
+    setCart(cart)
+    setCartStorage(cart)
+    // return item.subTotal
+    }
+    
+    
+  }
+
   return {
     cart,
     setCart,
@@ -106,6 +135,8 @@ const useCart = () => {
     removeCartValue,
     clearCart,
     updateItemsQuantities,
+    setCartItemQuantityAndPrize
+ 
   }
 }
 
@@ -117,6 +148,8 @@ const CartProvider = ({children}: { children: React.ReactNode}): React.ReactElem
     removeCartValue,
     clearCart,
     updateItemsQuantities,
+
+  
   } = useCart()
 
   return (
@@ -127,6 +160,9 @@ const CartProvider = ({children}: { children: React.ReactNode}): React.ReactElem
             removeCartValue,
             clearCart,
             updateItemsQuantities,
+            
+         
+
       }}>
         {children}
       </CartStorageUpdateContext.Provider>
