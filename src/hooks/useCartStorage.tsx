@@ -15,6 +15,7 @@ type CartStorageUpdateContextType = {
   removeCartValue: (event: React.MouseEvent<HTMLButtonElement>) => void;
   setCart: React.Dispatch<React.SetStateAction<ProductStorage[] | null>>;
   updateItemsQuantities: (cartQuantities: number[], checkout: string[], checkoutFlag?: boolean, action?: number, id?: string) => void;
+  
   // handleQtyDecrease: (id: string) => void;
   // handleQtyIncreaseC: (id: string) => void;
   // setCartItemQuantityAndPrize: (id: string, newQuantity: number) => number;

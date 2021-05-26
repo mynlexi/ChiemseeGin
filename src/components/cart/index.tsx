@@ -229,16 +229,20 @@ const SideCart = () => {
             <ol>
             
   
-              <div
+             
+            {isDisabled ? 
+            <div> Noch nichts zum Einkaufswagen hinzugefügt</div> :
+            <div> 
+             <div
               id="cart-total"
                 >
                     €{total}
-                    </div></ol>
+                    </div>
             <button className="bg-indigo-500" onClick={checkout} >
-                  {isDisabled ? "add items" : "checkout"}
-             </button>
-            
-         
+                  Checkout
+             </button></div>
+            }
+         </ol> 
           </nav>
         </StyledSidebar>
       </div>
