@@ -7,52 +7,6 @@ import  {ALL_RECIPES, RECIPE_INFO, RECIPE_TITLES} from '../../src/apollo_files/q
 import { initApollo } from '../../src/apollo_files/apolloClient';
 
 
-// function Props({title}){
-//   const { loading, error, data } = useQuery(RECIPE_INFO, {
-//     variables: { title: title }
-//   });
-//   if (loading) return <p>Loading...</p>;
-//   if (error) return <p>Error :(</p>;
-//     console.log(data)
-//   return (
-//     <>
-//     props
-//     <div>
-//      {data.recipe.recipeIngredients}
-//     </div>
-//     </>
-//   )
-// }
-
-
-// function Paths() {
-//   const { loading, error, data } = useQuery(RECIPE_TITLES);
-//   if (loading) return <p>Loading...</p>;
-//   if (error) return <p>Error :(</p>;
-//     console.log(data)
-//   return (
-//     <>
-//     paths
-//     <div>
-//       {data.recipes.map((recipe) => {
-     
-//         return(
-//           <div key={recipe.title}>
-//           <p>
-//             {recipe.title.split(" ").join("-")}
-//           </p>
-//           <Props title={recipe.title} />
-//         </div>
-//         )
-        
-//       })}
-//     </div>
-//     </>
-//   )
-// }
-
-
-
 
 
 function Recipes() {
@@ -64,7 +18,6 @@ function Recipes() {
   return (
     <>
     {data.recipes.map((recipe) => {
-      console.log("recipe", recipe)
       let innerHtml = recipe.recipeInstructions.html
       return (
       <div key={recipe.id}>

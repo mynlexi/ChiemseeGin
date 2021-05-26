@@ -119,9 +119,11 @@ const Menu = () => {
                 ))} */}
                 <li >
                   <Link href="/">
-                    <a>
+                    <button onCLick={toggleMenu}>
+                    <a >
                       Home
                     </a>
+                    </button>
                   </Link>
                 </li>
                 <li >

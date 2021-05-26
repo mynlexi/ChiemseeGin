@@ -78,17 +78,17 @@ export default function ProductsMain({collections}) {
       </Head>
    
       <div className="centered m-auto p-12">
-        <div>
+    
           <h2>{gins.description}</h2>
         
           {gins.products.map(product => {
             return (
-              <div key={product.id}>
+             
               <Product product={product} cart={cart} />
-              </div>
+              
             )
           })}
-        </div>
+   
 
         <div className="mt-20">
           <h2>{accessoires.description}</h2>
@@ -108,7 +108,7 @@ export default function ProductsMain({collections}) {
 }
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
   // const products = await shopifyClient.product.fetchAll()
   const collections = await shopifyClient.collection.fetchAllWithProducts()
