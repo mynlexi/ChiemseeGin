@@ -13,7 +13,10 @@ const Menu = () => {
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  const closeMenu = () => setMenuOpen(false)
+  const closeMenu = () => {
+    console.log(close)
+    setMenuOpen(false)
+  }
 
   const buttonRef = useRef(null);
   const navRef = useRef(null);
