@@ -15,7 +15,7 @@ type CartStorageUpdateContextType = {
   removeCartValue: (event: React.MouseEvent<HTMLButtonElement>) => void;
   setCart: React.Dispatch<React.SetStateAction<ProductStorage[] | null>>;
   updateItemsQuantities: (cartQuantities: number[], checkout: string[], checkoutFlag?: boolean, action?: number, id?: string) => void;
-  
+
   // handleQtyDecrease: (id: string) => void;
   // handleQtyIncreaseC: (id: string) => void;
   // setCartItemQuantityAndPrize: (id: string, newQuantity: number) => number;
@@ -111,23 +111,7 @@ const useCart = () => {
 
   }
 
-  const setCartItemQuantityAndPrize = (id: string, action: number) => {
-    let itemIndex = cart.findIndex(el => el.productId = id)
   
-    console.log(cart)
-    if(itemIndex>-1){
-    let item = cart[itemIndex]
-    item.quantity += action
-    // item.subTotal = item.quantity*item.price
-    cart[itemIndex] = item
-    console.log(cart)
-    setCart(cart)
-    setCartStorage(cart)
-    // return item.subTotal
-    }
-    
-    
-  }
 
   return {
     cart,
@@ -136,7 +120,7 @@ const useCart = () => {
     removeCartValue,
     clearCart,
     updateItemsQuantities,
-    setCartItemQuantityAndPrize
+    
  
   }
 }

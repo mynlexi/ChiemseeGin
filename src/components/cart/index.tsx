@@ -74,33 +74,6 @@ const SideCart = () => {
       }
   }, [ total ]);
 
-  
-  // React.useEffect(() => {
-  //   const itemPriceElements = Array.from(document.querySelectorAll(".cart-item__total"));
-  
-
-  //   const handleUpdateTotal = (event: MouseEvent) => {
-  //       if ((event.target as HTMLButtonElement).classList.contains("qty-change" )
-  //       || (event.target as HTMLButtonElement).classList.contains("cart-item--remove")) {
-            
-  //           handleTotalCalculation(itemPriceElements);
-  //           console.log("updating total")
-  //       
-  //           setTotal(updateTotal)
-            
-  //        }
-        
-   
-  //   }
-    
-  //   window.addEventListener("click", handleUpdateTotal);
-
-  //   return () => {
-  //     window.removeEventListener("click", handleUpdateTotal);
-  //   };
-  // }); 
-
-  
 
   
   //button stuff

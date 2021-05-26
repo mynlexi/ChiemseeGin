@@ -34,7 +34,6 @@ const useCartId = () => {
         .then((checkout) => {
           setCheckoutInfo([checkout.id, checkout.webUrl, 0])
           setCartCheckoutInfo([checkout.id, checkout.webUrl, 0])
-          console.log(checkout)
         })
     }
   }

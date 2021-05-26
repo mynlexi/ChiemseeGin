@@ -13,6 +13,8 @@ const Menu = () => {
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
+  const closeMenu = () => setMenuOpen(false)
+
   const buttonRef = useRef(null);
   const navRef = useRef(null);
 
@@ -119,7 +121,7 @@ const Menu = () => {
                 ))} */}
                 <li >
                   <Link href="/">
-                    <button onCLick={toggleMenu}>
+                    <button onCLick={closeMenu}>
                     <a >
                       Home
                     </a>

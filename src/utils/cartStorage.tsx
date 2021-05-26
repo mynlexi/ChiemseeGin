@@ -20,7 +20,6 @@ export const setCartStorage = (value: Array<ProductStorage>): void => {
 export const getCartStorage = (): Array<ProductStorage> | null => {
 
   if (typeof window === "undefined") {
-    console.log("undefined")
     return null;
   }
 
