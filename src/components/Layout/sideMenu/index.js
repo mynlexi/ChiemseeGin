@@ -14,7 +14,7 @@ const Menu = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const closeMenu = () => {
-    console.log(close)
+    console.log("close")
     setMenuOpen(false)
   }
 
