@@ -124,23 +124,23 @@ const Menu = () => {
                 ))} */}
                 <li >
                   <Link href="/">
-                    <button onCLick={closeMenu}>
-                    <a >
+               
+                    <a onClick={toggleMenu}>
                       Home
                     </a>
-                    </button>
+               
                   </Link>
                 </li>
                 <li >
-                  <Link href="/products">
-                    <a>
+                  <Link href="/products"  >
+                    <a onClick={toggleMenu}>
                       Products
                     </a>
                   </Link>
                 </li>
                 <li >
                   <Link href="/recipes">
-                    <a>
+                    <a  onClick={toggleMenu}>
                       Recipes
                     </a>
                   </Link>
