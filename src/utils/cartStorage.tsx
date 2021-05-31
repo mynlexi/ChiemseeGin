@@ -5,6 +5,7 @@ export interface ProductStorage {
   title: string,
   price: number,
   quantity: number
+  subTotal: number
 }
 
 export const setCartStorage = (value: Array<ProductStorage>): void => {
@@ -19,7 +20,6 @@ export const setCartStorage = (value: Array<ProductStorage>): void => {
 export const getCartStorage = (): Array<ProductStorage> | null => {
 
   if (typeof window === "undefined") {
-    console.log("undefined")
     return null;
   }
 

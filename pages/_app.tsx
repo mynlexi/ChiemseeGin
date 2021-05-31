@@ -5,9 +5,10 @@ import { gql } from '@apollo/client';
 
 import CheckoutIdProvider from '../src/hooks/useCheckoutId'
 import CartProvider from "../src/hooks/useCartStorage";
+import SideCartProvider from '../src/hooks/useOpenSidebar'
 import { AppProps } from "next/dist/next-server/lib/router/router";
 import { useApollo } from "../src/apollo_files/apolloClient";
-import Layout from "../src/components/Layout.tsx";
+import Layout from "../src/components/Layout";
 
 interface IProviders {
   components: React.JSXElementConstructor<React.PropsWithChildren<any>>[];
@@ -33,7 +34,7 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
 
   return(
     <ApolloProvider client={apolloClient}>
-        <Providers components={[CheckoutIdProvider, CartProvider]}>
+        <Providers components={[CheckoutIdProvider, CartProvider, SideCartProvider]}>
           <Layout>
             <Component {...pageProps} />
           </Layout>

@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Image from 'next/image'
 import {client as shopifyClient} from '../../src/utils/shopify'
 import { useCartContext, useCartUpdateContext } from "../../src/hooks/useCartStorage";
+import { useSideCartUpdate } from "../../src/hooks/useOpenSidebar";
 
 const Product: NextPage<any> = ({product}) => {
   let {cart} = useCartContext()
@@ -21,7 +22,7 @@ const Product: NextPage<any> = ({product}) => {
   } = product
 
   const {addCartValue} = useCartUpdateContext()
-
+  const {setSideCartOpen} = useSideCartUpdate()
   const addProduct = () => {
     addCartValue({
       productId: id,
@@ -29,8 +30,10 @@ const Product: NextPage<any> = ({product}) => {
       image: imageUrl,
       title: title,
       price: price,
-      quantity: quantity
+      quantity: quantity,
+      subTotal: (quantity*price)
     })
+    setSideCartOpen(true)
   }
 
   return (

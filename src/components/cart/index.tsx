@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ShoppingBag } from "react-feather";
+import { ShoppingCart } from "react-feather";
 
 import {
   StyledMenu,
@@ -16,7 +16,7 @@ import {
 } from "../../hooks/useCartStorage";
 import CartItem from './cartItem'
 import useCalculateTotal from "../../hooks/useCalculateCart";
-
+import { useSideCart, useSideCartUpdate } from "../../hooks/useOpenSidebar";
 
 
 
@@ -27,26 +27,41 @@ const SideCart = () => {
   if (cart === null) {
     cart = [];
   }
+ 
 
   const { updateItemsQuantities } = useCartUpdateContext()!;
-  const { total, handleTotalCalculation } = useCalculateTotal()!;
+  const { handleTotalCalculation, updateTotal } = useCalculateTotal();
+ 
+  const [total, setTotal] = React.useState(updateTotal)
   const [ isDisabled, setIsDisabled ] = React.useState(false);
 
 
-  const handleCheckoutProceed = () => {
-    
+
+  const handleQuantity = (action: number, id: string) => {
+  
     const quantitiyElements: HTMLInputElement[] = Array.from(document.querySelectorAll(".item-qty"));
     const cartQuantities = quantitiyElements.map((input) => parseInt(input.value));
-    updateItemsQuantities(cartQuantities, cartCheckoutInfo);   
+    
+    updateItemsQuantities(cartQuantities, cartCheckoutInfo, false, action, id);  
+    
+    setTotal(updateTotal)
+  };
 
+  const handleTotal = () => {
+    setTotal(updateTotal)
+  }
+  
+
+
+  const handleCheckoutProceed = () => {
+    const quantitiyElements: HTMLInputElement[] = Array.from(document.querySelectorAll(".item-qty"));
+    const cartQuantities = quantitiyElements.map((input) => parseInt(input.value));
+    updateItemsQuantities(cartQuantities, cartCheckoutInfo, true);   
   };
   
   const checkout = () => {
     handleCheckoutProceed()
-    console.log("now url")
-
     clearId()
-    
   };
 
   const handleToggleDisable = (value: boolean) => setIsDisabled(value);
@@ -59,30 +74,13 @@ const SideCart = () => {
       }
   }, [ total ]);
 
-  React.useEffect(() => {
-    const itemPriceElements = Array.from(document.querySelectorAll(".cart-item__total"));
-
-    const handleUpdateTotal = (event: MouseEvent) => {
-        if ((event.target as HTMLButtonElement).classList.contains("qty-change")
-        || (event.target as HTMLButtonElement).classList.contains("cart-item--remove")) {
-          
-            handleTotalCalculation(itemPriceElements);
-          
-        }
-    };
-    
-    window.addEventListener("click", handleUpdateTotal);
-
-    return () => {
-      window.removeEventListener("click", handleUpdateTotal);
-    };
-  }); 
 
   
   //button stuff
-  const [sideCartOpen, setSideCartOpen] = useState(false);
+  let {sideCartOpen} = useSideCart();
+  const {setSideCartOpen, toggleSideCart} = useSideCartUpdate()
 
-  const toggleSideCart = () => setSideCartOpen(!sideCartOpen);
+  // const toggleSideCart = () => setSideCartOpen(!sideCartOpen);
 
   const buttonRef = useRef(null);
   const navRef = useRef(null);
@@ -172,7 +170,7 @@ const SideCart = () => {
           ref={buttonRef}
           className="highlighter"
         >
-          <ShoppingBag
+          <ShoppingCart color={cart.length ?  "var(--green)": "var(--slate)"}
             
           />
         </StyledHamburgerButton>
@@ -184,7 +182,7 @@ const SideCart = () => {
        
         >
          
-          <nav ref={navRef}> 
+          <nav ref={navRef} className="hidden"> 
             <h1>Order Summary</h1>
             {cart.map((product) => {
             
@@ -192,24 +190,32 @@ const SideCart = () => {
                   <CartItem 
                     quantity={product.quantity}
                     id={product.productId}
+                    updateQhandle={handleQuantity}
+                    handleTotal={handleTotal}
                     title={product.title}
                     price={product.price}
+                    image={product.image}
+                   
                   />
               );
             })}
             <ol>
             
   
-              <div
+             
+            {isDisabled ? 
+            <div> Noch nichts zum Einkaufswagen hinzugefügt</div> :
+            <div> 
+             <div
               id="cart-total"
                 >
                     €{total}
-                    </div></ol>
+                    </div>
             <button className="bg-indigo-500" onClick={checkout} >
-                  {isDisabled ? "add items" : "checkout"}
-             </button>
-            
-         
+                  Checkout
+             </button></div>
+            }
+         </ol> 
           </nav>
         </StyledSidebar>
       </div>

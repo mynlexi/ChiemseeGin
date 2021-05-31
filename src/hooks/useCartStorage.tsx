@@ -14,7 +14,11 @@ type CartStorageUpdateContextType = {
   clearCart: () => void;
   removeCartValue: (event: React.MouseEvent<HTMLButtonElement>) => void;
   setCart: React.Dispatch<React.SetStateAction<ProductStorage[] | null>>;
-  updateItemsQuantities: (cartQuantities: number[], checkout: string[]) => void;
+  updateItemsQuantities: (cartQuantities: number[], checkout: string[], checkoutFlag?: boolean, action?: number, id?: string) => void;
+
+  // handleQtyDecrease: (id: string) => void;
+  // handleQtyIncreaseC: (id: string) => void;
+  // setCartItemQuantityAndPrize: (id: string, newQuantity: number) => number;
  
 }
 
@@ -30,7 +34,7 @@ export const useCartUpdateContext = (): CartStorageUpdateContextType | undefined
 
 const useCart = () => {
   const [cart, setCart] = React.useState(getCartStorage)
-  console.log("initial cart",cart)
+
   const addCartValue =(value: ProductStorage) => {
     const items = getCartStorage()
 
@@ -52,30 +56,38 @@ const useCart = () => {
       }
     }
     setCart(items)
-  
+   
   }
 
-  const updateItemsQuantities = (quantities: number[], checkout: string[]) => {
+  const updateItemsQuantities = (quantities: number[], checkout: string[], checkoutFlag?: boolean, action?: number, id?: string) => {
     const items = getCartStorage()!;
 
     let updatedItems: any = items;
-
+   
     if(items) {
       updatedItems = items.flatMap((item, index) => {
         if (quantities[index] < 1) {
           return [];
         }
+        if(id === item.productId){
+          quantities[index] += action
+       
+        }
         return {
           ...item,
-          quantity: quantities[index]
+          quantity: quantities[index],
+          subTotal: quantities[index] * item.price
         }
       })
         
-       
-        addProductsCheckout(updatedItems, checkout[0])
+       if(checkoutFlag){
+         addProductsCheckout(updatedItems, checkout[0])
+       }
+       setCart(updatedItems) 
+       setCartStorage(updatedItems)
     }
     
-    setCart(updatedItems)
+    
     
      
   }
@@ -99,6 +111,8 @@ const useCart = () => {
 
   }
 
+  
+
   return {
     cart,
     setCart,
@@ -106,6 +120,8 @@ const useCart = () => {
     removeCartValue,
     clearCart,
     updateItemsQuantities,
+    
+ 
   }
 }
 
@@ -117,6 +133,8 @@ const CartProvider = ({children}: { children: React.ReactNode}): React.ReactElem
     removeCartValue,
     clearCart,
     updateItemsQuantities,
+
+  
   } = useCart()
 
   return (
@@ -127,6 +145,9 @@ const CartProvider = ({children}: { children: React.ReactNode}): React.ReactElem
             removeCartValue,
             clearCart,
             updateItemsQuantities,
+            
+         
+
       }}>
         {children}
       </CartStorageUpdateContext.Provider>

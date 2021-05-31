@@ -7,6 +7,7 @@ import  {ALL_RECIPES, RECIPE_INFO, RECIPE_TITLES} from '../../src/apollo_files/q
 import { initApollo } from '../../src/apollo_files/apolloClient';
 import {client as shopifyClient} from '../../src/utils/shopify'
 import { useCartContext, useCartUpdateContext } from '../../src/hooks/useCartStorage';
+import { useSideCartUpdate } from '../../src/hooks/useOpenSidebar';
 
 
 
@@ -24,6 +25,7 @@ function Product({product, cart}) {
   } = product
 
   const {addCartValue} = useCartUpdateContext()
+  const {setSideCartOpen} = useSideCartUpdate()
 
   const addProduct = () => {
     addCartValue({
@@ -32,12 +34,14 @@ function Product({product, cart}) {
       image: imageUrl,
       title: title,
       price: price,
-      quantity: quantity
+      quantity: quantity,
+      subTotal: (quantity*price)
     })
+    setSideCartOpen(true)
   }
 
   return (
-    <div key={id}>
+    <div key={`product at product/index ${id}`}>
     <Link href={`products/${handle.toLowerCase()}`} ><a>
    
       <p>{title}</p>
@@ -74,15 +78,17 @@ export default function ProductsMain({collections}) {
       </Head>
    
       <div className="centered m-auto p-12">
-        <div>
+    
           <h2>{gins.description}</h2>
         
           {gins.products.map(product => {
             return (
+             
               <Product product={product} cart={cart} />
+              
             )
           })}
-        </div>
+   
 
         <div className="mt-20">
           <h2>{accessoires.description}</h2>
@@ -102,7 +108,7 @@ export default function ProductsMain({collections}) {
 }
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
   // const products = await shopifyClient.product.fetchAll()
   const collections = await shopifyClient.collection.fetchAllWithProducts()
