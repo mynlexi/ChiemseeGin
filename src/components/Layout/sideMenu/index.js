@@ -99,7 +99,7 @@ const Menu = () => {
         <body className={menuOpen ? 'blur' : ''} />
       </Helmet>
 
-      <div ref={wrapperRef} className="sideMenuLogo">
+      <div ref={wrapperRef} className="sideMenu">
         <StyledHamburgerButton onClick={toggleMenu} menuOpen={menuOpen} ref={buttonRef}>
           <div className="ham-box">
             <div className="ham-box-inner" />

@@ -97,56 +97,7 @@ export const Navbar = ({isHome}) => {
       </StyledNav>
       <SideCart />
     </StyledHeader>
-    //<div className=" top flex justify-between w-full">
-    //   <div className="p-4">
-    //     <Menu />
-    //   </div>
-    //   <div className="p-4">
-    //   <Link href="/">
-    //     <a>
-    //       Home(logo)
-    //     </a>
-    //   </Link>
-    //   </div>
-    //   <nav className=" flex-row p-4 space-x-3 hidden md:flex">
-        
-      
-    //   <Link href="/premiumgin">
-    //     <a>
-    //       Premium Gin (scroll down if on start)
-    //     </a>
-    //   </Link>
-    //   <Link href="/shop"  >
-    //       <a>
-    //         Shop
-    //       </a>
-    //     </Link>
-    //   <Link href="/rezepte">
-    //     <a>
-    //       Rezepte
-    //     </a>
-    //   </Link>
-      
-     
-    //     <Link href="/chiemsee">
-    //       <a >
-    //         Chiemsee
-    //       </a>
-    //     </Link>
-    
-      
-    //     <Link href="/geschichte">
-    //       <a >
-    //         Team
-    //       </a>
-    //     </Link>
-             
-    //   </nav>
-    
-    //   <div className="p-1 px-4">
-    //     <SideCart />
-    //   </div>
-    // </div>
+
   )
 }
 
