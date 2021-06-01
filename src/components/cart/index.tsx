@@ -170,7 +170,7 @@ const SideCart = () => {
           ref={buttonRef}
           className="highlighter"
         >
-          <ShoppingCart color={cart.length ?  "var(--green)": "var(--slate)"}
+          <ShoppingCart color={cart.length ?  "var(--dark-navy)": "var(--slate)"}
             
           />
         </StyledHamburgerButton>
@@ -183,7 +183,7 @@ const SideCart = () => {
         >
          
           <nav ref={navRef} className="hidden"> 
-            <h1>Order Summary</h1>
+            <h1>Dein Einkaufswagen</h1>
             {cart.map((product) => {
             
               return (
@@ -204,7 +204,7 @@ const SideCart = () => {
   
              
             {isDisabled ? 
-            <div> Noch nichts zum Einkaufswagen hinzugefügt</div> :
+            <div className="text-black"> Noch nichts zum Einkaufswagen hinzugefügt</div> :
             <div> 
              <div
               id="cart-total"

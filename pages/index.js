@@ -33,24 +33,26 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-
+          <div id="home">
         <p>Chiemsee Gin ist der Premium Gin vom bayerischen Meer – angenehm herb mit frischen
           Noten. Unser Wacholderschnaps wird in der seit 1892 bestehenden Edelbrandmanufaktur
           Guggenbichler in traditioneller Handarbeit mit handverlesenen Zutaten hergestellt. Ein
           außergewöhnlicher und facettenreicher Gin von und für seine bayerische Heimat und die
           Menschen, die sie/diese so sehr lieben. Mit jeder verkauften Flasche wird 1€ für den
           Naturschutz des Chiemgaus &amp; Chiemsees gespendet und somit die Erhaltung unserer
-          einzigartigen Heimat unterstützt.</p>
-        <Link href="/recipes">
-            recipes
+          einzigartigen Heimat unterstützt.</p></div>
+        <Link href="/rezepte">
+            Rezepte
         </Link>
         <br/>
         <br/>
-        <Link href="/products">
-            products
+        <Link href="/shop">
+            Shop
         </Link>
         
-        
+        <section id="premiumgin">
+
+        </section>
     
           
        

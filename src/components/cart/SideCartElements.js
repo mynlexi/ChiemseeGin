@@ -47,7 +47,7 @@ export const StyledSidebar = styled.aside`
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0;
-    background-color: var(--light-navy);
+    background-color: var(--white);
     box-shadow: -10px 0px 30px -15px var(--navy-shadow);
     z-index: 9;
     transform: translateX(${props => (props.sideCartOpen ? 0 : 100)}vw);
@@ -63,7 +63,7 @@ export const StyledSidebar = styled.aside`
     align-items: center;
     width: 100%;
     flex-direction: column;
-    color: var(--lightest-slate);
+    color: var(--white);
     font-family: var(--font-mono);
     text-align: center;
     
@@ -85,7 +85,7 @@ export const StyledSidebar = styled.aside`
         content: '0' counter(item) '.';
         display: block;
         margin-bottom: 5px;
-        color: var(--green);
+        color: var(--light-navy);
         font-size: var(--fz-sm);
       }
     }
