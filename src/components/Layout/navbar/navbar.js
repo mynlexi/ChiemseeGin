@@ -63,7 +63,12 @@ export const Navbar = ({isHome}) => {
                         exact='true'>
                           <a href="/" aria-label="premiumgin">
                             Unser Premium Gin
-                          </a></LinkScroll></li>):  null}
+                          </a></LinkScroll></li>):
+                    (<li><Link href="/">
+                      <a>
+                        Home
+                      </a>
+                    </Link></li>)}
             <li>
               <Link href="/shop"  >
                 <a>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { useCheckoutUpdate } from '../../hooks/useCheckoutId'
 import SideCart from '../cart'
-import PopupAge from './popup/agepopup'
 import { Footer } from './footer'
 import { Navbar } from './navbar/navbar'
 import { Modal } from './popup/Modal';
@@ -41,7 +40,7 @@ export default function Layout({children}) {
       <div>
         <Navbar isHome={isHome}/>
         
-        <main className="h-screen" id="content">{children}</main>
+        <main className="" id="content">{children}</main>
         <Footer />
       </div>
     </div>

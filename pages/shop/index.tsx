@@ -8,60 +8,16 @@ import { initApollo } from '../../src/apollo_files/apolloClient';
 import {client as shopifyClient} from '../../src/utils/shopify'
 import { useCartContext, useCartUpdateContext } from '../../src/hooks/useCartStorage';
 import { useSideCartUpdate } from '../../src/hooks/useOpenSidebar';
+import React from 'react';
+import ShopMain from '../../src/components/shop/shopMain';
 
 
-
-
-
-function Product({product, cart}) {
-  const {
-    id = product.Id,
-    title = product.title,
-    imageUrl = product.images[0].src,
-    variantId = product.variants[0].id,
-    price = parseInt(product.variants[0].price),
-    handle = product.handle,
-    quantity = 1
-  } = product
-
-  const {addCartValue} = useCartUpdateContext()
-  const {setSideCartOpen} = useSideCartUpdate()
-
-  const addProduct = () => {
-    addCartValue({
-      productId: id,
-      variantId: variantId,
-      image: imageUrl,
-      title: title,
-      price: price,
-      quantity: quantity,
-      subTotal: (quantity*price)
-    })
-    setSideCartOpen(true)
-  }
-
-  return (
-    <div key={`product at product/index ${id}`}>
-    <Link href={`shop/${handle.toLowerCase()}`} ><a>
-   
-      <p>{title}</p>
-      <img src={imageUrl} style={{height: "100px"}} className="mx-auto mt-10" />
-     
-   </a></Link>
-   <button onClick={addProduct} 
-    className="bg-purple-900">
-      {cart?.some(item => item.productId === id) ? "In Cart" : "Add To Cart"}
-    </button>
-   </div>
-
-    ) 
-}
 
 
 
 export default function ProductsMain({collections}) {
-  
-  
+
+  console.log(collections)
   const gins = collections[0]
   const accessoires = collections[1]
 
@@ -75,32 +31,18 @@ export default function ProductsMain({collections}) {
         <title>Premium Gins</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-   
-      <div className="centered m-auto p-12">
-    
-          <h2>{gins.description}</h2>
-        
-          {gins.products.map(product => {
-            return (
-             
-              <Product product={product} cart={cart} />
-              
-            )
-          })}
-   
 
-        <div className="mt-20">
-          <h2>{accessoires.description}</h2>
-        
-          {accessoires.products.map(product => {
-            return (
-              <Product product={product} cart={cart} />
-            )
-          })}
-        </div>
-        
-      </div>
-
+      <section id="hero-shop" className="w-full h-1/3">
+          picture
+        </section>
+      <section id="main-shop"> 
+        <div className="m-0">
+     
+         
+          </div>
+          <ShopMain collections={collections}/>
+     
+      </section>
 
     </div>
   )
@@ -111,7 +53,7 @@ export async function getServerSideProps() {
 
   // const products = await shopifyClient.product.fetchAll()
   const collections = await shopifyClient.collection.fetchAllWithProducts()
-
+  
   
   
  

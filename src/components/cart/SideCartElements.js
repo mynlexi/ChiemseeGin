@@ -18,7 +18,7 @@ export const StyledHamburgerButton = styled.button`
     -webkit-box-align: center;
     align-items: center;
     position: relative;
-    z-index: 10;
+    z-index: 15;
     margin-right: -15px;
     padding: 15px;
     border: 0;
@@ -49,7 +49,7 @@ export const StyledSidebar = styled.aside`
     outline: 0;
     background-color: var(--white);
     box-shadow: -10px 0px 30px -15px var(--navy-shadow);
-    z-index: 9;
+    z-index: 14;
     transform: translateX(${props => (props.sideCartOpen ? 0 : 100)}vw);
     visibility: ${props => (props.sideCartOpen ? 'visible' : 'hidden')};
     transition: var(--transition);

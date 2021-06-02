@@ -4,51 +4,13 @@ import Image from 'next/image'
 import {client as shopifyClient} from '../../src/utils/shopify'
 import { useCartContext, useCartUpdateContext } from "../../src/hooks/useCartStorage";
 import { useSideCartUpdate } from "../../src/hooks/useOpenSidebar";
+import React from "react";
+import Product from '../../src/components/shop/produkt'
 
-const Product: NextPage<any> = ({product}) => {
-  let {cart} = useCartContext()
-  if (cart === null) {
-      cart = []
-  }
-
-  const {
-    id = product.Id,
-    title = product.title,
-    imageUrl = product.images[0].src,
-    variantId = product.variants[0].id,
-    price = parseInt(product.variants[0].price),
-    description = product.description,
-    quantity = 1
-  } = product
-
-  const {addCartValue} = useCartUpdateContext()
-  const {setSideCartOpen} = useSideCartUpdate()
-  const addProduct = () => {
-    addCartValue({
-      productId: id,
-      variantId: variantId,
-      image: imageUrl,
-      title: title,
-      price: price,
-      quantity: quantity,
-      subTotal: (quantity*price)
-    })
-    setSideCartOpen(true)
-  }
-
+const ProductPage: NextPage<any> = ({product}) => {
   return (
-    <div key={id}>
-   <p>{title}</p>
-   <p>{description}</p>
-      <img src={imageUrl} style={{height: "100px"}} className="mx-auto mt-10" />
-   <button onClick={addProduct} 
-    className="bg-purple-900">
-      {cart?.some(item => item.productId === id) ? "In Cart" : "Add To Cart"}
-    </button>
-   </div>
-
-    ) 
-
+    <Product product={product}/>
+  )
 }
 
 
@@ -85,4 +47,4 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
   
 }
 
-export default Product
+export default ProductPage
