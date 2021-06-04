@@ -34,11 +34,12 @@ export const StyledHamburgerButton = styled.button`
 `;
 
 export const StyledSidebar = styled.aside`
+    
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    align-items: center;
+    align-items: start;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -57,37 +58,51 @@ export const StyledSidebar = styled.aside`
   
   nav {
     display: flex;
+    margin-top: 2rem;
     -webkit-box-pack: justify;
-    justify-content: space-between;
+    justify-content: space-around;
     -webkit-box-align: center;
     align-items: center;
     width: 100%;
     flex-direction: column;
-    color: var(--white);
+    color: var(--dark-navy);
     font-family: var(--font-mono);
     text-align: center;
     
   }
+
+  .cartitem {
+    min-height: 125px;
+    max-height: 225px;
+    
+    
+  }
   ol {
     padding: 0;
-    margin: 0;
+    margin: auto;
+    height: 24px;
+
     list-style: none;
     width: 100%;
+    bottom: 0px;
     li {
+    
       position: relative;
-      margin: 0 auto 20px;
+      height: 24px;
+      margin: 0 auto;
       counter-increment: item 1;
       font-size: clamp(var(--fz-sm), 4vw, var(--fz-lg));
       @media (max-width: 600px) {
         margin: 0 auto 10px;
       }
-      &:before {
-        content: '0' counter(item) '.';
-        display: block;
-        margin-bottom: 5px;
-        color: var(--light-navy);
-        font-size: var(--fz-sm);
-      }
+      // &:before {
+        
+      //   content: '0' counter(item) '';
+      //   display: block;
+      //   margin-bottom: 5px;
+      //   color: var(--light-navy);
+      //   font-size: var(--fz-sm);
+      // }
     }
     a {
       display: inline-block;
@@ -107,6 +122,13 @@ export const StyledSidebar = styled.aside`
       }
     }
   }
+
+  .cart-item--remove {
+    stroke-width: 2;
+    &:hover {
+      stroke-width: 3;
+    }
+  }
   .resume-link {
     color: var(--green);
     background-color: transparent;
@@ -124,7 +146,19 @@ export const StyledSidebar = styled.aside`
   }
 `;
 
-
+export const CartImage = styled.img`
+  margin: auto;
+  background: none;
+  position: relative;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  height: auto;
+  transform-style: preserve-3d;
+  max-height: 120px;
+  max-width: 120px;
+`
 // .ham-box {
 //   display: inline-block;
 //   position: relative;
