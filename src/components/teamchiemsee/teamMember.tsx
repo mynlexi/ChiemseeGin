@@ -31,15 +31,14 @@ export default function TeamMember({info}) {
     description = info.description ? info.description : null,
     cite = info.cite ? info.cite : null,
 
-
-
-
   }: MemberInfo = info
-
-  
+  let quality = '75'
+    if (width*height/1000 > 1440) {
+      quality = `50`
+    }
   const image = (
     
-      <Image src={path} width={width} height={height} layout="responsive"/>
+      <Image src={path} width={width} height={height} layout="responsive" quality={quality}/>
  
   )
   

@@ -49,9 +49,9 @@ export const team  = [
   },
   {
     key: 4,
-    path: "/images/dd.jpg",
-    width: 900,
-    height: 1600,
+    path: "/images/marcuslange.jpg",
+    width: 4000,
+    height: 6000,
   
       title: "Marcus – Der Mann hinter der Kamera und das kreative Designertalent",
       description: `Marcus ist für Video & Foto sowie das Design bei Chiemsee Gin verantwortlich.

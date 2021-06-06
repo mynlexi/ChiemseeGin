@@ -40,7 +40,7 @@ export default function Layout({children}) {
       <div>
         <Navbar isHome={isHome}/>
         
-        <main className="" id="content">{children}</main>
+        <main className="h-full" id="content">{children}</main>
         <Footer />
       </div>
     </div>

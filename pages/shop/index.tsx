@@ -10,6 +10,7 @@ import { useCartContext, useCartUpdateContext } from '../../src/hooks/useCartSto
 import { useSideCartUpdate } from '../../src/hooks/useOpenSidebar';
 import React from 'react';
 import ShopMain from '../../src/components/shop/shopMain';
+import Header from '../../src/components/general/header';
 
 
 
@@ -17,10 +18,14 @@ import ShopMain from '../../src/components/shop/shopMain';
 
 export default function ProductsMain({collections}) {
 
-  console.log(collections)
-  const gins = collections[0]
-  const accessoires = collections[1]
+  const header = {
+    path: '/images/chiemseebackground.jpg',
+    title: 'Unser Shop',
+   
+  }
 
+  
+ 
   let {cart} = useCartContext()
   if (cart === null) {
       cart = []
@@ -31,15 +36,10 @@ export default function ProductsMain({collections}) {
         <title>Premium Gins</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <section id="hero-shop" className="w-full h-1/3">
-          picture
-        </section>
+      <Header header={header} />
+    
       <section id="main-shop"> 
-        <div className="m-0">
-     
-         
-          </div>
+      
           <ShopMain collections={collections}/>
      
       </section>

@@ -1,5 +1,20 @@
 import styled, { css } from 'styled-components'
 
+export const FooterStyled = styled.footer`
+  font-family: var(--font-mono);
+  .links {
+    margin: 0 5px;
+    position: relative;
+    counter-increment: item 1;
+    cursor: pointer;
+    a {
+      padding: 10px;
+      &:hover,
+      &:focus {
+        color: var(--slate)
+      }
+  }
+`
 
 
 export const StyledHeader = styled.header`
