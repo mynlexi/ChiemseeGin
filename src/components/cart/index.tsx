@@ -170,7 +170,7 @@ const SideCart = () => {
           ref={buttonRef}
           className="highlighter"
         >
-          <ShoppingCart color={cart.length ?  "var(--green)": "var(--slate)"}
+          <ShoppingCart color={cart.length ?  "var(--dark-navy)": "var(--slate)"}
             
           />
         </StyledHamburgerButton>
@@ -183,7 +183,13 @@ const SideCart = () => {
         >
          
           <nav ref={navRef} className="hidden"> 
-            <h1>Order Summary</h1>
+          <div className="fixed top-0 my-10 border-b-2 border-black w-full">
+            <button onClick={toggleSideCart}>
+             <h1>Dein Warenkorb</h1>
+             </button>
+          </div>
+           
+            <div className="">
             {cart.map((product) => {
             
               return (
@@ -199,21 +205,28 @@ const SideCart = () => {
                   />
               );
             })}
+            </div>
             <ol>
             
   
              
             {isDisabled ? 
-            <div> Noch nichts zum Einkaufswagen hinzugefügt</div> :
-            <div> 
-             <div
-              id="cart-total"
-                >
-                    €{total}
-                    </div>
-            <button className="bg-indigo-500" onClick={checkout} >
-                  Checkout
-             </button></div>
+            <div className="text-black"> Noch nichts zum Einkaufswagen hinzugefügt</div> :
+            <div className="fixed bottom-0 w-full"> 
+            <div className="border-b-2 border-black w-full text-left text-2xl p-5">
+              <h3>Zwischensumme</h3>
+              <div
+                id="cart-total"
+                  >
+                       {total} €
+              </div>
+            </div>
+            <div className="w-full flex justify-items-center align-middle " onClick={checkout}>
+              <button className=" my-5 bg-gray-600 text-white px-20 hover:bg-gray-800  py-4 m-auto"  >
+                    Checkout
+              </button>
+              </div>
+            </div>
             }
          </ol> 
           </nav>

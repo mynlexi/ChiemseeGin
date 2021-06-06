@@ -99,7 +99,7 @@ const Menu = () => {
         <body className={menuOpen ? 'blur' : ''} />
       </Helmet>
 
-      <div ref={wrapperRef}>
+      <div ref={wrapperRef} className="sideMenu">
         <StyledHamburgerButton onClick={toggleMenu} menuOpen={menuOpen} ref={buttonRef}>
           <div className="ham-box">
             <div className="ham-box-inner" />
@@ -126,22 +126,38 @@ const Menu = () => {
                   <Link href="/">
                
                     <a onClick={toggleMenu}>
-                      Home
+                      Home(logo)
                     </a>
                
                   </Link>
                 </li>
+               
                 <li >
-                  <Link href="/products"  >
+                  <Link href="/shop"  >
                     <a onClick={toggleMenu}>
-                      Products
+                      Shop
+                    </a>
+                  </Link>
+                </li>
+             
+                <li >
+                  <Link href="/rezepte">
+                    <a  onClick={toggleMenu}>
+                      Rezepte
                     </a>
                   </Link>
                 </li>
                 <li >
-                  <Link href="/recipes">
+                  <Link href="/chiemsee">
                     <a  onClick={toggleMenu}>
-                      Recipes
+                      Chiemsee
+                    </a>
+                  </Link>
+                </li>
+                <li >
+                  <Link href="/geschichte">
+                    <a  onClick={toggleMenu}>
+                      Team
                     </a>
                   </Link>
                 </li>

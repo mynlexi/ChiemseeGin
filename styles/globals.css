@@ -12,8 +12,8 @@ html {
   box-sizing: inherit;
 }
 ::selection {
-  background-color: var(--slate);
-  color: var(--lightest-slate);
+  background-color: var(--white);
+  color: var(--light-navy);
 }
 
 body {
@@ -23,8 +23,8 @@ body {
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--navy);
-  color: var(--slate);
+  background-color: var(--white);
+  color: var(--dark-navy);
   font-family: var(--font-sans);
   font-size: var(--fz-xl);
   line-height: 1.3;
@@ -50,12 +50,15 @@ body {
       user-select: none;
     }
   
-
+#content {
+  margin-top: var(--nav-height);
+  margin-bottom: var(--nav-height)
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0px 0px 10px;
   font-weight: 600;
-  color: var(--lightest-slate);
+  color: var(--light-navy);
   line-height: 1.1;
 }
 
@@ -72,11 +75,11 @@ a {
   --navy: #0a192f;
   --light-navy: #112240;
   --lightest-navy: #233554;
-  --navy-shadow: rgba(2,12,27,0.7);
+  --navy-shadow: rgba(2, 12, 27, 0.144);
   --slate: #8892b0;
   --light-slate: #a8b2d1;
   --lightest-slate: #ccd6f6;
-  --white: #e6f1ff;
+  --white: #fcfcfc;
   --green: #64ffda;
   --green-tint: rgba(100,255,218,0.1);
   --font-sans: "Calibre","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
@@ -103,7 +106,7 @@ a {
   --ham-after-active: bottom 0.1s ease-out,transform 0.22s cubic-bezier(0.215,0.61,0.355,1) 0.12s;
 }
 
-.numbered-heading {
+/* .numbered-heading {
   display: flex;
   align-items: center;
   position: relative;
@@ -145,7 +148,12 @@ a {
     @media (max-width: 600px) {
       margin-left: 10px;
     }
-  }
+  } */
 button:focus {
   outline: none;
 }
+
+section {
+  @apply w-full px-1 md:w-10/12 md:px-2 lg:w-3/4 lg:px-8 mx-auto;
+}
+

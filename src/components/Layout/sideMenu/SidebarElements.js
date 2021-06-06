@@ -43,7 +43,7 @@ export const StyledHamburgerButton = styled.button`
     width: var(--hamburger-width);
     height: 2px;
     border-radius: var(--border-radius);
-    background-color: var(--green);
+    background-color: var(--lightest-navy);
     transition-duration: 0.22s;
     transition-property: transform;
     transition-delay: ${props => (props.menuOpen ? `0.12s` : `0s`)};
@@ -61,7 +61,7 @@ export const StyledHamburgerButton = styled.button`
       width: var(--hamburger-width);
       height: 2px;
       border-radius: 4px;
-      background-color: var(--green);
+      background-color: var(--lightest-navy);
       transition-timing-function: ease;
       transition-duration: 0.15s;
       transition-property: transform;
@@ -97,7 +97,7 @@ export const StyledSidebar = styled.aside`
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0;
-    background-color: var(--light-navy);
+    background-color: var(--white);
     box-shadow: -10px 0px 30px -15px var(--navy-shadow);
     z-index: 9;
     transform: translateX(${props => (props.menuOpen ? 0 : 100)}vw);
@@ -112,7 +112,7 @@ export const StyledSidebar = styled.aside`
     align-items: center;
     width: 100%;
     flex-direction: column;
-    color: var(--lightest-slate);
+    color: var(--dark-navy);
     font-family: var(--font-mono);
     text-align: center;
     visibility: ${props => (props.menuOpen ? 'visible' : 'hidden')};
@@ -131,13 +131,13 @@ export const StyledSidebar = styled.aside`
       @media (max-width: 600px) {
         margin: 0 auto 10px;
       }
-      &:before {
-        content: '0' counter(item) '.';
-        display: block;
-        margin-bottom: 5px;
-        color: var(--green);
-        font-size: var(--fz-sm);
-      }
+      // &:before {
+      //   content: '0' counter(item) '.';
+      //   display: block;
+      //   margin-bottom: 5px;
+      //   color: var(--light-navy);
+      //   font-size: var(--fz-sm);
+      // }
     }
     a {
       display: inline-block;
@@ -152,7 +152,7 @@ export const StyledSidebar = styled.aside`
     &:hover,
     &:active,
     &:focus {
-      color: var(--green);
+      color: var(--slate);
       outline: 0;
     }
       

@@ -3,6 +3,8 @@ import Image from 'next/image'
 import useCalculateTotal from '../../hooks/useCalculateCart';
 import { useCartUpdateContext } from '../../hooks/useCartStorage';
 import QuantityInput from './quantityInput'
+import { CartImage } from './SideCartElements';
+import {Trash} from 'react-feather'
 
 interface ICartItem {
   category?: string;
@@ -73,31 +75,28 @@ const CartItem = ({
         }
 
     return (
-      <div key={`cart ${id}`}>
-        <div className="flex justify-between">
-          <div className="w-1/3 h-1/3">
-            {/* <Image 
-              src={image}
-              layout="fill"
-              /> */}
+      <div key={`cart ${id}`} className="my-5 cartitem flex align-middle justify-items-center border-b">
+        <div className="flex mt-5 overflow-hidden justify-items-center">
+          <div className="w-1/3 justify-items-center flex">
+           <CartImage src={image} />
           </div>
-          <div>
-            <div> 
-              <p>{title}</p>
-              <p>{price}</p>
+          <div className="z-10  ">
+            <div className="justify-items-start flex flex-col text-left"> 
+              <p className="font-semibold">{title}</p>
+              <p className="text-gray-600">{price}</p>
             </div>
-            <div className="flex flex-row">
+            <div className="flex flex-row" >
               <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
                 <button
                   data-action="decrement"
-                  className="qty-change bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none"
+                  className="qty-change  text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-lg cursor-pointer outline-none"
                   onClick={decrement}
                 >
                 <span className="m-auto text-2xl font-thin">−</span>
                 </button>
                 <input
                   type="number"
-                  className=" item-qty outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700"
+                  className=" item-qty outline-none focus:outline-none text-center w-full -mr-3 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700"
                   name={`quantity-cart${id}`}
                   readOnly
                   min="1"
@@ -107,21 +106,23 @@ const CartItem = ({
                 />
                 <button
                   data-action="increment"
-                  className="qty-change bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer"
+                  className="qty-change border-gray-50 text-gray-600 hover:bg-gray-400 border- h-full w-20 rounded-lg cursor-pointer"
                   onClick={increment}
                 >
                   <span className="m-auto text-2xl font-thin">+</span>
                 </button>
-              </div>
-              <li id={id}>
-                <button onClick={(event) =>remove(event)} className="cart-item--remove bg-blue-600">
-                  remove this product
+                <ol className="">
+                  <li id={id} className="">
+                <button onClick={(event) =>remove(event)} className="cart-item--remove">
+                  <Trash size={24} />
                 </button>
               </li>
+          </ol>
+              </div>
+               <p className="cart-item__total hidden"> Sub-Total: €{price * itemQuantity }</p>
             </div>
           </div>
-     
-      <p className="cart-item__total"> Sub-Total: €{price * itemQuantity }</p>
+          
       
       </div>
     </div>

@@ -1,13 +1,20 @@
 import React from 'react'
 import { useCheckoutUpdate } from '../../hooks/useCheckoutId'
 import SideCart from '../cart'
-import PopupAge from './popup/agepopup'
 import { Footer } from './footer'
-import { Navbar } from './navbar'
+import { Navbar } from './navbar/navbar'
 import { Modal } from './popup/Modal';
+import { useRouter } from 'next/router'
+
 
 
 export default function Layout({children}) {
+  let isHome = false
+  const router = useRouter()
+  if (typeof window != "undefined"){
+    isHome = (router.pathname === '/');
+  } 
+  
   const {addId} = useCheckoutUpdate()
   React.useEffect(() => {
     addId()
@@ -31,9 +38,9 @@ export default function Layout({children}) {
     <div>
       <Modal showModal={showModal} setShowModal={setShowModal} />
       <div>
-        <Navbar />
+        <Navbar isHome={isHome}/>
         
-        <main className="h-screen" id="content">{children}</main>
+        <main className="h-full" id="content">{children}</main>
         <Footer />
       </div>
     </div>
