@@ -37,9 +37,9 @@ export default function TeamMember({info}) {
       quality = `50`
     }
   const image = (
-    
-      <Image src={path} width={width} height={height} layout="responsive" quality={quality}/>
- 
+      <div className="px-12 md:px-4 my-auto">
+      <Image src={path} width={width} height={height} layout="responsive" quality={quality} />
+      </div>
   )
   
   const even = (key % 2 === 0)

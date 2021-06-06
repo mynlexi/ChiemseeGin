@@ -6,8 +6,8 @@ import { FooterStyled } from './navbar/NavbarElements'
 export const Footer = () => {
   return (
   <FooterStyled className="p-4 bg-gray-300">
-    <div className="flex justify-between space-y-4">
-      <div className="w-1/5 ml-12 mb-4 mt-8">
+    <div className="flex flex-col md:flex-row justify-between space-y-4">
+      <div className=" w-1/2 md:w-1/5 mx-auto md:ml-12 md:mb-4 md:mt-8">
         <Link href="/">
         <Image src="/images/cglogobad.jpg" width={2393} height={1391} layout="responsive"/>
         </Link>

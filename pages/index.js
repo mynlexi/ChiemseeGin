@@ -57,14 +57,7 @@ export default function Home() {
               </p>
             </div>
         </section>
-        <Link href="/rezepte">
-            Rezepte
-        </Link>
-        <br/>
-        <br/>
-        <Link href="/shop">
-            Shop
-        </Link>
+      
         
         <section id="premiumgin" className="outer-box mt-8 ">
             <h2 className="my-8 ">Unser Bestseller</h2>

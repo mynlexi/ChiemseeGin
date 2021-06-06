@@ -31,7 +31,7 @@ export default function ProductsMain({collections}) {
       cart = []
   }
   return (
-    <div className="{styles.container}">
+    <div className="min-h-screen">
       <Head>
         <title>Premium Gins</title>
         <link rel="icon" href="/favicon.ico" />

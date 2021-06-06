@@ -46,7 +46,7 @@ const Recipe: NextPage<any> = ({ initialApolloState, params}) => {
 
 
   return (
-    <section >
+    <section className="min-h-screen">
       <h3 className="mx-auto text-center">{title}</h3>
       <div className="rounded-full h-1/4 w-1/4 mx-auto my-6"> 
         <Image 

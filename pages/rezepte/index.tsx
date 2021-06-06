@@ -64,14 +64,14 @@ export default function RecipeMain() {
 
  
   return (
-    <div className="{styles.container}">
+    <div className="min-h-screen">
       <Head>
         <title>Gin Rezepte | Chiemsee Gin</title>
      
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header header={header} />
-      <section >
+      <section className="">
         <Recipes />
 
    
