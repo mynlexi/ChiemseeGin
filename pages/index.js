@@ -60,7 +60,7 @@ export default function Home() {
       
         
         <section id="premiumgin" className="outer-box mt-8 ">
-            <h2 className="my-8 ">Unser Bestseller</h2>
+            <h2 className="my-8 ">Chiemsee Gin</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div className="w-full relative my-auto text-transparent hover:text-black">
                 <Link href="/shop/schexis-gin" className="relative k">

@@ -4,20 +4,8 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import { initApollo } from "../../src/apollo_files/apolloClient"
 import {ALL_RECIPES, RECIPE_INFO, RECIPE_TITLES} from "../../src/apollo_files/queries/recipes"
+import {IngList, PrepList} from '../../styles/utilstyled'
 
-const IngList = styled.div`
-  li {
-    list-style-type: disc;
-  }
-  
-`
-
-const PrepList = styled.div`
-  li {
-    list-style-type: decimal;
-  }
-  
-`
 
 
 

@@ -62,15 +62,15 @@ export const Navbar = ({isHome}) => {
                         spy={true}
                         exact='true'>
                           <a href="/" aria-label="premiumgin">
-                            Unser Premium Gin
+                            Premium Gin
                           </a></LinkScroll></li>):
                     (<li><Link href="/">
                       <a>
-                        Home
+                      Premium Gin
                       </a>
                     </Link></li>)}
             <li>
-              <Link href="/shop"  >
+              <Link href="/shop/chiemsee-gin"  >
                 <a>
                   Shop
                 </a>
@@ -79,7 +79,7 @@ export const Navbar = ({isHome}) => {
             <li>
               <Link href="/rezepte">
                 <a>
-                  Rezepte
+                  Chiemgauer Rezepte
                 </a>
               </Link>
             </li>
@@ -93,7 +93,7 @@ export const Navbar = ({isHome}) => {
             <li>           
               <Link href="/geschichte">
                 <a >
-                  Team
+                  Geschichte
                 </a>
               </Link>
             </li> 

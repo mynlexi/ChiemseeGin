@@ -40,10 +40,13 @@ function Product({ product }) {
     });
     setSideCartOpen(true);
   };
+  const openSideCart = () => {
+    setSideCartOpen(true);
+  }
 
   return (
     <div key={`product at product/index ${id}`}>
-      <ShopCartContainer>
+      <ShopCartContainer className=" mx-14">
         <div className="w-full md:w-1/2 relative">
           <ProductImageBG imageUrl={imageUrl} />
          
@@ -54,13 +57,13 @@ function Product({ product }) {
             <p className="font-bold text-2xl">{title}</p>
            <div dangerouslySetInnerHTML={{ __html: descriptionH }}></div>
           </div>
-          <div className="flex space-x-5 py-5 mb-8 mx-auto ">
+          <div className="flex space-x-5 mb-8 mx-auto ">
          
-            <div className="border-black border-2 p-2">
+            <div className=" p-2">
               {cart?.some((item) => item.productId === id) ? (
-                <p className="text-gray-500">Im Warenkorb</p>
+                <button onClick={openSideCart} className="text-gray-800 bg-gray-100 p-4">Warenkorb anzeigen</button>
               ) : (
-                <button onClick={addProduct} className="hover:border-gray-600"> In den Warenkorb </button>
+                <button onClick={addProduct} className="bg-blue-700 text-white hover:bg-white hover:text-blue-800 p-4 transition-colors"> In den Warenkorb </button>
               )}
             </div>
           </div>
