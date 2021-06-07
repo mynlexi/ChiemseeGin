@@ -19,14 +19,14 @@ export const Footer = () => {
               Home
               </a>
           </Link>
-          <Link href="/shop">
+          <Link href="/shop/chiemsee-gin">
               <a className="links text-xl hover:text-gray-600 ">
               Shop
               </a>
           </Link>
           <Link href="/rezepte">
               <a className="links text-xl hover:text-gray-600 ">
-              Rezepte
+              Chiemgauer Rezepte
               </a>
           </Link>
           <Link href="/chiemsee">
@@ -36,7 +36,7 @@ export const Footer = () => {
           </Link>
           <Link href="/team">
               <a className="links text-xl hover:text-gray-600 ">
-              Team
+              Geschichte
               </a>
           </Link>
         </div>

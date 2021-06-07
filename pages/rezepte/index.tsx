@@ -18,7 +18,8 @@ function Recipes() {
   if (error) return <p>Error :(</p>;
 
   return (
-    <>
+    <div className="grid grid-cols-6 gap-8 my-12">
+   
     {data.recipev2S.map((recipe) => {
       let innerHtml = recipe.ingredients.html
       let image = recipe.recipeImage
@@ -28,26 +29,28 @@ function Recipes() {
         // url
       
       return (
-      <div key={recipe.id}>
-        <div className="flex space-x-5">
-            <div className="w-28">
+      <div key={recipe.id} className="col-span-2 ">
+        <Link href={`rezepte/${recipe.title.split(" ").join("-")}`}><a> 
+          <div className="flex space-x-5 flex-col justify-around  ">
+            <div className="w-36 mx-auto">
               <Image src={image.url} height={image.height} width={image.width} layout="responsive" className="rounded-full" />
             </div>
-            <div className="my-auto">
-            <Link href={`rezepte/${recipe.title.split(" ").join("-")}`}><a> 
-            <h1>{recipe.title}</h1>
-            </a></Link>
+            <div >
+            
+            <p className="text-center">{recipe.title}</p>
+            
           
      
-              <div dangerouslySetInnerHTML={{ __html: innerHtml }}></div>
+              
            </div>
           </div>
+          </a></Link>
       </div>
       
       
       )
     })}
-    </>
+    </div>
     ) 
 }
 
@@ -71,7 +74,11 @@ export default function RecipeMain() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header header={header} />
-      <section className="">
+     
+      <section className="flex flex-col">
+        <h3>Chiemgauer Rezepte</h3>
+        <p>Einen guten Gin Tonic zuzubereiten, ist keine all zu Große Herausforderung. Nicht umsonst ist der altbekannte Klassiker unter den Gin Cocktails so sehr beliebt. Das passende Tonic zum Gin zu finden ist dagegen schon etwas schwieriger. In den hier aufgeführten Rezepten findest Du deswegen nicht nur Inspiration, sondern auch perfekt abgestimmte Tonic Empfehlungen passend zum Chiemsee Premium Gin</p>
+        
         <Recipes />
 
    

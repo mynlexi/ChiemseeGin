@@ -133,7 +133,7 @@ const Menu = () => {
                 </li>
                
                 <li >
-                  <Link href="/shop"  >
+                  <Link href="/shop/chiemsee-gin"  >
                     <a onClick={toggleMenu}>
                       Shop
                     </a>
@@ -143,7 +143,7 @@ const Menu = () => {
                 <li >
                   <Link href="/rezepte">
                     <a  onClick={toggleMenu}>
-                      Rezepte
+                      Chiemgauer Rezepte
                     </a>
                   </Link>
                 </li>
@@ -157,7 +157,7 @@ const Menu = () => {
                 <li >
                   <Link href="/geschichte">
                     <a  onClick={toggleMenu}>
-                      Team
+                      Geschichte
                     </a>
                   </Link>
                 </li>
