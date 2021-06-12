@@ -2,18 +2,19 @@ import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
 import { FooterStyled } from './navbar/NavbarElements'
+import Logo from '../../../public/chiemsee_gin_logo.svg'
 
 export const Footer = () => {
   return (
   <FooterStyled className="p-4 bg-gray-300">
     <div className="flex flex-col md:flex-row justify-between space-y-4">
-      <div className=" w-1/2 md:w-1/5 mx-auto md:ml-12 md:mb-4 md:mt-8">
+      <div className=" w-1/2 md:w-1/5 mx-auto md:ml-12 md:my-8">
         <Link href="/">
-        <Image src="/images/cglogobad.jpg" width={2393} height={1391} layout="responsive"/>
+       <Logo />
         </Link>
       </div>
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 my-4">
+        <div className="grid grid-cols-1  my-4">
           <Link href="/">
               <a className="links text-xl hover:text-gray-600 ">
               Home
@@ -47,7 +48,7 @@ export const Footer = () => {
       </div>
       <div className="border-t border-black flex justify-between">
         <p className="text-sm text-gray-900 font-bold my-2">
-        © 2021 by ChiemseeGin
+        © 2021 by Chiemsee Gin
         </p>
         <div className="flex space-x-2 my-2">
             <Link href="/admin/legal">

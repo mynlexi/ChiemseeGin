@@ -48,7 +48,11 @@ const CartItem = ({
         setItemQuantity(quantity)
       }
     })
-  
+    const [disabled, setDisabled] = React.useState(true)
+    
+    
+    
+
     const { 
         handleQtyIncrease, 
         handleQtyDecrease,
@@ -59,6 +63,8 @@ const CartItem = ({
           setItemQuantity(itemQuantity+ 1);
           // setSubTotal(getItemSubTotal(quantity+1, 1))
           updateQhandle(1, id)
+          setDisabled(false)
+
           
         
         };
@@ -66,6 +72,9 @@ const CartItem = ({
           setItemQuantity(itemQuantity - 1)
           // setSubTotal(getItemSubTotal(quantity-1, -1))
           updateQhandle(-1, id)
+          if(itemQuantity-1 === 1){
+            setDisabled(true)
+          }
         };
 
         const remove = (event) => {
@@ -91,6 +100,7 @@ const CartItem = ({
                   data-action="decrement"
                   className="qty-change  text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-lg cursor-pointer outline-none"
                   onClick={decrement}
+                  disabled={disabled}
                 >
                 <span className="m-auto text-2xl font-thin">−</span>
                 </button>

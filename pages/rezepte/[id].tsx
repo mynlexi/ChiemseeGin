@@ -18,8 +18,10 @@ interface RecipeId {
 
 const Recipe: NextPage<any> = ({ initialApolloState, params}) => {
 
-  const recipe = initialApolloState.ROOT_QUERY[params]
-  // const recipe = initialApolloState[ref]
+  const ref = initialApolloState.ROOT_QUERY[params].__ref
+  const recipe = initialApolloState[ref]
+
+  console.log(initialApolloState, recipe, ref)
   const {
     title: title,
     ginRecommendation: ginRec,
@@ -62,7 +64,6 @@ const Recipe: NextPage<any> = ({ initialApolloState, params}) => {
       </div>
     </section>
   )
-  
 }
 
 
@@ -70,12 +71,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   const apolloClient = initApollo()
   
-  const {data: {recipev2S}} = await apolloClient.query({
+  const {data: {recipes}} = await apolloClient.query({
     query: RECIPE_TITLES,
     fetchPolicy: "no-cache"
   });
   
-  const paths = recipev2S.map((recipe: RecipeId) => ({
+  const paths = recipes.map((recipe: RecipeId) => ({
     params: { id: recipe.title.split(" ").join("-")}
     
   }))
@@ -98,7 +99,7 @@ export const getStaticProps: GetStaticProps = async ({params}) =>{
       variables: {title: id}
     })
   }
-  const queryParams = `recipev2({"where":{"title":"${id}"}})`
+  const queryParams = `recipe({"where":{"title":"${id}"}})`
  
   return {
     props: {

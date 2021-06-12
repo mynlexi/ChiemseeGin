@@ -74,6 +74,14 @@ export const StyledSidebar = styled.aside`
   .cartitem {
     min-height: 125px;
     max-height: 225px;
+
+    button:disabled,
+    button[disabled]{
+      border: 1px solid #999999;
+      background-color: #cccccc;
+      color: #666666;
+      pointer-events: none;
+    }
     
     
   }
@@ -145,6 +153,7 @@ export const StyledSidebar = styled.aside`
     width: max-content;
   }
 `;
+
 
 export const CartImage = styled.img`
   margin: auto;

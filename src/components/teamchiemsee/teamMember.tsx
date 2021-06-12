@@ -37,7 +37,7 @@ export default function TeamMember({info}) {
       quality = `50`
     }
   const image = (
-      <div className="px-12 md:px-4 my-auto">
+      <div className="px-12 md:px-10 lg:px-20 my-auto " >
       <Image src={path} width={width} height={height} layout="responsive" quality={quality} />
       </div>
   )
@@ -55,9 +55,10 @@ export default function TeamMember({info}) {
   )
 
   // test if i can just insert flex-row reverse lol
-    
+
   return (
-    <Member key={`member ${key}`} className="grid grid-cols-2 gap-4 md:gap-8 lg:gap-12 justify-center align-middle py-5 ">
+  
+    <Member key={`member ${key}`} className="grid grid-cols-2 gap-4 md:gap-8 lg:gap-12 justify-center align-middle py-5">
    
         {even ? (
           image

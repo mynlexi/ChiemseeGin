@@ -8,14 +8,15 @@ import React from "react";
 import Product from '../../src/components/shop/produkt'
 import Head from "next/head";
 import { IngList } from "../../styles/utilstyled";
+import Helmet from 'react-helmet'
 
 const ProductPage: NextPage<any> = ({product}) => {
   return (
     <div>
-      <Head>
+      <Helmet>
         <title>Premium Gins</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+
+      </Helmet>
     <Product product={product}/>
 
     <div>
@@ -55,8 +56,8 @@ const ProductPage: NextPage<any> = ({product}) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   
-  const product = await shopifyClient.product.fetchByHandle('schexis-gin')
-
+  const product = await shopifyClient.product.fetchByHandle('chiemsee-gin')
+  
   return {
     props: {
       product: JSON.parse(JSON.stringify(product))

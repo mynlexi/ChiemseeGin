@@ -2,8 +2,8 @@ import { gql } from "@apollo/client";
 
 export const  ALL_RECIPES = gql`
 query ALL_RECIPES {
-  recipev2S {
-    id
+  recipes {
+    title
     description
     ginRecommendation {
       html
@@ -11,8 +11,7 @@ query ALL_RECIPES {
     ingredients {
       html
     }
-    title
-    tonicRecommendation {
+    preperation {
       html
     }
     recipeImage {
@@ -20,10 +19,9 @@ query ALL_RECIPES {
       width
       url
     }
-    preperation {
+    tonicRecommendation {
       html
     }
-    
   }
 }
 
@@ -31,7 +29,7 @@ query ALL_RECIPES {
 
 export const RECIPE_TITLES = gql`
 query RecipesTitles {
-  recipev2S {
+  recipes {
     title
   }
 }
@@ -39,11 +37,12 @@ query RecipesTitles {
 
 export const RECIPE_INFO = gql`
 query GetSingleRecipe ($title: String!) {
-  recipev2(where: {title: $title}) {
+  recipe(where: {title: $title}) {
     description
     ginRecommendation {
       html
     }
+    id
     ingredients {
       html
     }
@@ -52,13 +51,29 @@ query GetSingleRecipe ($title: String!) {
     }
     recipeImage {
       height
-      url
       width
+      url
     }
     tonicRecommendation {
       html
     }
-    title
   }
 }
+`
+
+export const RECIPE_INDEX = gql`
+query indexRecipe {
+  recipes {
+    ingredients {
+      html
+    }
+    title
+    recipeImage {
+      height
+      url
+      width
+    }
+  }
+}
+
 `

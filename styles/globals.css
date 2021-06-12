@@ -67,6 +67,7 @@ a {
   text-decoration: none;
 }
 
+
 * {
   box-sizing: border-box;
 }
@@ -156,4 +157,65 @@ button:focus {
 section {
   @apply w-full px-1 md:w-10/12 md:px-2 lg:w-3/4 lg:px-8 mx-auto;
 }
+p {
+  @apply text-justify;
+}
 
+  .fadeup-enter {
+    display: block;
+    visibility: visible;
+    opacity: 0.01;
+    transform: translateY(20px);
+    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+  }
+  .fadeup-enter-active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 300ms var(--easing), transform 300ms var(--easing)
+  }
+
+  .fadeup-enter-done {
+    display: block;
+    visibility: visible;
+  }
+  /* Fade down */
+  .fadedown-enter {
+    display: block;
+    visibility: visible;
+    opacity: 0.01;
+    transform: translateY(-20px);
+    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+  }
+  .fadedown-enter-active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+  }
+  .fadedown-enter-done {
+    display: block;
+    visibility: visible;
+  }
+  /* Fade */
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-done {
+    display: block;
+    visibility: visible;
+  }
+  .fade-enter-active {
+    opacity: 0.5;
+    transition: opacity 500ms var(--easing);
+    
+  }
+  .fade-exit {
+    opacity: 1;
+  }
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms var(--easing);
+  }

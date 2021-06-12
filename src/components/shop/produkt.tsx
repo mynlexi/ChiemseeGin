@@ -57,7 +57,7 @@ function Product({ product }) {
             <p className="font-bold text-2xl">{title}</p>
            <div dangerouslySetInnerHTML={{ __html: descriptionH }}></div>
           </div>
-          <div className="flex space-x-5 mb-8 mx-auto ">
+          <div className="flex space-x-5 my-8 mx-auto ">
          
             <div className=" p-2">
               {cart?.some((item) => item.productId === id) ? (

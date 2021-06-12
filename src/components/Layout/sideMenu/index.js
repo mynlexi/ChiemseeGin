@@ -7,6 +7,7 @@ import {StyledMenu, StyledHamburgerButton, StyledSidebar, } from './SidebarEleme
 // import { navLinks } from '../../config';
 import { KEY_CODES } from '../../../utils/keyCodes';
 import { useOnClickOutside } from '../../../hooks';
+import Logo from '../../../../public/chiemsee_gin_logo.svg'
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -125,8 +126,10 @@ const Menu = () => {
                 <li >
                   <Link href="/">
                
-                    <a onClick={toggleMenu}>
-                      Home(logo)
+                    <a onClick={toggleMenu} >
+                      <div className="w-32 mx-auto">
+                      <Logo />
+                      </div>
                     </a>
                
                   </Link>

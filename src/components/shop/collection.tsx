@@ -7,7 +7,6 @@ export default function Collection({collection, active}) {
     return (
     <div>
       {collection.products.map((product)=> {
-        console.log(product)
         return(
         <ShopProduct product={product} />
         )
