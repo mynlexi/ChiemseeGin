@@ -80,7 +80,7 @@ export const Navbar = ({isHome}) => {
                     
                     </Link></li>)}
             <li>
-              <Link href="/shop/chiemsee-gin"  >
+              <Link href="/shop/chiemsee-premium-gin"  >
                
                   Shop
                 

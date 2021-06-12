@@ -24,7 +24,7 @@ const ProductImage = ({imageUrl}) => {
     <div className="w-full relative my-auto text-transparent  hover:text-black hidden">
               
     
-    <Link href="/shop/schexis-gin" >
+    <Link href="/shop/chiemsee-premium-gin" >
       <a className="relative k">
     <Image src={imageUrl} width={2924} height={1872} layout="responsive" />
       </a>

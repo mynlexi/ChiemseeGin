@@ -14,8 +14,8 @@ const ProductPage: NextPage<any> = ({product}) => {
   return (
     <div>
       <Helmet>
-        <title>Premium Gins</title>
-
+        <title>Chiemsee Premium Gin</title>
+      
       </Helmet>
     <Product product={product}/>
 

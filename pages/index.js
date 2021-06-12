@@ -21,7 +21,7 @@ export default function Home() {
   title: 'Willkommen bei Chiemsee Premium Gin',
   subtitle: 'Eine Perle des Genusses direkt aus dem bayrischen Meer',
   button: 'Zum Premium Gin',
-  buttonLink: '/shop/schexis-gin'
+  buttonLink: 'chiemsee-premium-gin'
   }
   
   const [isHome, setIsHome] = React.useState(false)

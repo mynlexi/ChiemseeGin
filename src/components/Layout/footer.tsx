@@ -20,7 +20,7 @@ export const Footer = () => {
               Home
               </a>
           </Link>
-          <Link href="/shop/chiemsee-gin">
+          <Link href="/shop/chiemsee-premium-gin">
               <a className="links text-xl hover:text-gray-600 ">
               Shop
               </a>

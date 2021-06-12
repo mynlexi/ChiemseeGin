@@ -136,7 +136,7 @@ const Menu = () => {
                 </li>
                
                 <li >
-                  <Link href="/shop/chiemsee-gin"  >
+                  <Link href="/shop/chiemsee-premium-gin"  >
                     <a onClick={toggleMenu}>
                       Shop
                     </a>
