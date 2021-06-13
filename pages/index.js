@@ -59,6 +59,7 @@ export default function Home() {
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="msapplication-config" content="favicons/browserconfig.xml" />
           <meta name="theme-color" content="#fffdfd"></meta>
+          <link rel="stylesheet" href="/src/fonts/essonnes-display/style.css"/>
 
       </Helmet>
       
@@ -77,7 +78,6 @@ export default function Home() {
             </div>
         </section>
       
-   
           <HomePremiumGin imageUrl={imageUrl} />
  
         <section id="recipe-slider">

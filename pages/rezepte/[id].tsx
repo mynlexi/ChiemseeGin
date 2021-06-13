@@ -9,11 +9,11 @@ import {IngList, PrepList} from '../../styles/utilstyled'
 
 
 
-type Recipev2 = any
+
 
 interface RecipeId {
   title: string,
-  __typename: Recipev2
+  __typename: string
 }
 
 const Recipe: NextPage<any> = ({ initialApolloState, params}) => {
@@ -33,7 +33,7 @@ const Recipe: NextPage<any> = ({ initialApolloState, params}) => {
 
   } = recipe
 
-
+  console.log(ginRec)
 
   return (
     <section className="min-h-screen">
@@ -50,16 +50,29 @@ const Recipe: NextPage<any> = ({ initialApolloState, params}) => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
         <div>
+          <div className="mb-4">
           <h4>Zutaten</h4>
           <IngList dangerouslySetInnerHTML={{ __html: ingredients.html }}></IngList>
+          </div>
+          {
+            tonicRec && (<>
+              <h4>Passende Tonic Empfehlung: </h4>
+            <div dangerouslySetInnerHTML={{ __html: tonicRec.html }}></div>
+            </>
+            )
+          }
+           {
+            ginRec && (<>
+           
+            <h4>Passende Gin Empfehlung: </h4>
+            <div dangerouslySetInnerHTML={{ __html: ginRec.html }}></div>
+            </>)
+           }
         </div>
         <div className ="flex flex-col space-y-4">
             <h4>Zubereitung</h4>
             <PrepList className=""dangerouslySetInnerHTML={{ __html: preperation.html }}></PrepList>
-            <h4>Passende Tonic Empfehlung: </h4>
-            <div dangerouslySetInnerHTML={{ __html: tonicRec.html }}></div>
-            <h4>Passende Gin Empfehlung: </h4>
-            <div dangerouslySetInnerHTML={{ __html: ginRec.html }}></div>
+           
         </div>
       </div>
     </section>
