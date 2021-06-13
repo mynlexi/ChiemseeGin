@@ -20,9 +20,9 @@ const ProductPage: NextPage<any> = ({product}) => {
     <Product product={product}/>
 
     <div>
-      <div className="w-full border-b border-gray-700 font-bold ml-17 flex">
-        <div className="ml-14 border-b-2 border-gray-900">
-          <p className=" mb-2">Beschreibung</p>
+      <div className="w-full border-b border-cgblue font-bold ml-17 flex">
+        <div className="ml-14 border-b-2 border-cgblue">
+          <h3 className=" mb-2">Beschreibung</h3>
         </div>
       </div>
 

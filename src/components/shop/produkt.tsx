@@ -63,7 +63,7 @@ function Product({ product }) {
               {cart?.some((item) => item.productId === id) ? (
                 <button onClick={openSideCart} className="text-gray-800 bg-gray-100 p-4">Warenkorb anzeigen</button>
               ) : (
-                <button onClick={addProduct} className="bg-blue-700 text-white hover:bg-white hover:text-blue-800 p-4 transition-colors"> In den Warenkorb </button>
+                <button onClick={addProduct} className=" hover:bg-white hover:text-cgblue p-4 transition-colors bg-cgblue"> In den Warenkorb </button>
               )}
             </div>
           </div>

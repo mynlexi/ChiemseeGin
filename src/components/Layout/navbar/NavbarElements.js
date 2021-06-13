@@ -68,7 +68,7 @@ export const StyledNav = styled.nav`
   align-items: center;
   position: relative;
   width: 100%;
-  color: var(--dark-navy);
+  color: var(--blue);
   font-family: var(--font-mono);
   counter-reset: item 0;
   
@@ -86,7 +86,7 @@ export const StyledNav = styled.nav`
   .logo {
    
     a {
-      color: var(--);
+      color: var(--blue);
       width: 42px;
       height: 42px;
       &:hover,
@@ -129,7 +129,7 @@ align-items: center;
       margin: 0 5px;
       position: relative;
       counter-increment: item 1;
-      font-size: var(--fz-md);
+      font-size: var(--fz-xl);
       cursor: pointer;
       a {
         padding: 10px;

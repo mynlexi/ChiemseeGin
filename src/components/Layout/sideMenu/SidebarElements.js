@@ -24,7 +24,7 @@ export const StyledHamburgerButton = styled.button`
     padding: 15px;
     border: 0;
     background-color: transparent;
-    color: inherit;
+    color: var(--blue);
     text-transform: none;
     transition-timing-function: linear;
     transition-duration: 0.15s;

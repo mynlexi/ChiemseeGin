@@ -84,7 +84,7 @@ const CartItem = ({
         }
 
     return (
-      <div key={`cart ${id}`} className="my-5 cartitem flex align-middle justify-items-center border-b">
+      <div key={`cart ${id}`} className="my-5 cartitem flex align-middle justify-items-center border-b border-cgblue">
         <div className="flex mt-5 overflow-hidden justify-items-center">
           <div className="w-1/3 justify-items-center flex">
            <CartImage src={image} />
@@ -98,7 +98,7 @@ const CartItem = ({
               <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
                 <button
                   data-action="decrement"
-                  className="qty-change  text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-lg cursor-pointer outline-none"
+                  className="qty-change  text-gray-600 hover:text-gray-700 hover:bg-blue-100 h-full w-20 rounded-lg cursor-pointer outline-none"
                   onClick={decrement}
                   disabled={disabled}
                 >
@@ -116,14 +116,14 @@ const CartItem = ({
                 />
                 <button
                   data-action="increment"
-                  className="qty-change border-gray-50 text-gray-600 hover:bg-gray-400 border- h-full w-20 rounded-lg cursor-pointer"
+                  className="qty-change border-gray-50 text-gray-600 hover:bg-blue-100 border- h-full w-20 rounded-lg cursor-pointer"
                   onClick={increment}
                 >
                   <span className="m-auto text-2xl font-thin">+</span>
                 </button>
                 <ol className="">
                   <li id={id} className="">
-                <button onClick={(event) =>remove(event)} className="cart-item--remove">
+                <button onClick={(event) =>remove(event)} className="cart-item--remove text-cgblue hover:text-gray-500">
                   <Trash size={24} />
                 </button>
               </li>

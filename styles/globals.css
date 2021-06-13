@@ -58,7 +58,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0px 0px 10px;
   font-weight: 600;
-  color: var(--light-navy);
+  color: var(--blue);
   line-height: 1.1;
 }
 
@@ -82,6 +82,7 @@ a {
   --lightest-slate: #ccd6f6;
   --white: #fcfcfc;
   --green: #64ffda;
+  --blue: #223669;
   --green-tint: rgba(100,255,218,0.1);
   --font-sans: "Calibre","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
   --font-mono: "Essonnes";
