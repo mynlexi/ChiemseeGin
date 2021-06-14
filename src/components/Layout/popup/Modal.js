@@ -92,18 +92,25 @@ export const Modal = ({showModal, setShowModal}) => {
     {showModal ? 
     (
       <Background>
-        <ModalWrapper showModal={showModal}>
+        <ModalWrapper showModal={showModal} className="flex justify-center">
          
-          <ModalContent>
+          <ModalContent >
+            {/* maybe gin in the background half the bottle large? */}
             <h1>Herzlich Willkommen bei Chiemsee Premium Gin!</h1>
+            <div className="grid grid-cols-5 gap-4">
+              <div className="col-span-2 bg-black">
+
+              </div>
+              <div className="col-span-3"> 
+            
             <p>Wie setzen uns für den verantwortungsvollen Genuss unserer Gins ein. Um unsere Webseite besuchen zu können, bitten wir Sie, uns Ihr Alter zu bestätigen.</p>
             <p>Sind Sie über 18 Jahre alt?</p>
-            <div>
+            <div className=" flex space-x-4 ml-auto">
               <button onClick={set}>Ja</button>
-              <button onClick={goBack}>nein</button>
-
+              <button onClick={goBack}>Leider nein</button>
+              </div>
             </div>
-          
+          </div>
          
           </ModalContent>
         </ModalWrapper>

@@ -8,20 +8,21 @@ import React from "react";
 import Product from '../../src/components/shop/produkt'
 import Head from "next/head";
 import { IngList } from "../../styles/utilstyled";
+import Helmet from 'react-helmet'
 
 const ProductPage: NextPage<any> = ({product}) => {
   return (
     <div>
-      <Head>
-        <title>Premium Gins</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Helmet>
+        <title>Chiemsee Premium Gin</title>
+      
+      </Helmet>
     <Product product={product}/>
 
     <div>
-      <div className="w-full border-b border-gray-700 font-bold ml-17 flex">
-        <div className="ml-14 border-b-2 border-gray-900">
-          <p className=" mb-2">Beschreibung</p>
+      <div className="w-full border-b border-cgblue font-bold ml-17 flex">
+        <div className="ml-14 border-b-2 border-cgblue">
+          <h3 className=" mb-2">Beschreibung</h3>
         </div>
       </div>
 
@@ -55,8 +56,8 @@ const ProductPage: NextPage<any> = ({product}) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   
-  const product = await shopifyClient.product.fetchByHandle('schexis-gin')
-
+  const product = await shopifyClient.product.fetchByHandle('chiemsee-gin')
+  
   return {
     props: {
       product: JSON.parse(JSON.stringify(product))

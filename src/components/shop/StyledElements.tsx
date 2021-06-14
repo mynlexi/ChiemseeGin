@@ -5,7 +5,7 @@ export const ShopCartContainer = styled.div`
   flex-direction: column;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  height: 25rem;
+  min-height: 25rem;
   @media (min-width: 768px) {
     flex-direction: row;
   }

@@ -170,7 +170,7 @@ const SideCart = () => {
           ref={buttonRef}
           className="highlighter"
         >
-          <ShoppingCart color={cart.length ?  "var(--dark-navy)": "var(--slate)"}
+          <ShoppingCart color={cart.length ?  "var(--blue)": "var(--slate)"}
             
           />
         </StyledHamburgerButton>
@@ -183,7 +183,7 @@ const SideCart = () => {
         >
          
           <nav ref={navRef} className="hidden"> 
-          <div className="fixed top-0 my-10 border-b-2 border-black w-full">
+          <div className="fixed top-0 my-10 border-b-2 border-cgblue w-full">
             <button onClick={toggleSideCart}>
              <h1>Dein Warenkorb</h1>
              </button>
@@ -211,9 +211,9 @@ const SideCart = () => {
   
              
             {isDisabled ? 
-            <div className="text-black"> Noch nichts zum Einkaufswagen hinzugefügt</div> :
+            <div className="text-cgblue"> Noch nichts zum Einkaufswagen hinzugefügt</div> :
             <div className="fixed bottom-0 w-full"> 
-            <div className="border-b-2 border-black w-full text-left text-2xl p-5">
+            <div className="border-b-2 border-cgblue w-full text-left text-2xl p-5 text-cgblue">
               <h3>Zwischensumme</h3>
               <div
                 id="cart-total"
@@ -222,7 +222,7 @@ const SideCart = () => {
               </div>
             </div>
             <div className="w-full flex justify-items-center align-middle " onClick={checkout}>
-              <button className=" my-5 bg-gray-600 text-white px-20 hover:bg-gray-800  py-4 m-auto"  >
+              <button className=" my-5 bg-gray-600 text-white px-20 hover:bg-cgblue  py-4 m-auto"  >
                     Checkout
               </button>
               </div>

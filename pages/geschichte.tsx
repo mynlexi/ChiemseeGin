@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../src/components/general/header'
 import TeamMember from '../src/components/teamchiemsee/teamMember'
 import {team} from '../src/utils/teamconfig'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 export default function Geschichte() {
   const header = {
@@ -26,11 +27,13 @@ export default function Geschichte() {
         </p>
       </section>
       <section className="grid grid-cols-1 py-4 mx-auto w-full md:w-5/6 lg:w-3/4  ">
-    {team.map((member, index) => {
-      return (
-        <TeamMember info={member} key={index} />
-      )
-    })}
+       
+        {team.map((member, index) => (
+        
+            <TeamMember info={member} key={index} />
+      
+        ))}
+      
     </section>
     </div>
   )

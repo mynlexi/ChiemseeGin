@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { useQuery, gql } from '@apollo/client';
-import  {ALL_RECIPES, RECIPE_INFO, RECIPE_TITLES} from '../../src/apollo_files/queries/recipes';
+import  {ALL_RECIPES, RECIPE_INDEX, RECIPE_INFO, RECIPE_TITLES} from '../../src/apollo_files/queries/recipes';
 import { initApollo } from '../../src/apollo_files/apolloClient';
 import React from 'react';
 import Header from '../../src/components/general/header';
@@ -12,15 +12,16 @@ import Header from '../../src/components/general/header';
 
 
 function Recipes() {
-  const { loading, error, data } = useQuery(ALL_RECIPES);
-  console.log(data)
+  const { loading, error, data } = useQuery(RECIPE_INDEX);
+  console.log(data, error)
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (error) return <p>Error :( </p>;
+  
 
   return (
     <div className="grid grid-cols-6 gap-8 my-12">
    
-    {data.recipev2S.map((recipe) => {
+    {data.recipes.map((recipe) => {
       let innerHtml = recipe.ingredients.html
       let image = recipe.recipeImage
      
