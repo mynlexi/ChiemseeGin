@@ -91,7 +91,7 @@ const ContactForm = () => {
           {!status.submitting
             ? !status.submitted
               ? 'Abschicken'
-              : 'Abgeschickt'
+              : 'Abgeschickt!'
             : 'Abschicken...'}
         </button>
       </form>
