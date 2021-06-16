@@ -11,8 +11,8 @@ export default function Chiemsee() {
   return (
     <div>
       <Header header={header} />
-      <p>Unser Wacholderschnaps wird in der seit 1892 bestehenden Edelbrandmanufaktur
-Guggenbichler in traditioneller Handarbeit mit handverlesenen Zutaten hergestellt.</p>
+      <section>Unser Wacholderschnaps wird in der seit 1892 bestehenden Edelbrandmanufaktur
+Guggenbichler in traditioneller Handarbeit mit handverlesenen Zutaten hergestellt.</section>
     </div>
   )
 }
