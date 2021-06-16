@@ -149,6 +149,7 @@ export const StyledSidebar = styled.aside`
     cursor: pointer;
     width: 100%;
     padding: 3px 20px 20px;
+    font-size: var(--fz-xl);
     &:hover,
     &:active,
     &:focus {

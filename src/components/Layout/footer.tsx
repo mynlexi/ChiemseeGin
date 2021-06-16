@@ -6,7 +6,7 @@ import Logo from '../../../public/chiemsee_gin_logo.svg'
 
 export const Footer = () => {
   return (
-  <FooterStyled className="p-4 bg-blue-100 text-cgblue">
+  <FooterStyled className="p-4 bg-blue-100 text-cgblue text-center md:text-left">
     <div className="flex flex-col md:flex-row justify-between space-y-4">
       <div className=" w-1/2 md:w-1/5 mx-auto md:ml-12 md:my-8">
         <Link href="/">
@@ -46,11 +46,11 @@ export const Footer = () => {
         </div>
        </div>
       </div>
-      <div className="border-t border-cgblue flex justify-between">
-        <p className="text-sm text-cgblue font-bold my-2">
+      <div className="border-t border-cgblue flex flex-col-reverse md:flex-row justify-between">
+        <p className="text-sm text-cgblue text-center md:text-left font-bold my-2">
         © 2021 by Chiemsee Gin
         </p>
-        <div className="flex space-x-2 my-2">
+        <div className="flex flex-col md:flex-row space-x-2 my-2">
             <Link href="/admin/kontakt">
             <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
             Kontakt
