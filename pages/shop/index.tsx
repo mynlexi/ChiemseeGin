@@ -17,7 +17,7 @@ import Header from '../../src/components/general/header';
 
 
 export default function ProductsMain({collections}) {
-  console.log(collections)
+
   const header = {
     path: '/images/chiemseebackground.jpg',
     title: 'Unser Shop',
@@ -53,7 +53,7 @@ export async function getServerSideProps() {
 
   // const products = await shopifyClient.product.fetchAll()
   const collections = await shopifyClient.product.fetchAll()
-  console.log(collections)
+
   
   
  
