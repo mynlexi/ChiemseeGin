@@ -1,18 +1,12 @@
 /* eslint-disable @next/next/no-css-tags */
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
-import React, { useEffect } from 'react'
-import {useCheckout, useCheckoutUpdate} from '../src/hooks/useCheckoutId'
-import { useCartContext, useCartUpdateContext } from '../src/hooks/useCartStorage'
-import shopifyClient from '../src/utils/shopify'
-import Header from '../src/components/general/header'
-import ProductImageBG from '../src/components/shop/productImage';
-import { useQuery, gql } from '@apollo/client';
-import { HomePremiumGin } from '../src/components/general/homeGin'
-import { CSSTransition } from 'react-transition-group'
 import Helmet from 'react-helmet'
+import styles from '../styles/Home.module.css'
+import React from 'react'
+
+import { useCheckoutUpdate} from '../src/hooks/useCheckoutId'
+import Header from '../src/components/general/header'
+import { HomePremiumGin } from '../src/components/general/homeGin'
+
 
 
 export default function Home() {

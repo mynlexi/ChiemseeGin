@@ -30,7 +30,7 @@ const SideCart = () => {
  
 
   const { updateItemsQuantities } = useCartUpdateContext()!;
-  const { handleTotalCalculation, updateTotal } = useCalculateTotal();
+  const { updateTotal } = useCalculateTotal();
  
   const [total, setTotal] = React.useState(updateTotal)
   const [ isDisabled, setIsDisabled ] = React.useState(false);

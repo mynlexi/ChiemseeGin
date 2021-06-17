@@ -41,7 +41,7 @@ const ProductImage = () => {
   )
 }
 
-export const HomePremiumGin = ({imageUrl}) => {
+export const HomePremiumGin = () => {
   const [show, setShow] = React.useState(false)
   const timeout = setTimeout(() => {
     setShow(true);
