@@ -57,10 +57,12 @@ export default function Home() {
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="msapplication-config" content="favicons/browserconfig.xml" />
           <meta name="theme-color" content="#fffdfd"></meta>
+          <link rel="preconnect" href="https://vitals.vercel-insights.com" />
+          <link rel="preconnect" href="https://chiemsee-gin.myshopify.com" />
           {/*  eslint-disable no-eval */ }
-          <link rel="preload" as="font" href="/src/fonts/essonnes-display/style.css" />
+          <link rel="preload" as="font" href="/src/fonts/essonnes-display/style.css" crossOrigin="anonymous"/>
 
-          {/* <link rel="stylesheet"  href="/src/fonts/essonnes-display/style.css"/>   */}
+          <link rel="stylesheet"  href="/src/fonts/essonnes-display/style.css"/>  
 
       </Helmet>
       
