@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { X } from 'react-feather'
-import Image from 'next/dist/client/image'
+import Helmet from 'react-helmet'
 
 const Background = styled.div`
   top: 0;
@@ -93,6 +92,9 @@ export const Modal = ({showModal, setShowModal}) => {
     {showModal ? 
     (
       <Background>
+           <Helmet>
+        <body className={showModal ? 'blur' : ''} />
+      </Helmet>
         <ModalWrapper showModal={showModal} className="flex justify-center">
          
           <ModalContent >
