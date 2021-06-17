@@ -31,9 +31,9 @@ function ShopMain({collections}) {
 
       <div>
        
-        {collections.map((collection) => {
+        {collections.map((collection, idx) => {
           return(
-          <Collection collection={collection} active={active} />
+          <Collection collection={collection} active={active} key={idx} />
           )
         })}
       </div>

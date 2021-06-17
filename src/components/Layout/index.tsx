@@ -18,13 +18,14 @@ export default function Layout({children}) {
   const {addId} = useCheckoutUpdate()
   React.useEffect(() => {
     addId()
-  }, [])
+  }, [addId])
 
   const [showModal, setShowModal] = React.useState(false)
   
   let marked =""
   React.useEffect(() => {
     if (typeof window != "undefined"){
+     // eslint-disable-next-line react-hooks/exhaustive-deps
      marked =  window.localStorage.getItem("over18")
      console.log("useeffect", marked)
      if (!marked) {

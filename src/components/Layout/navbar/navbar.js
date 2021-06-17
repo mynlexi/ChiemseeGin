@@ -58,9 +58,10 @@ export const Navbar = ({isHome}) => {
                       duration={500}
                       spy={true}
                       exact='true'>
+                        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                         <a href="/" aria-label="home" >
                           <Logo className="w-16"/>
-                        </a></LinkScroll>) : (<Link href="/" aria-label="home">
+                        </a></LinkScroll>) : (<Link href="/" aria-label="home" passHref>
                         <Logo className="w-16"/>
                     </Link>)}
         </div>
@@ -71,6 +72,7 @@ export const Navbar = ({isHome}) => {
                         duration={500}
                         spy={true}
                         exact='true'>
+                          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                           <a href="/" aria-label="premiumgin">
                             Premium Gin
                           </a></LinkScroll></li>):

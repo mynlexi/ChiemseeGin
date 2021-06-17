@@ -9,8 +9,8 @@ export const Footer = () => {
   <FooterStyled className="p-4 bg-blue-100 text-cgblue">
     <div className="flex flex-col md:flex-row justify-between space-y-4">
       <div className=" w-1/2 md:w-1/5 mx-auto md:ml-12 md:my-8">
-        <Link href="/">
-       <Logo />
+        <Link href="/" passHref>
+        <Logo />
         </Link>
       </div>
       <div>

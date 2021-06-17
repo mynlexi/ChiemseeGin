@@ -37,27 +37,23 @@ const CartItem = ({
     
     React.useEffect(()=>{
         setSubTotal(price * itemQuantity)
-    }, [subTotal])
+    }, [itemQuantity, price, subTotal])
 
     React.useEffect(()=>{
       handleTotal()
-    }, [])
+    }, [handleTotal])
     
     React.useEffect(() => {
       if(!itemQuantity){
         setItemQuantity(quantity)
       }
-    })
+    }, [itemQuantity, quantity])
     const [disabled, setDisabled] = React.useState(true)
     
     
     
 
-    const { 
-        handleQtyIncrease, 
-        handleQtyDecrease,
-        getItemSubTotal,
-        itemPrice } = useCalculateTotal(price);
+
 
         const increment = () =>{
           setItemQuantity(itemQuantity+ 1);

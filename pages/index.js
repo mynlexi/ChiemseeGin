@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-css-tags */
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -39,9 +40,9 @@ export default function Home() {
 
   React.useEffect(() => {
     addId()
-  }, [])
+  }, [addId])
   
-  const {addId, clearId} = useCheckoutUpdate()
+  const {addId} = useCheckoutUpdate()
   
   return (
     <div className={styles.container}>
@@ -59,7 +60,8 @@ export default function Home() {
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="msapplication-config" content="favicons/browserconfig.xml" />
           <meta name="theme-color" content="#fffdfd"></meta>
-          <link rel="stylesheet" href="/src/fonts/essonnes-display/style.css"/>
+          {/*  eslint-disable no-eval */ }
+          <link rel="stylesheet" href="/src/fonts/essonnes-display/style.css"/>  
 
       </Helmet>
       

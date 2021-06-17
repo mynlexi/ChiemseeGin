@@ -26,7 +26,7 @@ const ProductImage = ({imageUrl}) => {
     
     <Link href="/shop/chiemsee-premium-gin" >
       <a className="relative k">
-    <Image src={imageUrl} width={2924} height={1872} layout="responsive" />
+    <Image src={imageUrl} width={2924} height={1872} layout="responsive" alt="" />
       </a>
     </Link>
     
