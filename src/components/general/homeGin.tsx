@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
+import src from '../../../public/images/Gin-High-Quality-Wallpapers.jpg'
 
 import { CSSTransition } from 'react-transition-group'
 
@@ -19,14 +20,14 @@ const Content = ()=> {
   )
 }
 
-const ProductImage = ({imageUrl}) => {
+const ProductImage = () => {
   return (
     <div className="w-full relative my-auto text-transparent  hover:text-black hidden">
               
     
     <Link href="/shop/chiemsee-premium-gin" >
       <a className="relative k">
-    <Image src={imageUrl} width={2924} height={1872} layout="responsive" alt="" />
+    <Image src={src} layout="responsive" alt="" placeholder="blur" />
       </a>
     </Link>
     

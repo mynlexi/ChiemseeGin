@@ -37,12 +37,13 @@ export default function Home() {
 
   const {cartCheckoutInfo, GinId} = useCheckout()
 
-
+  const {addId} = useCheckoutUpdate()
+  
   React.useEffect(() => {
     addId()
   }, [addId])
   
-  const {addId} = useCheckoutUpdate()
+  
   
   return (
     <div className={styles.container}>
@@ -80,7 +81,7 @@ export default function Home() {
             </div>
         </section>
       
-          <HomePremiumGin imageUrl={imageUrl} />
+          <HomePremiumGin />
  
         <section id="recipe-slider">
 
