@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
+import src from '../../../../public/images/johanngugg.png'
+import Image from 'next/image'
 
 const Background = styled.div`
   top: 0;
@@ -17,7 +19,7 @@ const Background = styled.div`
 
 const ModalWrapper = styled.div`
   width: 800px;
-  height: 800px;
+  min-height: 300px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #fff;
   color: #000;
@@ -102,9 +104,9 @@ export const Modal = ({showModal, setShowModal}) => {
             <h1>Herzlich Willkommen bei Chiemsee Premium Gin!</h1>
             <div className="grid grid-cols-5 gap-4">
               <div className="col-span-2 bg-black">
-
+                <Image src={src} layout="responsive" placeholder="blur" alt=""/>
               </div>
-              <div className="col-span-3"> 
+              <div className="col-span-3 my-auto"> 
             
             <p>Wie setzen uns für den verantwortungsvollen Genuss unserer Gins ein. Um unsere Webseite besuchen zu können, bitten wir Sie, uns Ihr Alter zu bestätigen.</p>
             <p>Sind Sie über 18 Jahre alt?</p>
