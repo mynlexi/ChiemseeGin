@@ -34,7 +34,7 @@ function Recipes() {
         <Link href={`rezepte/${recipe.title.split(" ").join("-")}`}><a> 
           <div className="flex space-x-5 flex-col justify-around  ">
             <div className="w-36 mx-auto">
-              <Image src={image.url} height={image.height} width={image.width} layout="responsive" className="rounded-full" />
+              <Image src={image.url} height={image.height} width={image.width} layout="responsive" className="rounded-full" alt="" />
             </div>
             <div >
             
@@ -60,7 +60,7 @@ function Recipes() {
 export default function RecipeMain() {
   
   const header = {
-    path: '/images/chiemseebackground.jpg',
+    path: '/images/backgroundheader.jpg',
     title: 'Unsere Rezepte',
    
   }

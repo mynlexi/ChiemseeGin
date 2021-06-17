@@ -6,7 +6,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 export default function Geschichte() {
   const header = {
-    path: '/images/chiemseebackground.jpg',
+    path: '/images/backgroundheader.jpg',
     title: 'Wer, Wie, Wo, Was, Warum????',
    
   }
