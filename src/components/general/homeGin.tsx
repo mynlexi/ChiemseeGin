@@ -51,7 +51,7 @@ export const HomePremiumGin = ({imageUrl}) => {
       <h2 className="my-8 ">Chiemsee Gin</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <CSSTransition classNames="fadeup" in={show} timeout={150} appear={true}>
-                  <ProductImage imageUrl={imageUrl} />
+                  <ProductImage />
               </CSSTransition>
               <CSSTransition classNames="fadedown" in={show} timeout={300} appear={true}>
                 <Content />

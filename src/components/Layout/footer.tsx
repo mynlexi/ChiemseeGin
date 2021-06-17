@@ -10,7 +10,8 @@ export const Footer = () => {
     <div className="flex flex-col md:flex-row justify-between space-y-4">
       <div className=" w-1/2 md:w-1/5 mx-auto md:ml-12 md:my-8">
         <Link href="/" passHref>
-        <Logo />
+          {/*  @ts-ignore  This is only a issue here not in the sidebar or navbar ??*/}
+        <Logo className=" md:w-48"/>
         </Link>
       </div>
       <div>
