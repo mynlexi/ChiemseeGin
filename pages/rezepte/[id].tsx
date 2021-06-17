@@ -42,7 +42,8 @@ const Recipe: NextPage<any> = ({ initialApolloState, params}) => {
         <Image 
           src={ImageOb.url}
           height={ImageOb.height}
-          width={ImageOb.width}  className="rounded-full"/>
+          width={ImageOb.width}  className="rounded-full"
+          alt=""/>
       </div>
 
       <div>

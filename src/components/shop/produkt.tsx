@@ -24,7 +24,7 @@ function Product({ product }) {
     description = product.description,
     quantity = 1,
   } = product;
-  console.log(product, `${descriptionH}`)
+ 
   const { addCartValue } = useCartUpdateContext();
   const { setSideCartOpen } = useSideCartUpdate();
 

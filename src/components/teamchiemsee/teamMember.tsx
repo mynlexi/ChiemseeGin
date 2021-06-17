@@ -38,7 +38,7 @@ export default function TeamMember({info}) {
     }
   const image = (
       <div className="px-12 md:px-10 lg:px-20 my-auto " >
-      <Image src={path} width={width} height={height} layout="responsive" quality={quality} />
+      <Image src={path} width={width} height={height} layout="responsive" quality={quality} alt=""/>
       </div>
   )
   

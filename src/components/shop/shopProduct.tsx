@@ -42,7 +42,7 @@ function ShopProduct({ product }) {
   };
 
   return (
-    <Link href={`shop/${handle.toLowerCase()}`}key={`product at product/index ${id}`}>
+    <Link href={`shop/${handle.toLowerCase()}`}key={`product at product/index ${id}`} passHref>
       <ShopCartContainer>
         <div className="w-full md:w-1/2 relative">
           <ProductImageBG imageUrl={imageUrl} />

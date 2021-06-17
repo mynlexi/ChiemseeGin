@@ -9,6 +9,7 @@ import SideCartProvider from '../src/hooks/useOpenSidebar'
 import { AppProps } from "next/dist/next-server/lib/router/router";
 import { useApollo } from "../src/apollo_files/apolloClient";
 import Layout from "../src/components/Layout";
+import { env } from "process";
 
 interface IProviders {
   components: React.JSXElementConstructor<React.PropsWithChildren<any>>[];
@@ -29,6 +30,7 @@ const Providers = ({ components, children }: IProviders) => (
 
 
 function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
+  
     
   const apolloClient = useApollo(pageProps.initialApolloState);
 
@@ -36,7 +38,8 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
     <ApolloProvider client={apolloClient}>
         <Providers components={[CheckoutIdProvider, CartProvider, SideCartProvider]}>
           <Layout>
-            <Component {...pageProps} />
+            <div>in development</div>
+            {/* <Component {...pageProps} /> */}
           </Layout>
         </Providers>
       

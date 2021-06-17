@@ -42,10 +42,10 @@ export default function Header({header}) {
 
   
 
-  // iamge in the background
+  // image in the background
   return (
     <div className="w-full">
-      <Header imageUrl={path} className="w-full bg-blend-luminosity bg-white hover:bg-transparent">
+      <Header imageUrl={path} className="w-full " placeholder="blur">
           <div className=" mx-auto mb-12 p-24 flex flex-col justify-items-center text-center">
             <h2>{title}</h2>
             { subtitle && (

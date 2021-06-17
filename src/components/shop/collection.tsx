@@ -8,7 +8,7 @@ export default function Collection({collection, active}) {
     <div>
       {collection.products.map((product)=> {
         return(
-        <ShopProduct product={product} />
+        <ShopProduct product={product} key={`product ${product.handle}`} />
         )
       })}
     </div>

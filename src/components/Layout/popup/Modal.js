@@ -13,6 +13,7 @@ const Background = styled.div`
   align-items: center;
   overflow: hidden;
   z-index: 500;
+  blur: 15rem;
 `
 
 const ModalWrapper = styled.div`

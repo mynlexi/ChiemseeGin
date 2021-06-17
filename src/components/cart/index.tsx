@@ -156,6 +156,7 @@ const SideCart = () => {
       document.removeEventListener("keydown", onKeyDown);
       window.removeEventListener("resize", onResize);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const wrapperRef = useRef();
@@ -193,7 +194,8 @@ const SideCart = () => {
             {cart.map((product) => {
             
               return (
-                  <CartItem 
+                  <CartItem
+                    key={`cart ${product.productId}`}
                     quantity={product.quantity}
                     id={product.productId}
                     updateQhandle={handleQuantity}

@@ -4,7 +4,7 @@ import Header from '../src/components/general/header'
 export default function Chiemsee() {
 
   const header = {
-    path: '/images/chiemseebackground.jpg',
+    path: '/images/backgroundheader.jpg',
     title: 'Heimat, Chiemsee, Chiemgau, Naturschutz',
  
   }
