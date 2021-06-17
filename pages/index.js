@@ -18,7 +18,7 @@ import Helmet from 'react-helmet'
 export default function Home() {
   
   const header = {
-  path: '/images/chiemseebackground.jpg',
+  path: '/images/backgroundheader.jpg',
   title: 'Willkommen bei Chiemsee Premium Gin',
   subtitle: 'Eine Perle des Genusses direkt aus dem bayrischen Meer',
   button: 'Zum Premium Gin',

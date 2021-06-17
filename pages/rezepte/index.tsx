@@ -60,7 +60,7 @@ function Recipes() {
 export default function RecipeMain() {
   
   const header = {
-    path: '/images/chiemseebackground.jpg',
+    path: '/images/backgroundheader.jpg',
     title: 'Unsere Rezepte',
    
   }
