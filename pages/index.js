@@ -31,14 +31,10 @@ export default function Home() {
     setIsHome(true);
   }, 100);
 
-  const imageUrl = "/images/Gin-High-Quality-Wallpapers.jpg" // more optimizations possible with next image
 
-  const {cart} = useCartContext()
-
-  const {cartCheckoutInfo, GinId} = useCheckout()
 
   const {addId} = useCheckoutUpdate()
-  
+
   React.useEffect(() => {
     addId()
   }, [addId])
@@ -62,7 +58,9 @@ export default function Home() {
           <meta name="msapplication-config" content="favicons/browserconfig.xml" />
           <meta name="theme-color" content="#fffdfd"></meta>
           {/*  eslint-disable no-eval */ }
-          <link rel="stylesheet" href="/src/fonts/essonnes-display/style.css"/>  
+          <link rel="preload" as="style" href="/src/fonts/essonnes-display/style.css"/>
+
+          <link rel="stylesheet"  href="/src/fonts/essonnes-display/style.css"/>  
 
       </Helmet>
       
