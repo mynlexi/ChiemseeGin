@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.3.17",
+    "axios": "^0.21.1",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "graphql": "^15.5.0",
     "next": "^11.0.0",
