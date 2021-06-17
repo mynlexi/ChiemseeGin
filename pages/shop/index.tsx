@@ -19,7 +19,7 @@ import Header from '../../src/components/general/header';
 export default function ProductsMain({collections}) {
 
   const header = {
-    path: '/images/chiemseebackground.jpg',
+    path: '/images/backgroundheader.jpg',
     title: 'Unser Shop',
    
   }

@@ -60,9 +60,11 @@ export default function Home() {
           <link rel="preconnect" href="https://vitals.vercel-insights.com" />
           <link rel="preconnect" href="https://chiemsee-gin.myshopify.com" />
           {/*  eslint-disable no-eval */ }
-          <link rel="preload" as="font" href="/src/fonts/essonnes-display/style.css" crossOrigin="anonymous"/>
-
-          <link rel="stylesheet"  href="/src/fonts/essonnes-display/style.css"/>  
+          <link rel="preload" as="style" href="/essonnes-display/style.css"/>  
+          <link rel="preload" as="font" href="/essonnes-display/EssonnesDisplay-Regular.woff2"  type="font/woff2" crossOrigin="anonymous"/>
+          <link rel="preload" as="font" href="/essonnes-display/EssonnesDisplay-Regular.woff"  type="font/woff" crossOrigin="anonymous"/>
+          <link rel="preload" as="font" href="/essonnes-display/EssonnesDisplay-Regular.ttf"  type="font/ttf" crossOrigin="anonymous"/>
+          
 
       </Helmet>
       

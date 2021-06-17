@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Essonnes';
+    src: local('Essonnes Display Regular'), local('Essonnes-Display-Regular'),
+        url('/styles/essonnes-display/EssonnesDisplay-Regular.woff2') format('woff2'),
+        url('/styles/essonnes-display/EssonnesDisplay-Regular.woff') format('woff'),
+        url('/styles/essonnes-display/EssonnesDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Essonnes';
+  }
