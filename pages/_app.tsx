@@ -38,8 +38,8 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
     <ApolloProvider client={apolloClient}>
         <Providers components={[CheckoutIdProvider, CartProvider, SideCartProvider]}>
           <Layout>
-            <div>in development</div>
-            {/* <Component {...pageProps} /> */}
+            {/* <div>in development</div> */}
+            <Component {...pageProps} />
           </Layout>
         </Providers>
       
