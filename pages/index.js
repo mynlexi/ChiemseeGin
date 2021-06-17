@@ -58,9 +58,9 @@ export default function Home() {
           <meta name="msapplication-config" content="favicons/browserconfig.xml" />
           <meta name="theme-color" content="#fffdfd"></meta>
           {/*  eslint-disable no-eval */ }
-          <link rel="preload" as="font" href="/src/fonts/essonnes-display/style.css"/>
+          <link rel="preload" as="font" href="/src/fonts/essonnes-display/style.css" />
 
-          <link rel="stylesheet"  href="/src/fonts/essonnes-display/style.css"/>  
+          {/* <link rel="stylesheet"  href="/src/fonts/essonnes-display/style.css"/>   */}
 
       </Helmet>
       
