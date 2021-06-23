@@ -57,6 +57,7 @@ display: flex;
   }
   @media (max-width: 768px) {
     padding: 0 25px;
+    padding-left: 10px;
   }
 `;
 

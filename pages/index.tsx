@@ -12,11 +12,17 @@ import { HomePremiumGin } from '../src/components/general/homeGin'
 export default function Home() {
   
   const header = {
-  path: '/images/backgroundheader.jpg',
-  title: 'Willkommen bei Chiemsee Premium Gin',
-  subtitle: 'Eine Perle des Genusses direkt aus dem bayrischen Meer',
+  path: '/images/headers/teal-25-small.jpg',
+  pathxs: '/images/headers/teal-25-small.jpg',
+  pathsm: '/images/headers/teal-50-small.jpg',
+  pathmd: '/images/headers/teal-50-small.jpg',
+  pathlg: '/images/headers/teal-50-medium.jpg',
+  pathxl: '/images/headers/teal-50-large1.jpg',
+  path2xl: '/images/headers/teal-50-large3.jpg',
+  title: 'CHIEMSEE GIN',
+  subtitle: 'Eine Perle des Genusses direkt vom bayerischen Meer',
   button: 'Zum Premium Gin',
-  buttonLink: 'chiemsee-premium-gin'
+  buttonLink: '/shop/chiemsee-premium-gin'
   }
   
   const [isHome, setIsHome] = React.useState(false)
@@ -79,7 +85,7 @@ export default function Home() {
       
           <HomePremiumGin />
  
-        <section id="recipe-slider">
+        <section id="recipe-slider"> 
 
         </section>
     

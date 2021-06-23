@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { Link as LinkScroll } from 'react-scroll'
 import Menu from '../sideMenu'
@@ -6,7 +7,16 @@ import SideCart from '../../cart'
 import { useScrollDirection } from '../../../hooks'
 import { StyledHeader, StyledLinks, StyledNav } from './NavbarElements'
 import Logo from '../../../../public/chiemsee_gin_logo.svg'
+import LogoPNG from '../../../../public/images/chiemsee_gin_logo_farbig.png'
 import { useSideCart } from "../../../hooks/useOpenSidebar";
+
+const LogoImage = () => {
+  return(
+    <div className="w-16 h-18">
+      <Image src={LogoPNG} alt="logo" placeholder="blur" layout="responsive" />
+    </div>
+  )
+}
 
 export const Navbar = ({isHome}) => {
 
@@ -53,13 +63,13 @@ export const Navbar = ({isHome}) => {
                       exact='true'>
                         {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                         <a href="/" aria-label="home" >
-                          <Logo className="w-16"/>
+                          <LogoImage className="w-16"/>
                         </a></LinkScroll>) : (<Link href="/" aria-label="home" passHref>
-                        <Logo className="w-16"/>
+                        <LogoImage className="w-16"/>
                     </Link>)}
         </div>
         <StyledLinks>
-          <ol>
+          <ol className="text-center">
             {isHome ? (<li><LinkScroll to="premiumgin"
                         smooth={true}
                         duration={500}
