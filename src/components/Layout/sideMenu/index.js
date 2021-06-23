@@ -1,13 +1,14 @@
-
+import Image from 'next/image'
 import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link as LinkScroll } from 'react-scroll';
 import Link from 'next/link'
 import {StyledMenu, StyledHamburgerButton, StyledSidebar, } from './SidebarElements'
-// import { navLinks } from '../../config';
+
+import LogoPNG from '../../../../public/images/chiemsee_gin_logo_farbig.png'
 import { KEY_CODES } from '../../../utils/keyCodes';
 import { useOnClickOutside } from '../../../hooks';
 import Logo from '../../../../public/chiemsee_gin_logo.svg'
+import src from '../../../../public/images/bild_sina_scan_600dpi_dunkel.png'
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -109,26 +110,14 @@ const Menu = () => {
 
         <StyledSidebar menuOpen={menuOpen} aria-hidden={!menuOpen} tabIndex={menuOpen ? 1 : -1}>
           <nav ref={navRef}>
-            {/* {navLinks && ( */}
+            
               <ol>
-                {/* {navLinks.map(({ url, name }, i) => (
-                  <li key={i}>
-                  
-                    <LinkScroll
-                      smooth={true}
-                      duration={500}
-                      spy={true}
-                      exact='true' to={url}><a>
-                      {name}</a>
-                    </LinkScroll>
-                  </li>
-                ))} */}
                 <li >
                   <Link href="/">
                
                     <a onClick={toggleMenu} >
                       <div className="w-32 mx-auto">
-                      <Logo />
+                      <Image src={LogoPNG} alt="logo" placeholder="blur" layout="responsive" />
                       </div>
                     </a>
                
@@ -165,10 +154,12 @@ const Menu = () => {
                   </Link>
                 </li>
               </ol>
-            {/* )} */}
-
-          
+  
+          <div className="w-5/6 mt-4">
+          <Image src={src} layout="responsive" alt="sina's zeichung vom Chiemsee" placeholder="blur"/>
+          </div>
           </nav>
+          
         </StyledSidebar>
       </div>
     </StyledMenu>

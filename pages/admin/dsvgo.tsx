@@ -2,7 +2,8 @@
 
 export default function dsvgo(){
   return (
-    <div>
+    <section>
+    <div className="select-none">
     <h1>
     Datenschutzerklärung
     </h1>
@@ -36,7 +37,7 @@ export default function dsvgo(){
       betroffenen Person frei, personenbezogene Daten auch auf alternativen Wegen, beispielsweise
       telefonisch, an uns zu übermitteln.
       </p>
-      <h2>
+      <h2 className="my-12">
         1.Begriffsbestimmungen
       </h2>
         <p>Die Datenschutzerklärung der Chiemsee Premium Gin UG (haftungsbeschränkt) beruht auf den
@@ -49,7 +50,7 @@ export default function dsvgo(){
         <p>
         Wir verwenden in dieser Datenschutzerklärung unter anderem die folgenden Begriffe:
         </p>
-        <h4>a) personenbezogene Daten</h4>
+        <h4 className="my-6">a) personenbezogene Daten</h4>
         <p>
         Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare
         natürliche Person (im Folgenden „betroffene Person“) beziehen. Als identifizierbar wird eine natürliche
@@ -59,12 +60,12 @@ export default function dsvgo(){
         psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser natürlichen Person sind,
         identifiziert werden kann.
         </p>
-        <h4>b) betroffene Person</h4>
+        <h4 className="my-6">b) betroffene Person</h4>
         <p>
         Betroffene Person ist jede identifizierte oder identifizierbare natürliche Person, deren
         personenbezogene Daten von dem für die Verarbeitung Verantwortlichen verarbeitet werden.
         </p>
-        <h4>c) Verarbeitung</h4>
+        <h4 className="my-6">c) Verarbeitung</h4>
         <p>
         Verarbeitung ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede
         solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten wie das Erheben, das
@@ -73,12 +74,12 @@ export default function dsvgo(){
         andere Form der Bereitstellung, den Abgleich oder die Verknüpfung, die Einschränkung, das Löschen
         oder die Vernichtung.
         </p>
-        <h4>d) Einschränkung der Verarbeitung</h4>
+        <h4 className="my-6">d) Einschränkung der Verarbeitung</h4>
         <p>
         Einschränkung der Verarbeitung ist die Markierung gespeicherter personenbezogener Daten mit dem
         Ziel, ihre künftige Verarbeitung einzuschränken.
         </p>
-        <h4>e) Profiling</h4>
+        <h4 className="my-6">e) Profiling</h4>
         <p>
         Profiling ist jede Art der automatisierten Verarbeitung personenbezogener Daten, die darin besteht,
         dass diese personenbezogenen Daten verwendet werden, um bestimmte persönliche Aspekte, die
@@ -87,7 +88,7 @@ export default function dsvgo(){
         Verhalten, Aufenthaltsort oder Ortswechsel dieser natürlichen Person zu analysieren oder
         vorherzusagen.
         </p>
-        <h4>f) Pseudonymisierung</h4>
+        <h4 className="my-6">f) Pseudonymisierung</h4>
         <p>
         Pseudonymisierung ist die Verarbeitung personenbezogener Daten in einer Weise, auf welche die
         personenbezogenen Daten ohne Hinzuziehung zusätzlicher Informationen nicht mehr einer
@@ -96,7 +97,7 @@ export default function dsvgo(){
         gewährleisten, dass die personenbezogenen Daten nicht einer identifizierten oder identifizierbaren
         natürlichen Person zugewiesen werden.
         </p>
-        <h4>g) Verantwortlicher oder für die Verarbeitung Verantwortlicher</h4>
+        <h4 className="my-6">g) Verantwortlicher oder für die Verarbeitung Verantwortlicher</h4>
         <p>
         Verantwortlicher oder für die Verarbeitung Verantwortlicher ist die natürliche oder juristische Person,
         Behörde, Einrichtung oder andere Stelle, die allein oder gemeinsam mit anderen über die Zwecke und
@@ -105,12 +106,12 @@ export default function dsvgo(){
         Verantwortliche beziehungsweise können die bestimmten Kriterien seiner Benennung nach dem
         Unionsrecht oder dem Recht der Mitgliedstaaten vorgesehen werden.
         </p>
-        <h4>h) Auftragsverarbeiter</h4>
+        <h4 className="my-6">h) Auftragsverarbeiter</h4>
         <p>
         Auftragsverarbeiter ist eine natürliche oder juristische Person, Behörde, Einrichtung oder andere
         Stelle, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet.
         </p>
-        <h4>i) Empfänger</h4>
+        <h4 className="my-6">i) Empfänger</h4>
         <p>
         Empfänger ist eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, der
         personenbezogene Daten offengelegt werden, unabhängig davon, ob es sich bei ihr um einen Dritten
@@ -118,20 +119,20 @@ export default function dsvgo(){
         Unionsrecht oder dem Recht der Mitgliedstaaten möglicherweise personenbezogene Daten erhalten,
         gelten jedoch nicht als Empfänger.
         </p>
-        <h4>j) Dritter</h4>
+        <h4 className="my-6">j) Dritter</h4>
         <p>
         Dritter ist eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle außer der
         betroffenen Person, dem Verantwortlichen, dem Auftragsverarbeiter und den Personen, die unter der unmittelbaren Verantwortung des Verantwortlichen oder des Auftragsverarbeiters befugt sind, die
         personenbezogenen Daten zu verarbeiten.
         </p>
-        <h4>k) Einwilligung</h4>
+        <h4 className="my-6">k) Einwilligung</h4>
         <p>
         Einwilligung ist jede von der betroffenen Person freiwillig für den bestimmten Fall in informierter Weise
         und unmissverständlich abgegebene Willensbekundung in Form einer Erklärung oder einer sonstigen
         eindeutigen bestätigenden Handlung, mit der die betroffene Person zu verstehen gibt, dass sie mit der
         Verarbeitung der sie betreffenden personenbezogenen Daten einverstanden ist.
         </p>
-      <h2>2. Name und Anschrift des für die Verarbeitung Verantwortlichen</h2>
+      <h2 className="my-12">2. Name und Anschrift des für die Verarbeitung Verantwortlichen</h2>
         <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger in den Mitgliedstaaten der
         Europäischen Union geltenden Datenschutzgesetze und anderer Bestimmungen mit
         datenschutzrechtlichem Charakter ist die:
@@ -154,7 +155,7 @@ export default function dsvgo(){
         <p>
         Website: www.chiemseegin.de
         </p>
-      <h2>
+      <h2 className="my-12">
       3. Cookies
       </h2>
         <p>Die Internetseiten der Chiemsee Premium Gin UG (haftungsbeschränkt) verwenden Cookies. Cookies
@@ -185,7 +186,7 @@ export default function dsvgo(){
         Internetbrowsern möglich. Deaktiviert die betroffene Person die Setzung von Cookies in dem
         genutzten Internetbrowser, sind unter Umständen nicht alle Funktionen unserer Internetseite
         vollumfänglich nutzbar.</p>
-      <h2>4. Erfassung von allgemeinen Daten und Informationen</h2>
+      <h2 className="my-12">4. Erfassung von allgemeinen Daten und Informationen</h2>
         <p>Die Internetseite der Chiemsee Premium Gin UG (haftungsbeschränkt) erfasst mit jedem Aufruf der
         Internetseite durch eine betroffene Person oder ein automatisiertes System eine Reihe von
         allgemeinen Daten und Informationen. Diese allgemeinen Daten und Informationen werden in den
@@ -209,7 +210,7 @@ export default function dsvgo(){
         letztlich ein optimales Schutzniveau für die von uns verarbeiteten personenbezogenen Daten
         sicherzustellen. Die anonymen Daten der Server-Logfiles werden getrennt von allen durch eine
         betroffene Person angegebenen personenbezogenen Daten gespeichert.</p>
-      <h2>5. Registrierung auf unserer Internetseite</h2>
+      <h2 className="my-12">5. Registrierung auf unserer Internetseite</h2>
         <p>Die betroffene Person hat die Möglichkeit, sich auf der Internetseite des für die Verarbeitung
         Verantwortlichen unter Angabe von personenbezogenen Daten zu registrieren. Welche
         personenbezogenen Daten dabei an den für die Verarbeitung Verantwortlichen übermittelt werden,
@@ -234,7 +235,7 @@ export default function dsvgo(){
         Wunsch oder Hinweis der betroffenen Person, soweit dem keine gesetzlichen Aufbewahrungspflichten
         entgegenstehen. Die Gesamtheit der Mitarbeiter des für die Verarbeitung Verantwortlichen stehen der
         betroffenen Person in diesem Zusammenhang als Ansprechpartner zur Verfügung.</p>
-      <h2>6. Abonnement unseres Newsletters</h2>
+      <h2 className="my-12">6. Abonnement unseres Newsletters</h2>
         <p>Auf der Internetseite der Chiemsee Premium Gin UG (haftungsbeschränkt) wird den Benutzern die
         Möglichkeit eingeräumt, den Newsletter unseres Unternehmens zu abonnieren. Welche
         personenbezogenen Daten bei der Bestellung des Newsletters an den für die Verarbeitung
@@ -267,7 +268,7 @@ export default function dsvgo(){
         Möglichkeit, sich jederzeit auch direkt auf der Internetseite des für die Verarbeitung Verantwortlichen
         vom Newsletterversand abzumelden oder dies dem für die Verarbeitung Verantwortlichen auf andere
         Weise mitzuteilen.</p>
-      <h2>7. Newsletter-Tracking</h2>
+      <h2 className="my-12">7. Newsletter-Tracking</h2>
         <p>Die Newsletter der Chiemsee Premium Gin UG (haftungsbeschränkt) enthalten sogenannte Zählpixel.
         Ein Zählpixel ist eine Miniaturgrafik, die in solche E-Mails eingebettet wird, welche im HTML-Format
         versendet werden, um eine Logdatei-Aufzeichnung und eine Logdatei-Analyse zu ermöglichen.
@@ -285,7 +286,7 @@ export default function dsvgo(){
         werden diese personenbezogenen Daten von dem für die Verarbeitung Verantwortlichen gelöscht.
         Eine Abmeldung vom Erhalt des Newsletters deutet die Chiemsee Premium Gin UG
         (haftungsbeschränkt) automatisch als Widerruf.</p>
-      <h2>8. Kontaktmöglichkeit über die Internetseite</h2>
+      <h2 className="my-12">8. Kontaktmöglichkeit über die Internetseite</h2>
         <p>Die Internetseite der Chiemsee Premium Gin UG (haftungsbeschränkt) enthält aufgrund von
         gesetzlichen Vorschriften Angaben, die eine schnelle elektronische Kontaktaufnahme zu unserem
         Unternehmen sowie eine unmittelbare Kommunikation mit uns ermöglichen, was ebenfalls eine
@@ -296,7 +297,7 @@ export default function dsvgo(){
         die Verarbeitung Verantwortlichen übermittelten personenbezogenen Daten werden für Zwecke der
         Bearbeitung oder der Kontaktaufnahme zur betroffenen Person gespeichert. Es erfolgt keine
         Weitergabe dieser personenbezogenen Daten an Dritte.</p>
-      <h2>9. Routinemäßige Löschung und Sperrung von personenbezogenen Daten</h2>
+      <h2 className="my-12">9. Routinemäßige Löschung und Sperrung von personenbezogenen Daten</h2>
         <p>Der für die Verarbeitung Verantwortliche verarbeitet und speichert personenbezogene Daten der
         betroffenen Person nur für den Zeitraum, der zur Erreichung des Speicherungszwecks erforderlich ist
         oder sofern dies durch den Europäischen Richtlinien- und Verordnungsgeber oder einen anderen
@@ -306,13 +307,13 @@ export default function dsvgo(){
         oder einem anderen zuständigen Gesetzgeber vorgeschriebene Speicherfrist ab, werden die
         personenbezogenen Daten routinemäßig und entsprechend den gesetzlichen Vorschriften gesperrt
         oder gelöscht.</p>
-      <h2>10. Rechte der betroffenen Person</h2>
-        <h4>a) Recht auf Bestätigung</h4>
+      <h2 className="my-12">10. Rechte der betroffenen Person</h2>
+        <h4 className="my-6">a) Recht auf Bestätigung</h4>
           <p>Jede betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber eingeräumte
           Recht, von dem für die Verarbeitung Verantwortlichen eine Bestätigung darüber zu verlangen, ob sie
           betreffende personenbezogene Daten verarbeitet werden. Möchte eine betroffene Person dieses Bestätigungsrecht in Anspruch nehmen, kann sie sich hierzu jederzeit an einen Mitarbeiter des für die
           Verarbeitung Verantwortlichen wenden.</p>
-        <h4>b) Recht auf Auskunft</h4>
+        <h4 className="my-6">b) Recht auf Auskunft</h4>
           <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen
           Richtlinien- und Verordnungsgeber gewährte Recht, jederzeit von dem für die Verarbeitung
           Verantwortlichen unentgeltliche Auskunft über die zu seiner Person gespeicherten
@@ -343,7 +344,7 @@ export default function dsvgo(){
           Zusammenhang mit der Übermittlung zu erhalten.</p>
           <p>Möchte eine betroffene Person dieses Auskunftsrecht in Anspruch nehmen, kann sie sich hierzu
           jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.</p>
-      <h4>c) Recht auf Berichtigung</h4>
+      <h4 className="my-6">c) Recht auf Berichtigung</h4>
         <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen
         Richtlinien- und Verordnungsgeber gewährte Recht, die unverzügliche Berichtigung sie betreffender
         unrichtiger personenbezogener Daten zu verlangen. Ferner steht der betroffenen Person das Recht
@@ -351,7 +352,7 @@ export default function dsvgo(){
         personenbezogener Daten — auch mittels einer ergänzenden Erklärung — zu verlangen.</p>
         <p>Möchte eine betroffene Person dieses Berichtigungsrecht in Anspruch nehmen, kann sie sich hierzu
         jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.</p>
-      <h4>d) Recht auf Löschung (Recht auf Vergessen werden)</h4>
+      <h4 className="my-6">d) Recht auf Löschung (Recht auf Vergessen werden)</h4>
       <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen
       Richtlinien- und Verordnungsgeber gewährte Recht, von dem Verantwortlichen zu verlangen, dass die
       sie betreffenden personenbezogenen Daten unverzüglich gelöscht werden, sofern einer der folgenden
@@ -387,7 +388,7 @@ export default function dsvgo(){
       Daten oder von Kopien oder Replikationen dieser personenbezogenen Daten verlangt hat, soweit die
       Verarbeitung nicht erforderlich ist. Der Mitarbeiter der Chiemsee Premium Gin UG
       (haftungsbeschränkt) wird im Einzelfall das Notwendige veranlassen.</p>
-    <h4>e) Recht auf Einschränkung der Verarbeitung</h4>
+    <h4 className="my-6">e) Recht auf Einschränkung der Verarbeitung</h4>
     <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen
     Richtlinien- und Verordnungsgeber gewährte Recht, von dem Verantwortlichen die Einschränkung der
     Verarbeitung zu verlangen, wenn eine der folgenden Voraussetzungen gegeben ist:</p>
@@ -409,7 +410,7 @@ export default function dsvgo(){
     (haftungsbeschränkt) gespeichert sind, verlangen möchte, kann sie sich hierzu jederzeit an einen
     Mitarbeiter des für die Verarbeitung Verantwortlichen wenden. Der Mitarbeiter der Chiemsee Premium
     Gin UG (haftungsbeschränkt) wird die Einschränkung der Verarbeitung veranlassen.</p>
-    <h4>f) Recht auf Datenübertragbarkeit</h4>
+    <h4 className="my-6">f) Recht auf Datenübertragbarkeit</h4>
       <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen
       Richtlinien- und Verordnungsgeber gewährte Recht, die sie betreffenden personenbezogenen Daten,
       welche durch die betroffene Person einem Verantwortlichen bereitgestellt wurden, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten. Sie hat außerdem das Recht,
@@ -427,7 +428,7 @@ export default function dsvgo(){
       werden.</p>
       <p>Zur Geltendmachung des Rechts auf Datenübertragbarkeit kann sich die betroffene Person jederzeit
       an einen Mitarbeiter der Chiemsee Premium Gin UG (haftungsbeschränkt) wenden.</p>
-    <h4>g) Recht auf Widerspruch</h4>
+    <h4 className="my-6">g) Recht auf Widerspruch</h4>
       <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen
       Richtlinien- und Verordnungsgeber gewährte Recht, aus Gründen, die sich aus ihrer besonderen
       Situation ergeben, jederzeit gegen die Verarbeitung sie betreffender personenbezogener Daten, die
@@ -456,7 +457,7 @@ export default function dsvgo(){
       betroffenen Person steht es ferner frei, im Zusammenhang mit der Nutzung von Diensten der
       Informationsgesellschaft, ungeachtet der Richtlinie 2002/58/EG, ihr Widerspruchsrecht mittels
       automatisierter Verfahren auszuüben, bei denen technische Spezifikationen verwendet werden.</p>
-    <h4>h) Automatisierte Entscheidungen im Einzelfall einschließlich Profiling</h4>
+    <h4 className="my-6">h) Automatisierte Entscheidungen im Einzelfall einschließlich Profiling</h4>
       <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen
       Richtlinien- und Verordnungsgeber gewährte Recht, nicht einer ausschließlich auf einer
       automatisierten Verarbeitung — einschließlich Profiling — beruhenden Entscheidung unterworfen zu werden, die ihr gegenüber rechtliche Wirkung entfaltet oder sie in ähnlicher Weise erheblich
@@ -475,13 +476,13 @@ export default function dsvgo(){
       gehört.</p>
       <p>Möchte die betroffene Person Rechte mit Bezug auf automatisierte Entscheidungen geltend machen,
       kann sie sich hierzu jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.</p>
-    <h4>i) Recht auf Widerruf einer datenschutzrechtlichen Einwilligung</h4>
+    <h4 className="my-6">i) Recht auf Widerruf einer datenschutzrechtlichen Einwilligung</h4>
       <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen
       Richtlinien- und Verordnungsgeber gewährte Recht, eine Einwilligung zur Verarbeitung
       personenbezogener Daten jederzeit zu widerrufen.</p>
       <p>Möchte die betroffene Person ihr Recht auf Widerruf einer Einwilligung geltend machen, kann sie sich
       hierzu jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.</p>
-  <h2>11. Rechtsgrundlage der Verarbeitung</h2>
+  <h2 className="my-12">11. Rechtsgrundlage der Verarbeitung</h2>
     <p>Art. 6 I lit. a DS-GVO dient unserem Unternehmen als Rechtsgrundlage für Verarbeitungsvorgänge,
     bei denen wir eine Einwilligung für einen bestimmten Verarbeitungszweck einholen. Ist die
     Verarbeitung personenbezogener Daten zur Erfüllung eines Vertrags, dessen Vertragspartei die
@@ -506,17 +507,17 @@ export default function dsvgo(){
     den Europäischen Gesetzgeber besonders erwähnt wurden. Er vertrat insoweit die Auffassung, dass
     ein berechtigtes Interesse anzunehmen sein könnte, wenn die betroffene Person ein Kunde des
     Verantwortlichen ist (Erwägungsgrund 47 Satz 2 DS-GVO).</p>
-  <h2>12. Berechtigte Interessen an der Verarbeitung, die von dem Verantwortlichen oder
+  <h2 className="my-12">12. Berechtigte Interessen an der Verarbeitung, die von dem Verantwortlichen oder
     einem Dritten verfolgt werden</h2>
     <p>Basiert die Verarbeitung personenbezogener Daten auf Artikel 6 I lit. f DS-GVO ist unser berechtigtes
     Interesse die Durchführung unserer Geschäftstätigkeit zugunsten des Wohlergehens all unserer
     Mitarbeiter und unserer Anteilseigner.</p>
-  <h2>13. Dauer, für die die personenbezogenen Daten gespeichert werden</h2>
+  <h2 className="my-12">13. Dauer, für die die personenbezogenen Daten gespeichert werden</h2>
     <p>Das Kriterium für die Dauer der Speicherung von personenbezogenen Daten ist die jeweilige
     gesetzliche Aufbewahrungsfrist. Nach Ablauf der Frist werden die entsprechenden Daten
     routinemäßig gelöscht, sofern sie nicht mehr zur Vertragserfüllung oder Vertragsanbahnung
     erforderlich sind.</p>
-  <h2>14. Gesetzliche oder vertragliche Vorschriften zur Bereitstellung der personenbezogenen
+  <h2 className="my-12">14. Gesetzliche oder vertragliche Vorschriften zur Bereitstellung der personenbezogenen
     Daten; Erforderlichkeit für den Vertragsabschluss; Verpflichtung der betroffenen
     Person, die personenbezogenen Daten bereitzustellen; mögliche Folgen der
     Nichtbereitstellung</h2>
@@ -533,9 +534,10 @@ export default function dsvgo(){
     personenbezogenen Daten gesetzlich oder vertraglich vorgeschrieben oder für den Vertragsabschluss
     erforderlich ist, ob eine Verpflichtung besteht, die personenbezogenen Daten bereitzustellen, und
     welche Folgen die Nichtbereitstellung der personenbezogenen Daten hätte.</p>
-  <h2>15. Bestehen einer automatisierten Entscheidungsfindung</h2>
+  <h2 className="my-12">15. Bestehen einer automatisierten Entscheidungsfindung</h2>
       <p>Als verantwortungsbewusstes Unternehmen verzichten wir auf eine automatische
       Entscheidungsfindung oder ein Profiling.</p>
     </div>
+  </section>
   )
 }

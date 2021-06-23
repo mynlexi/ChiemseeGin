@@ -2,13 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
-import src from '../../../public/images/Gin-High-Quality-Wallpapers.jpg'
+import src from '../../../public/images/bootle_mockupsquare.jpg'
 
 import { CSSTransition } from 'react-transition-group'
 
 const Content = ()=> {
   return(
-    <div className="md:border-l border-gray-700 pl-12 hidden">
+    <div className="md:border-l border-gray-700 md:pl-12 hidden">
     <p>
     Chiemsee Gin ist der Premium Gin vom bayerischen Meer – angenehm herb mit frischen
     Noten. Unser Wacholderschnaps wird in der seit 1892 bestehenden Edelbrandmanufaktur
@@ -41,7 +41,7 @@ const ProductImage = () => {
   )
 }
 
-export const HomePremiumGin = ({imageUrl}) => {
+export const HomePremiumGin = () => {
   const [show, setShow] = React.useState(false)
   const timeout = setTimeout(() => {
     setShow(true);

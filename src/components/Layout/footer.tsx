@@ -2,16 +2,19 @@ import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
 import { FooterStyled } from './navbar/NavbarElements'
-import Logo from '../../../public/chiemsee_gin_logo.svg'
+import LogoPNG from '../../../public/images/chiemsee_gin_logo_farbig.png'
+import { Instagram } from 'react-feather'
 
 export const Footer = () => {
   return (
-  <FooterStyled className="p-4 bg-blue-100 text-cgblue">
+  <FooterStyled className="p-4 bg-blue-100 text-cgblue text-center md:text-left">
     <div className="flex flex-col md:flex-row justify-between space-y-4">
       <div className=" w-1/2 md:w-1/5 mx-auto md:ml-12 md:my-8">
         <Link href="/" passHref>
           {/*  @ts-ignore  This is only a issue here not in the sidebar or navbar ??*/}
-        <Logo className=" md:w-48"/>
+          <div className="w-64 h-32 mx-auto">
+            <Image src={LogoPNG} alt="logo" placeholder="blur" layout="responsive" />
+         </div>
         </Link>
       </div>
       <div>
@@ -42,16 +45,20 @@ export const Footer = () => {
               </a>
           </Link>
         </div>
-        <div className="my-4">
-            logo instagram logo ??
+        <div className="my-4 mx-auto">
+            <a href="https://www.instagram.com/chiemseegin/" rel="noreferrer noopener" target="_blank">
+              <button className="mx-auto ml-2">
+                <Instagram />
+              </button>
+            </a>
         </div>
        </div>
       </div>
-      <div className="border-t border-cgblue flex justify-between">
-        <p className="text-sm text-cgblue font-bold my-2">
+      <div className="border-t border-cgblue flex flex-col-reverse md:flex-row justify-between">
+        <p className="text-sm text-cgblue text-center md:text-left font-bold my-2">
         © 2021 by Chiemsee Gin
         </p>
-        <div className="flex space-x-2 my-2">
+        <div className="flex flex-col space-y-3 md:space-y-0 md:flex-row space-x-2 my-2">
             <Link href="/admin/kontakt">
             <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
             Kontakt
@@ -62,19 +69,19 @@ export const Footer = () => {
             DSVGO
             </a>
             </Link>
-            <Link href="/admin/legal">
+            <Link href="/admin/AGB">
             <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
-            AGB (not yet)
+            AGB
             </a>
             </Link>
-            <Link href="/admin/legal">
+            <Link href="/admin/impressum">
             <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
-            impressum(not yet)
+            Impressum
             </a>
             </Link>
-            <Link href="/admin/legal">
+            <Link href="/admin/widerrufsrecht">
             <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
-            Widerrufsrecht(not yet)
+            Widerrufsrecht
             </a>
             </Link>
         </div>

@@ -1,12 +1,10 @@
-import { GetServerSideProps, GetStaticPaths, GetStaticProps, NextPage } from "next"
-import { useRouter } from "next/router";
-import Image from 'next/image'
+import { GetServerSideProps, NextPage } from "next"
+
 import {client as shopifyClient} from '../../src/utils/shopify'
-import { useCartContext, useCartUpdateContext } from "../../src/hooks/useCartStorage";
-import { useSideCartUpdate } from "../../src/hooks/useOpenSidebar";
+
 import React from "react";
 import Product from '../../src/components/shop/produkt'
-import Head from "next/head";
+
 import { IngList } from "../../styles/utilstyled";
 import Helmet from 'react-helmet'
 
@@ -28,7 +26,7 @@ const ProductPage: NextPage<any> = ({product}) => {
 
       <section className="flex flex-col space-y-6 mt-12">
           <div className="flex flex-col space-y-6 ">
-          <p>Chiemsee Premium Gin wird nach alter Brenntradition von XXXX hergestellt. Und das in Zusammenarbeit mit der <a href="https://www.edelbrandmanufaktur.com/" className="font-semibold">Guggenbichler Edelbrandmanufactur</a>.</p>
+          <p>Chiemsee Premium Gin wird nach alter Brenntradition von 1829 hergestellt. Und das in Zusammenarbeit mit der <a href="https://www.edelbrandmanufaktur.com/" className="font-semibold">Guggenbichler Edelbrandmanufactur</a>.</p>
 
           <p>Die handverlesenen Kräuter, das kristallklare Gebirgsquellwasser und eine über Generationen überlieferte Destillateurs-Kunst ergeben einen erlesenen und reinen Premium Dry Gin, bei dem man den Unterschied wirklich schmeckt! Dieser bayerische Gin der Extraklasse in der 0,5L Flache wird von uns mit viel Liebe und von Hand in kleinen exklusiven Chargen destilliert und abgefüllt.</p>
 
@@ -37,7 +35,7 @@ const ProductPage: NextPage<any> = ({product}) => {
           <div>
             <IngList>
               <li>
-              Alkohol: 42% VOL
+              Alkohol: 45% VOL
               </li>
               <li>
               Füllmenge: 0,5L Flasche

@@ -57,8 +57,8 @@ export default function TeamMember({info}) {
   // test if i can just insert flex-row reverse lol
 
   return (
-  
-    <Member key={`member ${key}`} className="grid grid-cols-2 gap-4 md:gap-8 lg:gap-12 justify-center align-middle py-5">
+    <div>
+    <Member key={`member ${key}`} className="hidden md:grid md:grid-cols-2 gap-4 md:gap-8 lg:gap-12 justify-center align-middle py-5">
    
         {even ? (
           image
@@ -70,5 +70,10 @@ export default function TeamMember({info}) {
           ): image }
     
     </Member>
+    <Member key={`mobile member ${key}`} className="block md:hidden mt-10 border-t border-cgblue py-5">
+      {image}
+      {text}
+    </Member>
+    </div>
   )
 }

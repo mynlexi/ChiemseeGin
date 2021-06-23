@@ -4,8 +4,15 @@ import styled from 'styled-components'
 
 
 interface HeaderInfo {
-  
-  path: string,
+ 
+
+  pathBase: string,
+  pathxs?: string,
+  pathsm?: string,
+  pathmd?: string,
+  pathlg?: string,
+  pathxl?: string,
+  path2xl?: string,
   title: string,
   subtitle?: string,
   button?: string,
@@ -16,7 +23,14 @@ interface HeaderInfo {
 export default function Header({header}) {
   
   const {
-    path = header.path,
+    
+    pathBase = header.path ,
+    pathxs = header.pathxs ? header.pathxs : null,
+    pathsm = header.pathsm ? header.pathsm: null,
+    pathmd = header.pathmd ? header.pathmd: null,
+    pathlg = header.pathlg ? header.pathlg : null,
+    pathxl = header.pathxl ? header.pathxl : null,
+    path2xl = header.path2xl ? header.path2xl : null,
     title = header.title,
     subtitle = header.subtitle ? header.subtitle : null,
     button = header.button? header.button: null,
@@ -27,33 +41,65 @@ export default function Header({header}) {
 
     const Header = styled.div`
     background-image: url('${props => props.imageUrl ? props.imageUrl: ''}');
-    min-height: 100%;
+    min-height: 350px;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
-    background-size: cover;}
+    background-position: center bottom;
+    background-size: cover;
     width: 100%;
     
     h2 {
       font-size: 24px;
     }
     
+    @media(min-width: 480px) {
+      background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}');
+    }
+    @media(min-width: 640px) {
+      background-image: url('${props => props.imageUrlsm ? props.imageUrlsm: props.imageUrl}');
+    }
+    @media(min-width: 768px) { 
+      background-image: url('${props => props.imageUrlmd ? props.imageUrlmd: props.imageUrl}');
+      min-height: 250px;
+      padding-top: 3rem;
+    }
+    @media(min-width: 1024px) { 
+      background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}');
+    }
+    @media(min-width: 1280px) { 
+      background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}');
+    }
+    @media(min-width: 1536px) { 
+      background-image: url('${props => props.imageUrl2xl ? props.imageUrl2xl: props.imageUrl}');
+
+    }
   `
 
-  
+  // different paths for different sizes 4?
+  //768=md
+
 
   // image in the background
   return (
     <div className="w-full">
-      <Header imageUrl={path} className="w-full " placeholder="blur">
-          <div className=" mx-auto mb-12 p-24 flex flex-col justify-items-center text-center">
+      <Header 
+        imageUrl={pathBase}
+        imageUrlxs={pathxs}
+        imageUrlsm={pathsm}
+        imageUrlmd={pathmd}
+        imageUrllg={pathlg}
+        imageUrlxl={pathxl}
+        imageUrl2xl={path2xl}
+
+         className="w-full " placeholder="blur">
+          <div className="h-full mx-auto pt-20 md:py-12 xl:py-36 mb-0 md:mb-12  flex flex-col justify-items-center text-center ">
             <h2>{title}</h2>
             { subtitle && (
               <h5>{subtitle}</h5>
               )}
          
           { button && (
-            <button className="mt-8 py-4 border-white opacity-100 bg-transparent w-1/4 mx-auto hover:bg-white hover:opacity-30" >
+            <button className="mt-8 py-4 text-cgblue opacity-100 bg-transparent w-1/4 mx-auto  bg-white bg-opacity-40 hover:bg-opacity-60" >
               <Link href={buttonLink}>
                 {button}
               </Link>

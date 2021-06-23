@@ -1,6 +1,7 @@
 import styled from 'styled-components'
-import { X } from 'react-feather'
-import Image from 'next/dist/client/image'
+import Helmet from 'react-helmet'
+import src from '../../../../public/images/johanngugg.png'
+import Image from 'next/image'
 
 const Background = styled.div`
   top: 0;
@@ -18,7 +19,7 @@ const Background = styled.div`
 
 const ModalWrapper = styled.div`
   width: 800px;
-  height: 800px;
+  min-height: 300px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #fff;
   color: #000;
@@ -93,24 +94,32 @@ export const Modal = ({showModal, setShowModal}) => {
     {showModal ? 
     (
       <Background>
+           <Helmet>
+        <body className={showModal ? 'blur' : ''} />
+      </Helmet>
         <ModalWrapper showModal={showModal} className="flex justify-center">
          
-          <ModalContent >
+          <ModalContent className="py-3" >
             {/* maybe gin in the background half the bottle large? */}
-            <h1>Herzlich Willkommen bei Chiemsee Premium Gin!</h1>
+            <h1 className="text-center">Herzlich Willkommen bei Chiemsee Premium Gin!</h1>
             <div className="grid grid-cols-5 gap-4">
-              <div className="col-span-2 bg-black">
-
+              <div className="col-span-2 bg-black my-auto ml-4">
+                <Image src={src} layout="responsive" placeholder="blur" alt=""/>
               </div>
-              <div className="col-span-3"> 
+              <div className="col-span-3 my-auto pr-4"> 
             
             <p>Wie setzen uns für den verantwortungsvollen Genuss unserer Gins ein. Um unsere Webseite besuchen zu können, bitten wir Sie, uns Ihr Alter zu bestätigen.</p>
-            <p>Sind Sie über 18 Jahre alt?</p>
-            <div className=" flex space-x-4 ml-auto">
+            <p className="hidden md:block">Sind Sie über 18 Jahre alt?</p>
+            <div className=" space-x-4 ml-auto hidden md:flex">
               <button onClick={set}>Ja</button>
               <button onClick={goBack}>Leider nein</button>
               </div>
             </div>
+          </div>
+          <p className="block md:hidden text-center px-4 mx-auto">Sind Sie über 18 Jahre alt?</p>
+          <div className="flex space-x-4 m-auto  md:hidden">
+              <button onClick={set}>Ja</button>
+              <button onClick={goBack}>Leider nein</button>
           </div>
          
           </ModalContent>
