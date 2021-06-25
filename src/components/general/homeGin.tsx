@@ -8,13 +8,9 @@ import { CSSTransition } from 'react-transition-group'
 
 const Content = ()=> {
   return(
-    <div className="md:border-l border-gray-700 md:pl-12 hidden">
+    <div className="md:border-l border-gray-700 md:pl-12 hidden my-auto">
     <p>
-    Chiemsee Gin ist der Premium Gin vom bayerischen Meer – angenehm herb mit frischen
-    Noten. Unser Wacholderschnaps wird in der seit 1892 bestehenden Edelbrandmanufaktur
-    Guggenbichler in traditioneller Handarbeit mit handverlesenen Zutaten hergestellt. Ein
-    außergewöhnlicher und facettenreicher Gin von und für seine bayerische Heimat und die
-    Menschen, die sie/diese so sehr lieben.
+    Handverlesene Kräuter, kristallklares Gebirgsquellwasser und über 5 Generationen überlieferte Destillationskunst der Edelbrandmanufaktur Guggenbichler in Frasdorf am Chiemsee ergeben einen bayerischen Premium Gin der Extraklasse. Mit viel Liebe und Herzblut wird Chiemsee Gin in kleinen exklusiven Chargen hergestellt. Qualität steht für uns an erster Stelle.
     </p>
 </div>
   )
@@ -22,7 +18,7 @@ const Content = ()=> {
 
 const ProductImage = () => {
   return (
-    <div className="w-full relative my-auto text-transparent  hover:text-black hidden">
+    <div className="hover:w-full w-11/12 relative my-auto text-transparent  hover:text-black hidden transform">
               
     
     <Link href="/shop/chiemsee-premium-gin" >
@@ -32,11 +28,11 @@ const ProductImage = () => {
     </Link>
     
     
-    <div className="relative bottom-6 left-0">
+    {/* <div className="relative bottom-6 left-0">
       <button className=" text-center mx-auto w-full">
         -{'>'} Zum Gin
       </button>
-      </div>
+      </div> */}
   </div>
   )
 }

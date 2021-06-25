@@ -44,7 +44,7 @@ export default function Header({header}) {
     min-height: 350px;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center bottom;
+    background-position: bottom bottom;
     background-size: cover;
     width: 100%;
     
@@ -54,14 +54,16 @@ export default function Header({header}) {
     
     @media(min-width: 480px) {
       background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}');
+   
     }
     @media(min-width: 640px) {
       background-image: url('${props => props.imageUrlsm ? props.imageUrlsm: props.imageUrl}');
+    
     }
     @media(min-width: 768px) { 
       background-image: url('${props => props.imageUrlmd ? props.imageUrlmd: props.imageUrl}');
       min-height: 250px;
-      padding-top: 3rem;
+     
     }
     @media(min-width: 1024px) { 
       background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}');
@@ -81,7 +83,7 @@ export default function Header({header}) {
 
   // image in the background
   return (
-    <div className="w-full">
+    <div className="w-full p-0">
       <Header 
         imageUrl={pathBase}
         imageUrlxs={pathxs}
@@ -91,15 +93,15 @@ export default function Header({header}) {
         imageUrlxl={pathxl}
         imageUrl2xl={path2xl}
 
-         className="w-full " placeholder="blur">
-          <div className="h-full mx-auto pt-20 md:py-12 xl:py-36 mb-0 md:mb-12  flex flex-col justify-items-center text-center ">
+         className="" placeholder="blur">
+          <div className=" mx-auto py-36 md:py-20  md:mb-12 xl:py-36 flex flex-col justify-items-center text-center ">
             <h2>{title}</h2>
             { subtitle && (
               <h5>{subtitle}</h5>
               )}
          
           { button && (
-            <button className="mt-8 py-4 text-cgblue opacity-100 bg-transparent w-1/4 mx-auto  bg-white bg-opacity-40 hover:bg-opacity-60" >
+            <button className="mt-8 py-4 text-cgblue opacity-100 bg-transparent w-1/4 mx-auto bg-opacity-0  bg-white md:bg-opacity-40 hover:bg-opacity-60" >
               <Link href={buttonLink}>
                 {button}
               </Link>

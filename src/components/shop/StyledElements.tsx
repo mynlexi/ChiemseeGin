@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const ShopCartContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+
   min-height: 25rem;
   @media (min-width: 768px) {
     flex-direction: row;
@@ -26,8 +25,9 @@ export const ShopImageContainer = styled.div`
   bottom: 0;
   text-align: center;
   transform-style: preserve-3d;
-  max-height: 500px;
-  max-width:500px;
+  max-height: 450px;
+  max-width:450px;
+  margin: auto;
 
 
   @media only screen and (max-width: 767px){

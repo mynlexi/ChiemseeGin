@@ -56,7 +56,7 @@ export default function Home() {
           <link rel="shortcut icon" href="favicons/favicon.ico" />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="msapplication-config" content="favicons/browserconfig.xml" />
-          <meta name="theme-color" content="#fffdfd"></meta>
+          <meta name="theme-color" content="#223669" />
           <link rel="preconnect" href="https://vitals.vercel-insights.com" />
           <link rel="preconnect" href="https://chiemsee-gin.myshopify.com" />
           {/*  eslint-disable no-eval */ }
@@ -72,14 +72,9 @@ export default function Home() {
       <main className={styles.main}>
           <section id="home">
             <div className="">
-              <p className="">Chiemsee Gin ist der Premium Gin vom bayerischen Meer – angenehm herb mit frischen
-                Noten. Unser Wacholderschnaps wird in der seit 1892 bestehenden Edelbrandmanufaktur
-                Guggenbichler in traditioneller Handarbeit mit handverlesenen Zutaten hergestellt. Ein
-                außergewöhnlicher und facettenreicher Gin von und für seine bayerische Heimat und die
-                Menschen, die sie/diese so sehr lieben. Mit jeder verkauften Flasche wird 1€ für den
-                Naturschutz des Chiemgaus &amp; Chiemsees gespendet und somit die Erhaltung unserer
-                einzigartigen Heimat unterstützt.
+              <p className="">Chiemsee Gin ist der Premium Gin vom bayerischen Meer. Unser Wacholderschnaps wird in der seit 1829 bestehenden Edelbrandmanufaktur Guggenbichler in traditioneller Handarbeit destilliert. Alle Zutaten für unseren Gin werden mit größter Sorgfalt und mit Blick auf Nachhaltigkeit handverlesen. Ein außergewöhnlicher und facettenreicher Gin von und für seine bayerische Heimat und die Menschen, die diese so sehr lieben.
               </p>
+              <p>Mit jeder verkauften Flasche spenden wir 1 € für den chiemgauer Naturschutz und unterstützen somit die Erhaltung unserer Einzigartigen Heimat.</p>
             </div>
         </section>
       

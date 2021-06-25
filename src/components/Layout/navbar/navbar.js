@@ -98,17 +98,10 @@ export const Navbar = ({isHome}) => {
                 
               </Link>
             </li>
-            <li>
-              <Link href="/chiemsee">
-                
-                  Chiemsee
-               
-              </Link>
-            </li>
             <li>           
               <Link href="/geschichte">
                
-                  Geschichte
+              Über Uns
                 
               </Link>
             </li> 

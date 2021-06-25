@@ -1,23 +1,28 @@
 import React from 'react'
+import Helmet from 'react-helmet'
+
 import Header from '../src/components/general/header'
 import TeamMember from '../src/components/teamchiemsee/teamMember'
+
 import {team} from '../src/utils/teamconfig'
-import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 export default function Geschichte() {
   const header = {
-    path: '/images/headers/teal-25-small.jpg',
-    pathxs: '/images/headers/teal-25-small.jpg',
-    pathsm: '/images/headers/teal-50-small.jpg',
-    pathmd: '/images/headers/teal-50-small.jpg',
-    pathlg: '/images/headers/teal-50-medium.jpg',
-    pathxl: '/images/headers/teal-50-large1.jpg',
-    path2xl: '/images/headers/teal-50-large3.jpg',
-    title: 'Geschichte',
+    path: '/images/headers/island-small.jpeg',
+    pathxs: '/images/headers/island-small.jpeg',
+    pathsm: '/images/headers/island-small.jpeg',
+    pathmd: '/images/headers/winter.jpeg',
+    pathlg: '/images/headers/winter.jpeg',
+    pathxl: '/images/headers/winter.jpeg',
+    path2xl: '/images/headers/landscape.jpeg',
+    title: 'Über Uns',
    
   }
   return (
     <div>
+      <Helmet>
+        <title>Über Uns</title>
+      </Helmet>
       <Header header={header} />
       <section className="py-20 flex flex-col space-y-3">
         <p>Inmitten saftiger Obstbaumwiesen, eingebettet in das Chiemgauer Voralpenland, liegt malerisch schön der Hof von Johann Guggenbichler und Sitz der gleichnamigen Edelbrandmanufaktur.</p>

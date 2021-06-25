@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ShoppingCart } from "react-feather";
+import Image from 'next/image'
+
 
 import {
   StyledMenu,
@@ -17,6 +19,7 @@ import {
 import CartItem from './cartItem'
 import useCalculateTotal from "../../hooks/useCalculateCart";
 import { useSideCart, useSideCartUpdate } from "../../hooks/useOpenSidebar";
+import src from '../../../public/images/bild_sina_scan_600dpi_dunkel.png'
 
 
 
@@ -183,7 +186,7 @@ const SideCart = () => {
        
         >
          
-          <nav ref={navRef} className="hidden"> 
+          <nav ref={navRef} className="hidden h-full"> 
           <div className="fixed top-0 my-10 border-b-2 border-cgblue w-full">
             <button onClick={toggleSideCart}>
              <h1>Dein Warenkorb</h1>
@@ -213,7 +216,13 @@ const SideCart = () => {
   
              
             {isDisabled ? 
-            <div className="text-cgblue"> Noch nichts zum Einkaufswagen hinzugefügt</div> :
+            <div className=" flex flex-col">
+            <div className="text-cgblue mb-20"> Noch nichts zum Einkaufswagen hinzugefügt</div>
+              <div className="w-full ">
+              <Image src={src} layout="responsive" alt="sina's zeichung vom Chiemsee" placeholder="blur"/>
+              </div>
+            </div>
+             :
             <div className="fixed bottom-0 w-full"> 
             <div className="border-b-2 border-cgblue w-full text-left text-2xl p-5 text-cgblue">
               <h3>Zwischensumme</h3>

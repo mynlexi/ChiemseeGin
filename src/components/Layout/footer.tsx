@@ -34,24 +34,22 @@ export const Footer = () => {
               Chiemgauer Rezepte
               </a>
           </Link>
-          <Link href="/chiemsee">
+          <Link href="/geschichte">
               <a className="links text-xl hover:text-gray-900 ">
-              Chiemsee
+              Über Uns
               </a>
           </Link>
-          <Link href="/team">
-              <a className="links text-xl hover:text-gray-900 ">
-              Geschichte
-              </a>
-          </Link>
-        </div>
-        <div className="my-4 mx-auto">
-            <a href="https://www.instagram.com/chiemseegin/" rel="noreferrer noopener" target="_blank">
-              <button className="mx-auto ml-2">
-                <Instagram />
+        
+        <div className="my-4 mx-auto md:mx-0">
+            <a href="https://www.instagram.com/chiemseegin/" rel="noreferrer noopener" target="_blank" className="flex flex-row ">
+              <button className="py-2 ml-2 w-6">
+                <Instagram /> 
               </button>
+              <div className="py-2 ml-2 w-18">Instagram</div>
             </a>
         </div>
+        </div>
+       
        </div>
       </div>
       <div className="border-t border-cgblue flex flex-col-reverse md:flex-row justify-between">

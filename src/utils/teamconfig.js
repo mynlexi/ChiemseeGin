@@ -1,6 +1,18 @@
 export const team  = [
   {
     key: 1,
+    path: "/images/johanngugg.png",
+    width: 804,
+    height: 1324,
+    
+      title: "Johann Guggenbichler – Brennkunst und Brautradition in Person",
+      description: "Johann Guggenbichler führt die seit 1829 bestehende Familienbrennerei Edelbrandmanufaktur Guggenbichler in Frasdorf am Chiemsee. Chiemsee Gin trägt die Handschrift einer seit 5 Generationen bestehenden bayerischen Traditionsbrennerei. Johann Guggenbichler führt jeden Schritt nach alter Brennkultur in Handarbeit aus.",
+      author: "Johann Guggenbichler: ",
+      cite: `“Im Chiemsee Gin haben wir durch unsere bayerische Destillationskultur einen Gin der Extraklasse geschaffen. Dabei wird auch noch etwas für den regionalen Naturschutz getan, was mir ebenfalls sehr am Herzen liegt.”`
+    
+  },
+  {
+    key: 2,
     path: "/images/dd.jpg",
     width: 900,
     height: 1600,
@@ -16,7 +28,7 @@ export const team  = [
     
   },
   {
-    key: 2,
+    key: 3,
     path: "/images/dd.jpg",
     width: 900,
     height: 1600,
@@ -33,7 +45,7 @@ export const team  = [
     
   },
   {
-    key: 3,
+    key: 4,
     path: "/images/dd.jpg",
     width: 900,
     height: 1600,
@@ -48,7 +60,7 @@ export const team  = [
 
   },
   {
-    key: 4,
+    key: 5,
     path: "/images/marcuslange.jpg",
     width: 4000,
     height: 6000,
@@ -60,7 +72,7 @@ export const team  = [
 
   },
   {
-    key: 5,
+    key: 6,
     path: "/images/dd.jpg",
     width: 900,
     height: 1600,

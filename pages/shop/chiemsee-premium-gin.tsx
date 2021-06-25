@@ -26,10 +26,10 @@ const ProductPage: NextPage<any> = ({product}) => {
 
       <section className="flex flex-col space-y-6 mt-12">
           <div className="flex flex-col space-y-6 ">
-          <p>Chiemsee Premium Gin wird nach alter Brenntradition von 1829 hergestellt. Und das in Zusammenarbeit mit der <a href="https://www.edelbrandmanufaktur.com/" className="font-semibold">Guggenbichler Edelbrandmanufactur</a>.</p>
+          <p>Chiemsee Gin ist der Premium Gin vom bayerischen Meer. Unser Wacholderschnaps wird in der seit 1829 bestehenden Edelbrandmanufaktur Guggenbichler in traditioneller Handarbeit destilliert. Alle Zutaten für unseren Gin werden mit größter Sorgfalt und mit Blick auf Nachhaltigkeit handverlesen. Ein außergewöhnlicher und facettenreicher Gin von und für seine bayerische Heimat und die Menschen, die diese so sehr lieben.</p>
 
-          <p>Die handverlesenen Kräuter, das kristallklare Gebirgsquellwasser und eine über Generationen überlieferte Destillateurs-Kunst ergeben einen erlesenen und reinen Premium Dry Gin, bei dem man den Unterschied wirklich schmeckt! Dieser bayerische Gin der Extraklasse in der 0,5L Flache wird von uns mit viel Liebe und von Hand in kleinen exklusiven Chargen destilliert und abgefüllt.</p>
-
+          <p>Handverlesene Kräuter, kristallklares Gebirgsquellwasser und über 5 Generationen überlieferte Destillationskunst der Edelbrandmanufaktur Guggenbichler in Frasdorf am Chiemsee ergeben einen bayerischen Premium Gin der Extraklasse. Mit viel Liebe und Herzblut wird Chiemsee Gin in kleinen exklusiven Chargen hergestellt. Qualität steht für uns an erster Stelle.</p>
+          <p>Mit jeder verkauften Flasche spenden wir 1 € für den chiemgauer Naturschutz und unterstützen somit die Erhaltung unserer Einzigartigen Heimat.</p>
           </div>
 
           <div>
