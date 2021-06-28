@@ -43,7 +43,7 @@ const ContactForm = () => {
       submitting: false,
       info: { error: false, msg: null },
     });
-    console.log(inputs)
+
   };
   const handleOnSubmit = (e) => {
     e.preventDefault();

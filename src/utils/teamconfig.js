@@ -29,9 +29,9 @@ export const team  = [
   },
   {
     key: 3,
-    path: "/images/dd.jpg",
-    width: 900,
-    height: 1600,
+    path: "/images/sina.jpg",
+    width: 1200,
+    height: 1136,
    
       title: "Sina – Künstlerin aus dem Chiemgau",
       description: `Sina, eine regionale Künstlerin aus dem Chiemgau. Mit viel Liebe gestaltete sie für
