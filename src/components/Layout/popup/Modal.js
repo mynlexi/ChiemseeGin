@@ -108,7 +108,7 @@ export const Modal = ({showModal, setShowModal}) => {
               </div>
               <div className="col-span-3 my-auto pr-4"> 
             
-            <p>Wie setzen uns für den verantwortungsvollen Genuss unserer Gins ein. Um unsere Webseite besuchen zu können, bitten wir Sie, uns Ihr Alter zu bestätigen.</p>
+            <p>Wir setzen uns für den verantwortungsvollen Genuss unserer Gins ein. Um unsere Webseite besuchen zu können, bitten wir Sie, uns Ihr Alter zu bestätigen.</p>
             <p className="hidden md:block">Sind Sie über 18 Jahre alt?</p>
             <div className=" space-x-4 ml-auto hidden md:flex">
               <button onClick={set}>Ja</button>

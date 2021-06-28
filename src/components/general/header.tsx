@@ -41,10 +41,10 @@ export default function Header({header}) {
 
     const Header = styled.div`
     background-image: url('${props => props.imageUrl ? props.imageUrl: ''}');
-    min-height: 350px;
+    min-height: 65vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: bottom bottom;
+    background-position: center bottom;
     background-size: cover;
     width: 100%;
     
@@ -62,18 +62,20 @@ export default function Header({header}) {
     }
     @media(min-width: 768px) { 
       background-image: url('${props => props.imageUrlmd ? props.imageUrlmd: props.imageUrl}');
-      min-height: 250px;
+      min-height: 75vh;
      
     }
     @media(min-width: 1024px) { 
       background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}');
+      min-height: 75vh;
     }
     @media(min-width: 1280px) { 
       background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}');
+      min-height: 75vh;
     }
     @media(min-width: 1536px) { 
       background-image: url('${props => props.imageUrl2xl ? props.imageUrl2xl: props.imageUrl}');
-
+      min-height: 75vh;
     }
   `
 
@@ -93,15 +95,15 @@ export default function Header({header}) {
         imageUrlxl={pathxl}
         imageUrl2xl={path2xl}
 
-         className="" placeholder="blur">
-          <div className=" mx-auto py-36 md:py-20  md:mb-12 xl:py-36 flex flex-col justify-items-center text-center ">
-            <h2>{title}</h2>
+         className={ header.title ? "bg-blend-soft-light bg-white bg-opacity-40 flex" : ""} placeholder="blur">
+          <div className="mx-auto py-36 md:py-20  md:mb-12 xl:py-36 flex flex-col justify-items-center justify-center text-center ">
+            <h1 className="text-4xl">{title}</h1>
             { subtitle && (
               <h5>{subtitle}</h5>
               )}
          
           { button && (
-            <button className="mt-8 py-4 text-cgblue opacity-100 bg-transparent w-1/4 mx-auto bg-opacity-0  bg-white md:bg-opacity-40 hover:bg-opacity-60" >
+            <button className=" text-2xl mt-8 py-4 text-cgblue mx-auto bg-opacity-0  md:bg-opacity-40 hover:bg-opacity-60 w-3/4" >
               <Link href={buttonLink}>
                 {button}
               </Link>

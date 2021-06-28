@@ -21,9 +21,9 @@ import useCalculateTotal from "../../hooks/useCalculateCart";
 import { useSideCart, useSideCartUpdate } from "../../hooks/useOpenSidebar";
 import src from '../../../public/images/bild_sina_scan_600dpi_dunkel.png'
 
-
-
 const SideCart = () => {
+
+
   const {clearId} = useCheckoutUpdate()
   const { cartCheckoutInfo } = useCheckout();
   let { cart } = useCartContext();
@@ -63,6 +63,7 @@ const SideCart = () => {
   };
   
   const checkout = () => {
+
     handleCheckoutProceed()
     clearId()
   };
@@ -233,8 +234,9 @@ const SideCart = () => {
               </div>
             </div>
             <div className="w-full flex justify-items-center align-middle " onClick={checkout}>
-              <button className=" my-5 bg-gray-600 text-white px-20 hover:bg-cgblue  py-4 m-auto"  >
-                    Checkout
+              <button className=" my-5 bg-gray-600 text-white px-20 hover:bg-cgblue  py-4 m-auto "  >
+         
+                Checkout
               </button>
               </div>
             </div>

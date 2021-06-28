@@ -12,13 +12,13 @@ export const Footer = () => {
       <div className=" w-1/2 md:w-1/5 mx-auto md:ml-12 md:my-8">
         <Link href="/" passHref>
           {/*  @ts-ignore  This is only a issue here not in the sidebar or navbar ??*/}
-          <div className="w-64 h-32 mx-auto">
+          <div className=" w-40 sm:w-64 h-32 mx-auto">
             <Image src={LogoPNG} alt="logo" placeholder="blur" layout="responsive" />
          </div>
         </Link>
       </div>
       <div>
-        <div className="grid grid-cols-1  my-4">
+        <div className="grid grid-cols-1  mb-4">
           <Link href="/">
               <a className="links text-xl hover:text-gray-900 ">
               Home

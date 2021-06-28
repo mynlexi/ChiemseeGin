@@ -8,14 +8,13 @@ import {team} from '../src/utils/teamconfig'
 
 export default function Geschichte() {
   const header = {
-    path: '/images/headers/island-small.jpeg',
-    pathxs: '/images/headers/island-small.jpeg',
-    pathsm: '/images/headers/island-small.jpeg',
+    path: '/images/headers/winter-small.jpeg',
+    pathxs: '/images/headers/winter-small.jpeg',
+    pathsm: '/images/headers/winter-small.jpeg',
     pathmd: '/images/headers/winter.jpeg',
     pathlg: '/images/headers/winter.jpeg',
     pathxl: '/images/headers/winter.jpeg',
     path2xl: '/images/headers/landscape.jpeg',
-    title: 'Über Uns',
    
   }
   return (
@@ -25,6 +24,7 @@ export default function Geschichte() {
       </Helmet>
       <Header header={header} />
       <section className="py-20 flex flex-col space-y-3">
+      <h3 className ="text-center mb-20 mt-0  page-title" >   Über Uns   </h3>
         <p>Inmitten saftiger Obstbaumwiesen, eingebettet in das Chiemgauer Voralpenland, liegt malerisch schön der Hof von Johann Guggenbichler und Sitz der gleichnamigen Edelbrandmanufaktur.</p>
         <p>Die Brennerei bildet den Hauptteil auf dem landwirtschaftlichen Anwesen, das neben dem Streuobst mit jahrhundertealten Bäumen auch ein Wildgehege beheimatet. Unterschiedliche Hühnerrassen die absolut frei, sprich ohne Zaun, sich bewegen können, dazu ein ordentlicher Gemüsegarten sorgen für guten und schmackhafte Zutaten für die heimische Küche.</p>
         <p>Es mag ein Fleckchen Erde sein, mit dem Gott es besonders gut gemeint haben muss: grüne, saftige Wiesen, blühende Obstbäume, schützend umrahmt von den Chiemgauer Bergen und den sanften Hügeln des Voralpenlandes – und inmitten dieser beruhigend ländlichen Idylle liegt der Guggenbichler Hof.</p>
