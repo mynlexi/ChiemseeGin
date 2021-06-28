@@ -8,6 +8,8 @@ const ContactForm = () => {
     info: { error: false, msg: null },
   });
   const [inputs, setInputs] = useState({
+    first_name: "",
+    last_name: "",
     email: "",
     message: "",
   });
@@ -19,6 +21,8 @@ const ContactForm = () => {
         info: { error: false, msg: msg },
       });
       setInputs({
+        first_name: "",
+        last_name: "",
         email: "",
         message: "",
       });
@@ -39,6 +43,7 @@ const ContactForm = () => {
       submitting: false,
       info: { error: false, msg: null },
     });
+    console.log(inputs)
   };
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -63,32 +68,34 @@ const ContactForm = () => {
         <div className="flex space-x-4 w-full md:w-3/4 px-3 mb-6 md:mb-0 mx-auto">
           <div>
             <label
-              htmlFor="first-name"
+              htmlFor="first_name"
               className="block uppercase tracking-wide text-cgblue text-lg font-bold mb-2"
             >
               Vorname
             </label>
             <input
               type="text"
-              name="name"
-              id="first-name"
-           
+              name="first_name"
+              id="first_name"
+              onChange={handleOnChange}
+              value={inputs.first_name}
               required=""
               className="appearance-none block w-full bg-gray-200 text-gray-700 border border-cgblue rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             />
           </div>
           <div>
             <label
-              htmlFor="last-name"
+              htmlFor="last_name"
               className="block uppercase tracking-wide text-cgblue text-lg font-bold mb-2"
             >
               Nachname
             </label>
             <input
               type="text"
-              name="name"
-              id="last-name"
-             
+              name="last_name"
+              id="last_name"
+              onChange={handleOnChange}
+              value={inputs.last_name}
               required=""
               className="appearance-none block w-full bg-gray-200 text-gray-700 border border-cgblue rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             />
