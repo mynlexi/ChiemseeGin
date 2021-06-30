@@ -16,6 +16,8 @@ interface MemberInfo {
   author?: string,
   cite?: string,
   description?: string
+  socialMedia?: string
+  socialMediaLink?: string
 }
 
 
@@ -30,6 +32,8 @@ export default function TeamMember({info}) {
     author = info.author ? info.author : null,
     description = info.description ? info.description : null,
     cite = info.cite ? info.cite : null,
+    socialMedia = info.socialMedia ? info.socialMedia : null,
+    socialMediaLink = info.socialMediaLink ? info.socialMediaLink : null,
 
   }: MemberInfo = info
   let quality = '75'
@@ -51,6 +55,8 @@ export default function TeamMember({info}) {
         <div>
           <p>{author}<cite>{cite}</cite></p>
         </div>
+        {socialMedia &&
+        <a href={socialMediaLink} rel="external" className="my-2 hover:underline">{socialMedia}</a>}
       </div>
   )
 

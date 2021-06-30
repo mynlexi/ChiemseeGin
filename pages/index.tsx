@@ -65,16 +65,36 @@ export default function Home() {
           <link rel="preload" as="font" href="/essonnes-display/EssonnesDisplay-Regular.woff"  type="font/woff" crossOrigin="anonymous"/>
           <link rel="preload" as="font" href="/essonnes-display/EssonnesDisplay-Regular.ttf"  type="font/ttf" crossOrigin="anonymous"/>
           
+    
+          <meta name="description" content="" />
+          <meta property="og:type" content="Shop" />
+          <meta name="og:title" property="og:title" content="" />
+          <meta name="og:description" property="og:description" content="" />
+          <meta property="og:site_name" content="" />
+          <meta property="og:url" content="" />  
+          <meta name="twitter:card" content="summary" /> 
+          <meta name="twitter:title" content="" />
+          <meta name="twitter:description" content="" />
+          <meta name="twitter:site" content="" />
+          <meta name="twitter:creator" content="" />
+          <link rel="icon" type="image/png" href="/static/images/favicon.ico" />
+          <link rel="apple-touch-icon" href="/static/images/favicon.ico" />
+          <meta property="og:image" content="" />  
+          <meta name="twitter:image" content="" />   
+          <link rel="canonical" href="https://www.chiemseegin.de" />
+      
+    
 
       </Helmet>
       
       <Header header={header} />
       <main className={styles.main}>
           <section id="home ">
+          <h3 className ="text-center my-10 text-2xl" >Ein Gin so einzigartig wie seine Heimat
+</h3>
             <div className="py-8">
               <p className="">Chiemsee Gin ist der Premium Gin vom bayerischen Meer. Unser Wacholderschnaps wird in der seit 1829 bestehenden Edelbrandmanufaktur Guggenbichler in traditioneller Handarbeit destilliert. Alle Zutaten für unseren Gin werden mit größter Sorgfalt und mit Blick auf Nachhaltigkeit handverlesen. Ein außergewöhnlicher und facettenreicher Gin von und für seine bayerische Heimat und die Menschen, die diese so sehr lieben.
-              </p>
-              <p>Mit jeder verkauften Flasche spenden wir 1 € für den Chiemgauer Naturschutz und unterstützen somit die Erhaltung unserer Einzigartigen Heimat.</p>
+              Mit jeder verkauften Flasche spenden wir 1 € für den Chiemgauer Naturschutz und unterstützen somit die Erhaltung unserer Einzigartigen Heimat.</p>
             </div>
         </section>
       

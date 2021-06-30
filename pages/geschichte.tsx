@@ -3,8 +3,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../src/components/general/header'
 import TeamMember from '../src/components/teamchiemsee/teamMember'
-
-import {team} from '../src/utils/teamconfig'
+import {team} from '../src/components/teamchiemsee/teamconfig'
 
 export default function Geschichte() {
   const header = {
