@@ -101,7 +101,7 @@ export const Modal = ({showModal, setShowModal}) => {
          
           <ModalContent className="py-3" >
             {/* maybe gin in the background half the bottle large? */}
-            <h1 className="text-center">Chiemsee Gin – Eine Perle des Genusses direkt vom bayerischen Meer schreiben</h1>
+            <h1 className="text-center">Chiemsee Gin – Eine Perle des Genusses direkt vom bayerischen Meer</h1>
             <div className="grid grid-cols-5 gap-4">
               <div className="col-span-2 bg-black my-auto ml-4">
                 <Image src={src} layout="responsive" placeholder="blur" alt=""/>

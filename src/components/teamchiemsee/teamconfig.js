@@ -58,6 +58,8 @@ export const team  = [
       description: `Marcus ist für Video & Foto sowie das Design bei Chiemsee Gin verantwortlich.
       Seine Kreativität spiegelt sich nicht nur in unseren Videos & Fotos, sondern auch im
       Logo und dem Etikettendesign wider.`,
+      socialMedia: "Zum Portfolio",
+      socialMediaLink: "https://medesyre.com",
 
   },
   {

@@ -56,7 +56,7 @@ export default function TeamMember({info}) {
           <p>{author}<cite>{cite}</cite></p>
         </div>
         {socialMedia &&
-        <a href={socialMediaLink} rel="external" className="my-2 hover:underline">{socialMedia}</a>}
+        <a href={socialMediaLink} rel="external noreferrer noopener" target="_blank" className="my-2 hover:underline text-cgblue">{socialMedia}</a>}
       </div>
   )
 

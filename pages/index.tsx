@@ -66,7 +66,7 @@ export default function Home() {
           <link rel="preload" as="font" href="/essonnes-display/EssonnesDisplay-Regular.ttf"  type="font/ttf" crossOrigin="anonymous"/>
           
     
-          <meta name="description" content="" />
+          <meta name="description" content="Chiemsee Gin ist der Premium Gin vom bayerischen Meer. Ein Gin so einzigartig wie seine Heimat." />
           <meta property="og:type" content="Shop" />
           <meta name="og:title" property="og:title" content="" />
           <meta name="og:description" property="og:description" content="" />
