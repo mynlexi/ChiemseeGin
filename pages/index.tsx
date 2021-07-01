@@ -3,10 +3,11 @@ import Helmet from 'react-helmet'
 import styles from '../styles/Home.module.css'
 import React from 'react'
 
+
 import { useCheckoutUpdate} from '../src/hooks/useCheckoutId'
 import Header from '../src/components/general/header'
 import { HomePremiumGin } from '../src/components/general/homeGin'
-
+import Vimeoplayer from '../src/components/general/vimeoplayer'
 
 
 export default function Home() {
@@ -98,11 +99,9 @@ export default function Home() {
             </div>
         </section>
       
+          <Vimeoplayer />
           <HomePremiumGin />
  
-        <section id="recipe-slider"> 
-
-        </section>
     
           
        
