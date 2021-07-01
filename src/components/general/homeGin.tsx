@@ -26,9 +26,7 @@ const ProductImage = () => {
     <Image src={src} layout="responsive" alt="" placeholder="blur" />
       </a>
     </Link>
-    
-    
-   
+
   </div>
   )
 }
