@@ -34,7 +34,7 @@ export const Footer = () => {
               Chiemgauer Rezepte
               </a>
           </Link>
-          <Link href="/geschichte">
+          <Link href="/ueber-uns">
               <a className="links text-xl hover:text-gray-900 ">
               Über Uns
               </a>
