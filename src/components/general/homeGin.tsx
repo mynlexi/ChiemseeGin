@@ -51,9 +51,9 @@ export const HomePremiumGin = () => {
              
             </div>
        <div className=" mx-auto px-20">
-      <button className="hover:bg-white hover:text-cgblue text-white p-4 transition-colors bg-cgblue mx-auto flex space-x-4 hover:border-cgblue ">
+      <Link href="/shop/chiemsee-premium-gin" passHref><button className="hover:bg-white hover:text-cgblue text-white p-4 transition-colors bg-cgblue mx-auto flex space-x-4 hover:border-cgblue">
         <ArrowRight /> <div>Zum Gin</div>
-      </button>
+      </button></Link>
       </div>
 
     </section>
