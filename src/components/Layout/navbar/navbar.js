@@ -102,7 +102,7 @@ export const Navbar = ({isHome}) => {
               </Link>
             </li>
             <li>           
-              <Link href="/geschichte">
+              <Link href="/ueber-uns">
                
               Über Uns
                 

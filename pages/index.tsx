@@ -99,7 +99,7 @@ export default function Home() {
             </div>
         </section>
       
-          <Vimeoplayer />
+          {/* <Vimeoplayer /> not until product video is finished */}
           <HomePremiumGin />
  
     
