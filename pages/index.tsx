@@ -3,22 +3,23 @@ import Helmet from 'react-helmet'
 import styles from '../styles/Home.module.css'
 import React from 'react'
 
+
 import { useCheckoutUpdate} from '../src/hooks/useCheckoutId'
 import Header from '../src/components/general/header'
 import { HomePremiumGin } from '../src/components/general/homeGin'
-
+import Vimeoplayer from '../src/components/general/vimeoplayer'
 
 
 export default function Home() {
   
   const header = {
-  path: '/images/headers/teal-25-small.jpg',
-  pathxs: '/images/headers/teal-25-small.jpg',
-  pathsm: '/images/headers/teal-50-small.jpg',
-  pathmd: '/images/headers/teal-50-small.jpg',
+  path: '/images/headers/teal-50-crop.jpg',
+  pathxs: '/images/headers/teal-50-crop.jpg',
+  pathsm: '/images/headers/teal-50-crop.jpg',
+  pathmd: '/images/headers/teal-50-medium.jpg',
   pathlg: '/images/headers/teal-50-medium.jpg',
   pathxl: '/images/headers/teal-50-large1.jpg',
-  path2xl: '/images/headers/teal-50-large3.jpg',
+  path2xl: '/images/headers/teal-50.jpg',
   title: 'CHIEMSEE GIN',
   subtitle: 'Eine Perle des Genusses direkt vom bayerischen Meer',
   button: 'Zum Premium Gin',
@@ -56,7 +57,7 @@ export default function Home() {
           <link rel="shortcut icon" href="favicons/favicon.ico" />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="msapplication-config" content="favicons/browserconfig.xml" />
-          <meta name="theme-color" content="#fffdfd"></meta>
+          <meta name="theme-color" content="#223669" />
           <link rel="preconnect" href="https://vitals.vercel-insights.com" />
           <link rel="preconnect" href="https://chiemsee-gin.myshopify.com" />
           {/*  eslint-disable no-eval */ }
@@ -65,29 +66,42 @@ export default function Home() {
           <link rel="preload" as="font" href="/essonnes-display/EssonnesDisplay-Regular.woff"  type="font/woff" crossOrigin="anonymous"/>
           <link rel="preload" as="font" href="/essonnes-display/EssonnesDisplay-Regular.ttf"  type="font/ttf" crossOrigin="anonymous"/>
           
+    
+          <meta name="description" content="Chiemsee Gin ist der Premium Gin vom bayerischen Meer. Ein Gin so einzigartig wie seine Heimat." />
+          <meta property="og:type" content="Shop" />
+          <meta name="og:title" property="og:title" content="" />
+          <meta name="og:description" property="og:description" content="" />
+          <meta property="og:site_name" content="" />
+          <meta property="og:url" content="" />  
+          <meta name="twitter:card" content="summary" /> 
+          <meta name="twitter:title" content="" />
+          <meta name="twitter:description" content="" />
+          <meta name="twitter:site" content="" />
+          <meta name="twitter:creator" content="" />
+          <link rel="icon" type="image/png" href="/static/images/favicon.ico" />
+          <link rel="apple-touch-icon" href="/static/images/favicon.ico" />
+          <meta property="og:image" content="" />  
+          <meta name="twitter:image" content="" />   
+          <link rel="canonical" href="https://www.chiemseegin.de" />
+      
+    
 
       </Helmet>
       
       <Header header={header} />
       <main className={styles.main}>
-          <section id="home">
-            <div className="">
-              <p className="">Chiemsee Gin ist der Premium Gin vom bayerischen Meer – angenehm herb mit frischen
-                Noten. Unser Wacholderschnaps wird in der seit 1892 bestehenden Edelbrandmanufaktur
-                Guggenbichler in traditioneller Handarbeit mit handverlesenen Zutaten hergestellt. Ein
-                außergewöhnlicher und facettenreicher Gin von und für seine bayerische Heimat und die
-                Menschen, die sie/diese so sehr lieben. Mit jeder verkauften Flasche wird 1€ für den
-                Naturschutz des Chiemgaus &amp; Chiemsees gespendet und somit die Erhaltung unserer
-                einzigartigen Heimat unterstützt.
-              </p>
+          <section id="home ">
+          <h3 className ="text-center my-10 text-2xl" >Ein Gin so einzigartig wie seine Heimat
+</h3>
+            <div className="py-8">
+              <p className="">Chiemsee Gin ist der Premium Gin vom bayerischen Meer. Unser Wacholderschnaps wird in der seit 1829 bestehenden Edelbrandmanufaktur Guggenbichler in traditioneller Handarbeit destilliert. Alle Zutaten für unseren Gin werden mit größter Sorgfalt und mit Blick auf Nachhaltigkeit handverlesen. Ein außergewöhnlicher und facettenreicher Gin von und für seine bayerische Heimat und die Menschen, die diese so sehr lieben.
+              Mit jeder verkauften Flasche spenden wir 1 € für den Chiemgauer Naturschutz und unterstützen somit die Erhaltung unserer Einzigartigen Heimat.</p>
             </div>
         </section>
       
+          <Vimeoplayer />
           <HomePremiumGin />
  
-        <section id="recipe-slider"> 
-
-        </section>
     
           
        

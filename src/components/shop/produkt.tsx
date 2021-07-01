@@ -52,13 +52,15 @@ function Product({ product }) {
          
          
         </div>
-        <div className="w-full md:w-1/2 flex flex-col content-between py-2 ">
+        <div className="w-full md:w-1/2 flex flex-col content-between py-4 px-8 ">
           <div className="flex-1">
             <p className="font-bold text-2xl">{title}</p>
-           <div dangerouslySetInnerHTML={{ __html: descriptionH }}></div>
+           <div dangerouslySetInnerHTML={{ __html: descriptionH }} className="flex flex-col space-y-4"></div>
           </div>
           <div className="flex space-x-5 my-8 mx-auto ">
-         
+            <div className="mx-auto my-auto">
+              <h4 className="mx-auto my-auto"><strong>Einführungspreis</strong> {price},- €</h4>
+            </div>
             <div className=" p-2">
               {cart?.some((item) => item.productId === id) ? (
                 <button onClick={openSideCart} className="text-gray-800 bg-gray-100 p-4">Warenkorb anzeigen</button>

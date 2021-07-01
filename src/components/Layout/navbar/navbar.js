@@ -12,9 +12,10 @@ import { useSideCart } from "../../../hooks/useOpenSidebar";
 
 const LogoImage = () => {
   return(
+    <Link href="/" passHref>
     <div className="w-16 h-18">
       <Image src={LogoPNG} alt="logo" placeholder="blur" layout="responsive" />
-    </div>
+    </div></Link>
   )
 }
 
@@ -64,9 +65,11 @@ export const Navbar = ({isHome}) => {
                         {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                         <a href="/" aria-label="home" >
                           <LogoImage className="w-16"/>
-                        </a></LinkScroll>) : (<Link href="/" aria-label="home" passHref>
-                        <LogoImage className="w-16"/>
-                    </Link>)}
+                        </a></LinkScroll>) : (
+                        <Link href="/" aria-label="home" passHref>
+                          <LogoImage className="w-16"/>
+                        </Link>
+                    )}
         </div>
         <StyledLinks>
           <ol className="text-center">
@@ -98,17 +101,10 @@ export const Navbar = ({isHome}) => {
                 
               </Link>
             </li>
-            <li>
-              <Link href="/chiemsee">
-                
-                  Chiemsee
-               
-              </Link>
-            </li>
             <li>           
               <Link href="/geschichte">
                
-                  Geschichte
+              Über Uns
                 
               </Link>
             </li> 

@@ -66,8 +66,8 @@ export default function RecipeMain() {
     pathmd: '/images/headers/blue50small-crop.jpg',
     pathlg: '/images/headers/blue50middle-crop.jpg',
     pathxl: '/images/headers/bluelarge-crop.jpg',
-    path2xl: '/images/headers/bluesuper-crop.jpeg',
-    title: 'Unsere Rezepte',
+    path2xl: '/images/headers/bluesuper-crop.jpeg'
+  
    
   }
   
@@ -82,8 +82,8 @@ export default function RecipeMain() {
       </Head>
       <Header header={header} />
      
-      <section className="flex flex-col py-20">
-        <h3>Chiemgauer Rezepte</h3>
+      <section className="flex flex-col pb-20 pt-16">
+        <h3 className ="text-center mb-20 mt-0  page-title" >   Unsere Rezepte   </h3>
         <p>Einen guten Gin Tonic zuzubereiten, ist keine all zu Große Herausforderung. Nicht umsonst ist der altbekannte Klassiker unter den Gin Cocktails so sehr beliebt. Das passende Tonic zum Gin zu finden ist dagegen schon etwas schwieriger. In den hier aufgeführten Rezepten findest Du deswegen nicht nur Inspiration, sondern auch perfekt abgestimmte Tonic Empfehlungen passend zum Chiemsee Premium Gin</p>
         
         <Recipes />

@@ -101,14 +101,14 @@ export const Modal = ({showModal, setShowModal}) => {
          
           <ModalContent className="py-3" >
             {/* maybe gin in the background half the bottle large? */}
-            <h1 className="text-center">Herzlich Willkommen bei Chiemsee Premium Gin!</h1>
+            <h1 className="text-center">Chiemsee Gin – Eine Perle des Genusses direkt vom bayerischen Meer</h1>
             <div className="grid grid-cols-5 gap-4">
               <div className="col-span-2 bg-black my-auto ml-4">
                 <Image src={src} layout="responsive" placeholder="blur" alt=""/>
               </div>
               <div className="col-span-3 my-auto pr-4"> 
             
-            <p>Wie setzen uns für den verantwortungsvollen Genuss unserer Gins ein. Um unsere Webseite besuchen zu können, bitten wir Sie, uns Ihr Alter zu bestätigen.</p>
+            <p>Wir setzen uns für den verantwortungsvollen Genuss unserer Gins ein. Um unsere Webseite besuchen zu können, bitten wir Sie, uns Ihr Alter zu bestätigen.</p>
             <p className="hidden md:block">Sind Sie über 18 Jahre alt?</p>
             <div className=" space-x-4 ml-auto hidden md:flex">
               <button onClick={set}>Ja</button>
