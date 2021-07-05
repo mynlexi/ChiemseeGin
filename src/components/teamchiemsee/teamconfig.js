@@ -8,7 +8,7 @@ export const team  = [
       title: "Johann Guggenbichler – Brennkunst und Brautradition in Person",
       description: "Johann Guggenbichler führt die seit 1829 bestehende Familienbrennerei Edelbrandmanufaktur Guggenbichler in Frasdorf am Chiemsee. Chiemsee Gin trägt die Handschrift einer seit 5 Generationen bestehenden bayerischen Traditionsbrennerei. Johann Guggenbichler führt jeden Schritt nach alter Brennkultur in Handarbeit aus.",
       author: "Johann Guggenbichler: ",
-      cite: `“Im Chiemsee Gin haben wir durch unsere bayerische Destillationskultur einen Gin der Extraklasse geschaffen. Etwas ganz Besonderes - ein Gin, in dem ich mich als Brennmeister verwirklichen konnte. Dabei wird auch noch etwas für den regionalen Naturschutz getan, was mir ebenfalls sehr am Herzen liegt.”`
+      cite: `“Im Chiemsee Gin haben wir durch unsere bayerische Destillationskultur einen Gin der Extraklasse geschaffen. Etwas ganz Besonderes - ein Gin, in dem ich mich als Brennmeister verwirklichen konnte. Dabei wird auch noch etwas Gutes für den regionalen Naturschutz getan, was mir ebenfalls sehr am Herzen liegt.”`
     
   },
   {
@@ -69,7 +69,7 @@ export const team  = [
     height: 1600,
       title: "Lorenz – Webshopentwickler & Prozessperfektionist",
       description: `Lorenz ist für die Chiemsee Gin Homepage und den Webshop verantwortlich. Individuell angefertigt soll
-      der Shop für ein schnelles und einfaches Kauferlebnis liefern.`,
+      der Shop ein schnelles und einfaches Kauferlebnis liefern.`,
       socialMedia: "Zu Lorenzs Portfolio",
       socialMediaLink: "https://lorenzwestner.com",
   },
