@@ -34,7 +34,7 @@ export const Footer = () => {
               Chiemgauer Rezepte
               </a>
           </Link>
-          <Link href="/geschichte">
+          <Link href="/ueber-uns">
               <a className="links text-xl hover:text-gray-900 ">
               Über Uns
               </a>
@@ -57,27 +57,27 @@ export const Footer = () => {
         © 2021 by Chiemsee Gin
         </p>
         <div className="flex flex-col space-y-3 md:space-y-0 md:flex-row space-x-2 my-2">
-            <Link href="/admin/kontakt">
+            <Link href="/kontakt">
             <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
             Kontakt
             </a>
             </Link>
-            <Link href="/admin/dsvgo">
+            <Link href="/dsvgo">
             <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
             DSVGO
             </a>
             </Link>
-            <Link href="/admin/AGB">
+            <Link href="/AGB">
             <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
             AGB
             </a>
             </Link>
-            <Link href="/admin/impressum">
+            <Link href="/impressum">
             <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
             Impressum
             </a>
             </Link>
-            <Link href="/admin/widerrufsrecht">
+            <Link href="/widerrufsrecht">
             <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
             Widerrufsrecht
             </a>
