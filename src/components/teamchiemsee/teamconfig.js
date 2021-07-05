@@ -70,7 +70,7 @@ export const team  = [
       title: "Lorenz – Webshopentwickler & Prozessperfektionist",
       description: `Lorenz ist für die Chiemsee Gin Homepage und den Webshop verantwortlich. Individuell angefertigt soll
       der Shop ein schnelles und einfaches Kauferlebnis liefern.`,
-      socialMedia: "Zu Lorenzs Portfolio",
+      socialMedia: "Zum Portfolio",
       socialMediaLink: "https://lorenzwestner.com",
   },
 
