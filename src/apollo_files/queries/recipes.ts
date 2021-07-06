@@ -63,7 +63,7 @@ query GetSingleRecipe ($title: String!) {
 
 export const RECIPE_INDEX = gql`
 query indexRecipe {
-  recipes {
+  recipes(orderBy: updatedAt_DESC) {
     ingredients {
       html
     }
