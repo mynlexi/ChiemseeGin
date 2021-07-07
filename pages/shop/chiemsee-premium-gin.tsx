@@ -8,7 +8,12 @@ import Product from '../../src/components/shop/produkt'
 import { IngList } from "../../styles/utilstyled";
 import Helmet from 'react-helmet'
 
-const ProductPage: NextPage<any> = ({product}) => {
+const ProductPage: NextPage<any> = ({product, productPackage}) => {
+
+  const productMultiple = productPackage
+  const [multiple, setMultiple] = React.useState(false)
+  
+
   return (
     <div>
       <Helmet>
@@ -32,8 +37,30 @@ const ProductPage: NextPage<any> = ({product}) => {
        
       
       </Helmet>
-    <Product product={product}/>
 
+    <div>
+      {multiple ?
+        <Product product={productMultiple} />
+      :
+      <Product product={product}/>}
+    </div>
+    <section className="md:ml-auto mr-4 w-1/2">
+      <div className="flex flex-row w-44 mx-auto">
+        <div className="flex items-center mr-4 mb-4 justify-items-end" onClick={(()=> setMultiple(false))}>
+        <input id="radio1" type="radio" name="radio" className="hidden" checked={!multiple} defaultChecked />
+        <label htmlFor="radio1" className="flex items-center cursor-pointer">
+        <span className="w-4 h-4 inline-block mr-1 rounded-full border border-grey"></span>
+        Flasche</label>
+        </div>
+
+        <div className="flex items-center mr-4 mb-4" onClick={(()=> setMultiple(true))}>
+          <input id="radio2" type="radio" name="radio" className="hidden" checked={multiple}/>
+          <label htmlFor="radio2" className="flex items-center cursor-pointer">
+          <span className="w-4 h-4 inline-block mr-1 rounded-full border border-grey"></span>
+          Kiste</label>
+        </div>
+      </div>
+   </section>
     <div>
       <div className="w-full border-b border-cgblue font-bold ml-17 flex">
         <div className="ml-14 border-b-2 border-cgblue">
@@ -72,10 +99,12 @@ const ProductPage: NextPage<any> = ({product}) => {
 export const getServerSideProps: GetServerSideProps = async () => {
   
   const product = await shopifyClient.product.fetchByHandle('chiemsee-gin')
-  
+  const productPackage = await shopifyClient.product.fetchByHandle('chiemsee-gin-kiste-6-flaschen')
+ 
   return {
     props: {
-      product: JSON.parse(JSON.stringify(product))
+      product: JSON.parse(JSON.stringify(product)),
+      productPackage: JSON.parse(JSON.stringify(productPackage))
     }, 
   }
   

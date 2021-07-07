@@ -19,7 +19,7 @@ function Recipes() {
   
 
   return (
-    <div className="grid grid-cols-6 gap-8 my-4">
+    <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-8 gap-8 my-4">
    
     {data.recipes.map((recipe) => {
       
