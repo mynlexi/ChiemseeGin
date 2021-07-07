@@ -57,7 +57,7 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
           <input id="radio2" type="radio" name="radio" className="hidden" checked={multiple}/>
           <label htmlFor="radio2" className="flex items-center cursor-pointer">
           <span className="w-4 h-4 inline-block mr-1 rounded-full border border-grey"></span>
-          Kiste</label>
+          Kiste (6 Flaschen)</label>
         </div>
       </div>
    </section>
