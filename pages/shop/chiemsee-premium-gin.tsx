@@ -44,8 +44,8 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
       :
       <Product product={product}/>}
     </div>
-    <section className="md:ml-auto mr-4 w-1/2">
-      <div className="flex flex-row w-44 mx-auto">
+    <section className="md:ml-auto mr-4 md:w-1/2 w-3/4 mx-auto">
+      <div className="flex flex-row ml-0 lg:ml-44 mx-auto">
         <div className="flex items-center mr-4 mb-4 justify-items-end" onClick={(()=> setMultiple(false))}>
         <input id="radio1" type="radio" name="radio" className="hidden" checked={!multiple} defaultChecked />
         <label htmlFor="radio1" className="flex items-center cursor-pointer">
