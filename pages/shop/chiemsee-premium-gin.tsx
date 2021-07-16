@@ -19,21 +19,21 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
       <Helmet>
         <title>Chiemsee Premium Gin</title>
         
-        <meta name="description" content="" />
-          <meta property="og:type" content="website" />
-          <meta name="og:title" property="og:title" content="" />
-          <meta name="og:description" property="og:description" content="" />
-          <meta property="og:site_name" content="" />
-          <meta property="og:url" content="" />  
+        <meta name="description" content="Chiemsee Gin ist ein Gin mit lokalem Charakter" />
+          <meta property="og:type" content="shop" />
+          <meta name="og:title" property="og:title" content="Chiemsee Gin" />
+          <meta name="og:description" property="og:description" content="Der Gin vom bayrischen Meer" />
+          <meta property="og:site_name" content="Chiemsee Gin" />
+          <meta property="og:url" content="https://chiemseegin.de" />  
           <meta name="twitter:card" content="summary" /> 
-          <meta name="twitter:title" content="" />
-          <meta name="twitter:description" content="" />
-          <meta name="twitter:site" content="" />
+          <meta name="twitter:title" content="Chiemsee Premium Gin" />
+          <meta name="twitter:description" content="Der Gin vom bayrischen Meer" />
+          <meta name="twitter:site" content="https://chiemseegin.de" />
           <meta name="twitter:creator" content="" />
           <link rel="icon" type="image/png" href="/static/images/favicon.ico" />
           <link rel="apple-touch-icon" href="/static/images/favicon.ico" />
-          <meta property="og:image" content="" />  
-          <meta name="twitter:image" content="" />   
+          <meta property="og:image" content="/static/images/favicon.ico" />  
+          <meta name="twitter:image" content="/static/images/favicon.ico" />   
        
       
       </Helmet>
