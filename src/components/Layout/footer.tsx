@@ -54,7 +54,7 @@ export const Footer = () => {
       </div>
       <div className="border-t border-cgblue flex flex-col-reverse md:flex-row justify-between">
         <p className="text-sm text-cgblue text-center md:text-left font-bold my-2">
-        © 2021 by Chiemsee Gin
+        Chiemsee Premium Gin
         </p>
         <div className="flex flex-col space-y-3 md:space-y-0 md:flex-row space-x-2 my-2">
             <Link href="/kontakt">

@@ -13,7 +13,7 @@ function impressum() {
       <div className="flex">Telefon: <div className="select-all ml-2"> +49 (0)175 – 571 94 27</div></div>
       <div className="flex flex-col my-4">
         <div className="flex">E-Mail: <div className="select-all ml-2"> info (at) chiemseegin.de</div></div>
-        <div className="flex">USt-IdNr.: <div className="select-all ml-2">In Beauftragung</div></div>
+        <div className="flex">USt-IdNr.: <div className="select-all ml-2">DE342398748</div></div>
         <div>eingetragen im Handelsregister des Amtsgerichtes Traunstein</div>
         <div>Handelsregisternummer HRB 29839</div>
       </div>
