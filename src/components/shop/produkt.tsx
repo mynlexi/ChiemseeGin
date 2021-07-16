@@ -59,7 +59,7 @@ function Product({ product }) {
           </div>
           <div className="flex flex-col md:flex-row md:space-x-5 space-y-3 mt-8 mx-auto ">
             <div className="mx-auto my-auto">
-              <h4 className="mx-auto my-auto"><strong>Einführungspreis</strong> {price},- €</h4>
+              <h4 className="mx-auto my-auto"><strong>Einführungspreis</strong> {price} €</h4>
             </div>
             <div className=" p-2">
               {cart?.some((item) => item.productId === id) ? (
