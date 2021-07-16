@@ -19,7 +19,7 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
       <Helmet>
         <title>Chiemsee Premium Gin</title>
         
-        <meta name="description" content="Chiemsee Gin ist ein Gin mit lokalem Charakter" />
+        <meta name="description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
           <meta property="og:type" content="shop" />
           <meta name="og:title" property="og:title" content="Chiemsee Gin" />
           <meta name="og:description" property="og:description" content="Der Gin vom bayrischen Meer" />
@@ -32,8 +32,8 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
           <meta name="twitter:creator" content="" />
           <link rel="icon" type="image/png" href="/static/images/favicon.ico" />
           <link rel="apple-touch-icon" href="/static/images/favicon.ico" />
-          <meta property="og:image" content="/static/images/favicon.ico" />  
-          <meta name="twitter:image" content="/static/images/favicon.ico" />   
+          <meta property="og:image" content="/static/images/public/images/bild_sina_scan_600dpi_dunkel.b420ba87e207135b1a5636506aec18ea.png" />  
+          <meta name="twitter:image" content="/static/images/public/images/bild_sina_scan_600dpi_dunkel.b420ba87e207135b1a5636506aec18ea.png" />   
        
       
       </Helmet>
