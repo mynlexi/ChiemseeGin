@@ -52,12 +52,12 @@ function Product({ product }) {
          
          
         </div>
-        <div className="w-full md:w-1/2 flex flex-col content-between py-4 px-8 ">
+        <div className="w-full md:w-1/2 flex flex-col content-between py-4 md:px-8 ">
           <div className="flex-1">
             <p className="font-bold text-2xl">{title}</p>
            <div dangerouslySetInnerHTML={{ __html: descriptionH }} className="flex flex-col space-y-4"></div>
           </div>
-          <div className="flex space-x-5 my-8 mx-auto ">
+          <div className="flex flex-col md:flex-row md:space-x-5 space-y-3 mt-8 mx-auto ">
             <div className="mx-auto my-auto">
               <h4 className="mx-auto my-auto"><strong>Einführungspreis</strong> {price},- €</h4>
             </div>

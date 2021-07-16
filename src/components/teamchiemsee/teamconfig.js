@@ -30,9 +30,9 @@ export const team  = [
   },
   {
     key: 3,
-    path: "/images/sina.jpg",
-    width: 1200,
-    height: 1136,
+    path: "/images/sinaHQ-min.jpg",
+    width: 3024,
+    height: 4032,
    
       title: "Sina – Künstlerin aus dem Chiemgau",
       description: `Sina, eine regionale Künstlerin aus dem Chiemgau. Mit viel Liebe gestaltete sie für
@@ -50,9 +50,9 @@ export const team  = [
 
   {
     key: 4,
-    path: "/images/marcuslange.jpg",
-    width: 4000,
-    height: 6000,
+    path: "/images/marcus-min.jpg",
+    width: 3193,
+    height: 4843,
   
       title: "Marcus – Der Mann hinter der Kamera und das kreative Designertalent",
       description: `Marcus ist für Video & Foto sowie das Design bei Chiemsee Gin verantwortlich.
@@ -64,13 +64,13 @@ export const team  = [
   },
   {
     key: 5,
-    path: "/images/dd.jpg",
-    width: 900,
-    height: 1600,
+    path: "/images/lorenz-min.jpg",
+    width: 2279,
+    height: 3108,
       title: "Lorenz – Webshopentwickler & Prozessperfektionist",
       description: `Lorenz ist für die Chiemsee Gin Homepage und den Webshop verantwortlich. Individuell angefertigt soll
       der Shop ein schnelles und einfaches Kauferlebnis liefern.`,
-      socialMedia: "Zu Lorenzs Portfolio",
+      socialMedia: "Zum Portfolio",
       socialMediaLink: "https://lorenzwestner.com",
   },
 
