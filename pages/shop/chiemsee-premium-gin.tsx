@@ -7,6 +7,7 @@ import Product from '../../src/components/shop/produkt'
 
 import { IngList } from "../../styles/utilstyled";
 import Helmet from 'react-helmet'
+import Head from "next/head";
 
 const ProductPage: NextPage<any> = ({product, productPackage}) => {
 
@@ -16,7 +17,28 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
 
   return (
     <div>
-      <Helmet>
+      <Head>
+      
+        <title>Chiemsee Premium Gin</title>
+        <meta name="title" content="Chiemsee Premium Gin"/>
+        <meta name="description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
+
+
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://www.chiemseegin.de/"/>
+        <meta property="og:title" content="Chiemsee Premium Gin"/>
+        <meta property="og:description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
+        <meta property="og:image" content=""/>
+
+
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://www.chiemseegin.de/"/>
+        <meta property="twitter:title" content="Chiemsee Premium Gin"/>
+        <meta property="twitter:description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
+        <meta property="twitter:image" content=""/>
+
+      </Head>
+      {/* <Helmet>
         <title>Chiemsee Premium Gin</title>
         
         <meta name="description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
@@ -36,7 +58,7 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
           <meta name="twitter:image" content="/static/images/public/images/bild_sina_scan_600dpi_dunkel.b420ba87e207135b1a5636506aec18ea.png" />   
        
       
-      </Helmet>
+      </Helmet> */}
 
     <div>
       {multiple ?

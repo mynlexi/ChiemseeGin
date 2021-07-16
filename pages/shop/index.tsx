@@ -33,8 +33,27 @@ export default function ProductsMain({collections}) {
   return (
     <div className="min-h-screen">
       <Head>
-        <title>Premium Gins</title>
-        <link rel="icon" href="/favicon.ico" />
+      <Head>
+      
+      <title>Chiemsee Premium Gin</title>
+      <meta name="title" content="Chiemsee Premium Gin"/>
+      <meta name="description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
+
+
+      <meta property="og:type" content="website"/>
+      <meta property="og:url" content="https://www.chiemseegin.de/"/>
+      <meta property="og:title" content="Chiemsee Premium Gin"/>
+      <meta property="og:description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
+      <meta property="og:image" content=""/>
+
+
+      <meta property="twitter:card" content="summary_large_image"/>
+      <meta property="twitter:url" content="https://www.chiemseegin.de/"/>
+      <meta property="twitter:title" content="Chiemsee Premium Gin"/>
+      <meta property="twitter:description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
+      <meta property="twitter:image" content=""/>
+
+    </Head>
       </Head>
       <Header header={header} />
     
