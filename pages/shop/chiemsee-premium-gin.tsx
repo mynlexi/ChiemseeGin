@@ -28,14 +28,14 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
         <meta property="og:url" content="https://www.chiemseegin.de/"/>
         <meta property="og:title" content="Chiemsee Premium Gin"/>
         <meta property="og:description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
-        <meta property="og:image" content="/static/images/public/images/bottle_mockupsquare.jpg"/>
+        <meta property="og:image" content="/static/image/public/images/bottle_mockupsquare.jpg"/>
 
 
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://www.chiemseegin.de/"/>
         <meta property="twitter:title" content="Chiemsee Premium Gin"/>
         <meta property="twitter:description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
-        <meta property="twitter:image" content="/static/images/public/images/bottle_mockupsquare.jpg"/>
+        <meta property="twitter:image" content="/static/image/public/images/bottle_mockupsquare.jpg"/>
 
       </Head>
       {/* <Helmet>
