@@ -14,6 +14,8 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
   const productMultiple = productPackage
   const [multiple, setMultiple] = React.useState(false)
 
+  const dynamicImage = product.images[0].src
+
   return (
     <div>
       <Head>
@@ -27,13 +29,13 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
         <meta property="og:url" content="https://www.chiemseegin.de/"/>
         <meta property="og:title" content="Chiemsee Premium Gin"/>
         <meta property="og:description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
-        <meta property="og:image" content="https://www.chiemseegin.de/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fbild_sina_scan_600dpi_dunkel.b420ba87e207135b1a5636506aec18ea.png&w=1920&q=75"/>
+        <meta property="og:image" content={dynamicImage}/>
 
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://www.chiemseegin.de/"/>
         <meta property="twitter:title" content="Chiemsee Premium Gin"/>
         <meta property="twitter:description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
-        <meta property="twitter:image" content="https://www.chiemseegin.de/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fbild_sina_scan_600dpi_dunkel.b420ba87e207135b1a5636506aec18ea.png&w=1920&q=75"/>
+        <meta property="twitter:image" content={dynamicImage}/>
 
       </Head>
       {/* <Helmet>
