@@ -81,14 +81,14 @@ export default function Home() {
         <meta property="og:url" content="https://www.chiemseegin.de/"/>
         <meta property="og:title" content="Chiemsee Premium Gin"/>
         <meta property="og:description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
-        <meta property="og:image" content="/static/image/public/images/bild_sina_scan_600dpi_dunkel.png"/>
+        <meta property="og:image" content="/_next/static/image/public/images/bild_sina_scan_600dpi_dunkel.png"/>
 
 
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://www.chiemseegin.de/"/>
         <meta property="twitter:title" content="Chiemsee Premium Gin"/>
         <meta property="twitter:description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
-        <meta property="twitter:image" content="/static/image/public/images/bild_sina_scan_600dpi_dunkel.png"/>
+        <meta property="twitter:image" content="/_next/static/image/public/images/bild_sina_scan_600dpi_dunkel.png"/>
 
       </Head>
       
