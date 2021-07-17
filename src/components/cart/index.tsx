@@ -230,7 +230,7 @@ const SideCart = () => {
               <div
                 id="cart-total"
                   >
-                       {total} €
+                       {total.toFixed(2)} €
               </div>
             </div>
             <div className="w-full flex justify-items-center align-middle " onClick={checkout}>

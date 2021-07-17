@@ -18,12 +18,13 @@ function Product({ product }) {
     title = product.title,
     imageUrl = product.images[0].src,
     variantId = product.variants[0].id,
-    price = parseInt(product.variants[0].price),
+    price = Number(product.variants[0].price),
     handle = product.handle,
     descriptionH = product.descriptionHtml,
     description = product.description,
     quantity = 1,
   } = product;
+  console.log(price)
  
   const { addCartValue } = useCartUpdateContext();
   const { setSideCartOpen } = useSideCartUpdate();
@@ -59,7 +60,7 @@ function Product({ product }) {
           </div>
           <div className="flex flex-col md:flex-row md:space-x-5 space-y-3 mt-8 mx-auto ">
             <div className="mx-auto my-auto">
-              <h4 className="mx-auto my-auto"><strong>Einführungspreis</strong> {price} €</h4>
+              <h4 className="mx-auto my-auto"><strong>Einführungspreis</strong> {price}0 €</h4>
             </div>
             <div className=" p-2">
               {cart?.some((item) => item.productId === id) ? (

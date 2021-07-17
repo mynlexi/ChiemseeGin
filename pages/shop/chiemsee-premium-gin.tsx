@@ -13,7 +13,7 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
 
   const productMultiple = productPackage
   const [multiple, setMultiple] = React.useState(false)
-  
+  console.log(productMultiple, product)
 
   return (
     <div>
@@ -122,7 +122,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   
   const product = await shopifyClient.product.fetchByHandle('chiemsee-gin')
   const productPackage = await shopifyClient.product.fetchByHandle('chiemsee-gin-kiste-6-flaschen')
- 
+  
   return {
     props: {
       product: JSON.parse(JSON.stringify(product)),

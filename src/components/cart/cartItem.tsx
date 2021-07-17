@@ -88,7 +88,7 @@ const CartItem = ({
           <div className="z-10  ">
             <div className="justify-items-start flex flex-col text-left"> 
               <p className="font-semibold">{title}</p>
-              <p className="text-gray-600">{price}</p>
+              <p className="text-gray-600">{price}0 €</p>
             </div>
             <div className="flex flex-row" >
               <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
