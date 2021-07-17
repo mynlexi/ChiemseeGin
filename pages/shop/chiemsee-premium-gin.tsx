@@ -13,7 +13,6 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
 
   const productMultiple = productPackage
   const [multiple, setMultiple] = React.useState(false)
-  console.log(productMultiple, product)
 
   return (
     <div>
@@ -28,14 +27,14 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
         <meta property="og:url" content="https://www.chiemseegin.de/"/>
         <meta property="og:title" content="Chiemsee Premium Gin"/>
         <meta property="og:description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
-        <meta property="og:image" content="/static/image/public/images/bottle_mockupsquare.jpg"/>
+        <meta property="og:image" content="/.next/static/image/public/images/bottle_mockupsquare.jpg"/>
 
 
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://www.chiemseegin.de/"/>
         <meta property="twitter:title" content="Chiemsee Premium Gin"/>
         <meta property="twitter:description" content="Chiemsee Gin ist der Premium Gin vom Bayerischen Meer. Gin aus Bayern so einzigartig wie seine Heimat - nach Chiemgauer Brenntradition seit 1892." />
-        <meta property="twitter:image" content="/static/image/public/images/bottle_mockupsquare.jpg"/>
+        <meta property="twitter:image" content="/.next/static/image/public/images/bottle_mockupsquare.jpg"/>
 
       </Head>
       {/* <Helmet>
@@ -52,7 +51,7 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
           <meta name="twitter:description" content="Der Gin vom bayrischen Meer" />
           <meta name="twitter:site" content="https://chiemseegin.de" />
           <meta name="twitter:creator" content="" />
-          <link rel="icon" type="image/png" href="/static/images/favicon.ico" />
+          <link rel="icon" type="image/png" href="/.next/static/images/favicon.ico" />
           <link rel="apple-touch-icon" href="/static/images/favicon.ico" />
           <meta property="og:image" content="/static/images/public/images/bild_sina_scan_600dpi_dunkel.b420ba87e207135b1a5636506aec18ea.png" />  
           <meta name="twitter:image" content="/static/images/public/images/bild_sina_scan_600dpi_dunkel.b420ba87e207135b1a5636506aec18ea.png" />   
