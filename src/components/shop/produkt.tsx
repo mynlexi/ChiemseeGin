@@ -52,7 +52,7 @@ function Product({ product }) {
          
          
         </div>
-        <div className="w-full md:w-1/2 flex flex-col content-between py-4 md:pl-8 ">
+        <div className="w-full md:w-1/2 flex flex-col content-between py-4 md:pl-8 ios-device-col ">
           <div className="flex-1">
             <p className="font-bold text-2xl">{title}</p>
            <div dangerouslySetInnerHTML={{ __html: descriptionH }} className="flex flex-col space-y-4"></div>
