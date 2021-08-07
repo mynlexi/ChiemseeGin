@@ -225,7 +225,7 @@ export default function Header({header}) {
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}')!important;
   min-height: 75vh;
-}
+
 
 }
 
@@ -236,7 +236,6 @@ export default function Header({header}) {
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}')!important;
   min-height: 75vh;
-}
 
 }
 
@@ -247,7 +246,7 @@ export default function Header({header}) {
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 1) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}')!important;
   min-height: 75vh;
-}
+
 
 }
 
@@ -259,7 +258,7 @@ export default function Header({header}) {
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 2) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}')!important;
   min-height: 75vh;
-}
+
 
 }
 
@@ -270,7 +269,6 @@ export default function Header({header}) {
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}')!important;
   min-height: 75vh;
-}
 
 }
 
@@ -281,7 +279,6 @@ export default function Header({header}) {
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}')!important;
   min-height: 75vh;
-}
 
 }
 
