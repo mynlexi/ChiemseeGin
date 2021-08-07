@@ -62,7 +62,7 @@ function Product({ product }) {
               <h4 className="mx-auto my-auto"><strong>Einführungspreis</strong> {price}0 €</h4>
                <div className="text-xs flex-row justify-center">
                  <p className="text-center">inkl. 19% MwSt.</p>
-                 <p className="text-center">zzgl.<Link href="/versandinformation"><a className="text-cgblue ">Versand</a></Link></p>
+                 <p className="text-center">zzgl. <Link href="/versandinformation"><a className="text-cgblue ">Versand</a></Link></p>
                </div>
             </div>
             <div className=" p-2">
