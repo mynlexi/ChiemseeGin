@@ -84,7 +84,7 @@ export default function Header({header}) {
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}');
+    background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}') !important;
 }
 
 /* Portrait */
@@ -92,7 +92,7 @@ export default function Header({header}) {
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}');
+  and (orientation: portrait) {background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}')!important;
 }
 
 /* Landscape */
@@ -100,7 +100,7 @@ export default function Header({header}) {
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}');
+  and (orientation: landscape) {background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}')!important;
 
 }
 
@@ -110,7 +110,7 @@ export default function Header({header}) {
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}')!important;
 
 }
 
@@ -119,7 +119,7 @@ export default function Header({header}) {
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}');
+  and (orientation: portrait) {background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}')!important;
 }
 
 /* Landscape */
@@ -127,7 +127,7 @@ export default function Header({header}) {
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}');
+  and (orientation: landscape) {background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}')!important;
 
 }
 
@@ -137,7 +137,7 @@ export default function Header({header}) {
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 2) { background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}')!important;
 
 }
 
@@ -146,7 +146,7 @@ export default function Header({header}) {
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}');
+  and (orientation: portrait) { background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}')!important;
 
 }
 
@@ -155,7 +155,7 @@ export default function Header({header}) {
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}');
+  and (orientation: landscape) { background-image: url('${props => props.imageUrlxs ? props.imageUrlxs: props.imageUrl}')!important;
 
 }
 
@@ -165,7 +165,7 @@ export default function Header({header}) {
 @media only screen 
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { background-image: url('${props => props.imageUrlsm ? props.imageUrlsm: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 3) { background-image: url('${props => props.imageUrlsm ? props.imageUrlsm: props.imageUrl}')!important;
 
 }
 
@@ -174,7 +174,7 @@ export default function Header({header}) {
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { background-image: url('${props => props.imageUrlsm ? props.imageUrlsm: props.imageUrl}');
+  and (orientation: portrait) { background-image: url('${props => props.imageUrlsm ? props.imageUrlsm: props.imageUrl}')!important;
 
 }
 
@@ -183,7 +183,7 @@ export default function Header({header}) {
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { background-image: url('${props => props.imageUrlsm ? props.imageUrlsm: props.imageUrl}');
+  and (orientation: landscape) { background-image: url('${props => props.imageUrlsm ? props.imageUrlsm: props.imageUrl}')!important;
 
 }
 
@@ -193,7 +193,7 @@ export default function Header({header}) {
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { background-image: url('${props => props.imageUrlmd ? props.imageUrlmd: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 3) { background-image: url('${props => props.imageUrlmd ? props.imageUrlmd: props.imageUrl}')!important;
   min-height: 75vh;
 
 }
@@ -203,7 +203,7 @@ export default function Header({header}) {
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { background-image: url('${props => props.imageUrlmd ? props.imageUrlmd: props.imageUrl}');
+  and (orientation: portrait) { background-image: url('${props => props.imageUrlmd ? props.imageUrlmd: props.imageUrl}')!important;
   min-height: 75vh;
 
 }
@@ -213,7 +213,7 @@ export default function Header({header}) {
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { background-image: url('${props => props.imageUrlmd ? props.imageUrlmd: props.imageUrl}');
+  and (orientation: landscape) { background-image: url('${props => props.imageUrlmd ? props.imageUrlmd: props.imageUrl}')!important;
   min-height: 75vh;
 
 }
@@ -223,7 +223,7 @@ export default function Header({header}) {
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 1) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}')!important;
   min-height: 75vh;
 }
 
@@ -234,7 +234,7 @@ export default function Header({header}) {
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 1) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}')!important;
   min-height: 75vh;
 }
 
@@ -245,7 +245,7 @@ export default function Header({header}) {
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 1) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 1) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}')!important;
   min-height: 75vh;
 }
 
@@ -257,7 +257,7 @@ export default function Header({header}) {
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 2) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 2) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}')!important;
   min-height: 75vh;
 }
 
@@ -268,7 +268,7 @@ export default function Header({header}) {
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 2) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}')!important;
   min-height: 75vh;
 }
 
@@ -279,7 +279,7 @@ export default function Header({header}) {
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 2) { background-image: url('${props => props.imageUrllg ? props.imageUrllg: props.imageUrl}')!important;
   min-height: 75vh;
 }
 
@@ -291,7 +291,7 @@ export default function Header({header}) {
 @media only screen 
   and (min-device-width: 834px) 
   and (max-device-width: 1112px)
-  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}')!important;
   min-height: 75vh;
 
 }
@@ -303,7 +303,7 @@ export default function Header({header}) {
   and (min-device-width: 834px) 
   and (max-device-width: 834px) 
   and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}')!important;
   min-height: 75vh;
 
 }
@@ -315,7 +315,7 @@ export default function Header({header}) {
   and (min-device-width: 1112px) 
   and (max-device-width: 1112px) 
   and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}')!important;
   min-height: 75vh;
 
 }
@@ -326,7 +326,7 @@ export default function Header({header}) {
 @media only screen 
   and (min-device-width: 1024px) 
   and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}')!important;
   min-height: 75vh;
 
 }
@@ -338,7 +338,7 @@ export default function Header({header}) {
   and (min-device-width: 1024px) 
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}')!important;
   min-height: 75vh;
 
 }
@@ -350,7 +350,7 @@ export default function Header({header}) {
   and (min-device-width: 1366px) 
   and (max-device-width: 1366px) 
   and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}');
+  and (-webkit-min-device-pixel-ratio: 2) {background-image: url('${props => props.imageUrlxl ? props.imageUrlxl: props.imageUrl}')!important;
   min-height: 75vh;
 
 }

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import src from '../../../public/images/bootle_mockupsquare.jpg'
+import src from '../../../public/images/start_.jpg'
 import { ArrowRight } from 'react-feather'
 
 import { CSSTransition } from 'react-transition-group'
@@ -20,8 +20,8 @@ const ProductImage = () => {
   return (
     <div className="hover:w-full w-11/12 relative my-auto text-transparent  hover:text-black hidden transform">
     <Link href="/shop/chiemsee-premium-gin" >
-      <a className="relative k">
-    <Image src={src} layout="responsive" alt="" placeholder="blur" />
+      <a className="relative k rounded">
+    <Image src={src} layout="responsive" alt="" placeholder="blur"  className="rounded"/>
       </a>
     </Link>
   </div>

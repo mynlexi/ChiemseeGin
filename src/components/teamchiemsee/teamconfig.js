@@ -13,13 +13,13 @@ export const team  = [
   },
   {
     key: 2,
-    path: "/images/dd.jpg",
-    width: 900,
-    height: 1600,
+    path: "/images/Chiemsee Gin_Daniel_Schex.jpg",
+    width: 2309,
+    height: 3464,
     
-      title: "Daniel & Daniel – Zwei Gründer & Gin-Liebhaber mit Herzblut",
+      title: "Daniel Schex – Zwei Gründer & Gin-Liebhaber mit Herzblut",
       description: "Der Traum von einem regionalen Gin vom Chiemsee, verknüpft mit Nachhaltigkeit, entsprang aus zwei Burschen. Nachdem sie monatelang ihr ganzes Herzblut in das Projekt steckten, gründeten sie Chiemsee Premium Gin.",
-      author: "Daniel & Daniel: ",
+      author: "Daniel Schex: ",
       cite: `„Wir wollten einen Premium Gin von und für unsere Heimat machen.
       Uns war dabei wichtig, dass der Gin qualitativ unschlagbar ist und bei der
       Herstellung traditionelle chiemgauer Brennkultur gelebt wird. Chiemsee Gin
@@ -30,6 +30,23 @@ export const team  = [
   },
   {
     key: 3,
+    path: "/images/DHH_01.png",
+    width: 454,
+    height: 523,
+    
+      title: "Daniel H. – Zwei Gründer & Gin-Liebhaber mit Herzblut",
+      description: "Der Traum von einem regionalen Gin vom Chiemsee, verknüpft mit Nachhaltigkeit, entsprang aus zwei Burschen. Nachdem sie monatelang ihr ganzes Herzblut in das Projekt steckten, gründeten sie Chiemsee Premium Gin.",
+      author: "Daniel H.: ",
+      cite: `„Wir wollten einen Premium Gin von und für unsere Heimat machen.
+      Uns war dabei wichtig, dass der Gin qualitativ unschlagbar ist und bei der
+      Herstellung traditionelle chiemgauer Brennkultur gelebt wird. Chiemsee Gin
+      verkörpert unsere bayerische Kultur und Lebensgefühl - und das schmeckt man. Gin
+      (Tonic) ist Kunst. Mit Chiemsee Gin und unseren bayerischen Rezepten wollen wir
+      die Menschen in die facettenreiche Welt des Gin (Tonic) einladen.”`
+    
+  },
+  {
+    key: 4,
     path: "/images/sinaHQ-min.jpg",
     width: 3024,
     height: 4032,
@@ -49,7 +66,7 @@ export const team  = [
   },
 
   {
-    key: 4,
+    key: 5,
     path: "/images/marcus-min.jpg",
     width: 3193,
     height: 4843,
@@ -63,7 +80,7 @@ export const team  = [
 
   },
   {
-    key: 5,
+    key: 6,
     path: "/images/lorenz-min.jpg",
     width: 2279,
     height: 3108,

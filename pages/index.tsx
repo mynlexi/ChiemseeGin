@@ -14,13 +14,13 @@ import Head from 'next/head'
 export default function Home() {
   
   const header = {
-  path: '/images/headers/teal-50-crop.jpg',
-  pathxs: '/images/headers/teal-50-crop.jpg',
-  pathsm: '/images/headers/teal-50-crop.jpg',
-  pathmd: '/images/headers/teal-50-medium.jpg',
-  pathlg: '/images/headers/teal-50-medium.jpg',
-  pathxl: '/images/headers/teal-50-large1.jpg',
-  path2xl: '/images/headers/teal-50.jpg',
+  path: '/images/headers/fraueninsel_small.jpg',
+  pathxs: '/images/headers/fraueninsel_small.jpg',
+  pathsm: '/images/headers/fraueninsel_small.jpg',
+  pathmd: '/images/headers/fraueninsel_small.jpg',
+  pathlg: '/images/headers/fraueninsel_small.jpg',
+  pathxl: '/images/headers/fraueninsel_small.jpg',
+  path2xl: '/images/headers/fraueninsel_small.jpg',
   title: 'CHIEMSEE GIN',
   subtitle: 'Eine Perle des Genusses direkt vom bayerischen Meer',
   button: 'Zum Premium Gin',

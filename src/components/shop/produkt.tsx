@@ -57,7 +57,7 @@ function Product({ product }) {
             <p className="font-bold text-2xl">{title}</p>
            <div dangerouslySetInnerHTML={{ __html: descriptionH }} className="flex flex-col space-y-4"></div>
           </div>
-          <div className="flex flex-col md:flex-row md:space-x-5 space-y-3 mt-8 mx-auto ">
+          <div className="flex flex-col md:flex-row md:space-x-5 space-y-3 my-8 mx-auto ">
             <div className="mx-auto my-auto flex-row">
               <h4 className="mx-auto my-auto"><strong>Einführungspreis</strong> {price}0 €</h4>
                <div className="text-xs flex-row justify-center">
