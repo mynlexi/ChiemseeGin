@@ -1,6 +1,6 @@
 
 
-export default function dsvgo(){
+export default function Datenschutz(){
   return (
     <section>
     <div className="select-none">
@@ -150,7 +150,7 @@ export default function dsvgo(){
         Deutschland
         </p>
         <p>
-        E-Mail: info@chiemseegin.de
+        E-Mail: info (at) chiemseegin.de
         </p>
         <p>
         Website: www.chiemseegin.de

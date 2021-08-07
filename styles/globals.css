@@ -123,6 +123,10 @@ button:focus {
   outline: none;
 }
 
+button {
+  @apply rounded
+}
+
 section {
   @apply  px-1 w-10/12 md:px-2 lg:w-3/4 lg:px-8 mx-auto;
 }

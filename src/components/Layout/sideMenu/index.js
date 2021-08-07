@@ -144,6 +144,12 @@ const Menu = () => {
                     </a>
                   </Link>
                 </li>
+
+                  <Link href="/gintasting">
+                  <a  onClick={toggleMenu}>
+                    Gin Tasting
+                  </a>
+                </Link>
                 <li >
                   <Link href="/ueber-uns">
                     <a  onClick={toggleMenu}>

@@ -234,7 +234,7 @@ const SideCart = () => {
               </div>
             </div>
             <div className="w-full flex justify-items-center align-middle " onClick={checkout}>
-              <button className=" my-5 bg-gray-600 text-white px-20 hover:bg-cgblue  py-4 m-auto "  >
+              <button className=" my-5 transition-colors bg-cgblue text-white px-20 hover:bg-white hover:text-cgblue py-4 m-auto "  >
          
                 Checkout
               </button>

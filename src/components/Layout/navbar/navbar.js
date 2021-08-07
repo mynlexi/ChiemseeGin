@@ -101,6 +101,13 @@ export const Navbar = ({isHome}) => {
                 
               </Link>
             </li>
+            <li>
+              <Link href="/gintasting">
+               
+              Gin Tasting
+                
+              </Link>
+            </li>
             <li>           
               <Link href="/ueber-uns">
                

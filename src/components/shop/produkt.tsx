@@ -58,8 +58,12 @@ function Product({ product }) {
            <div dangerouslySetInnerHTML={{ __html: descriptionH }} className="flex flex-col space-y-4"></div>
           </div>
           <div className="flex flex-col md:flex-row md:space-x-5 space-y-3 mt-8 mx-auto ">
-            <div className="mx-auto my-auto">
+            <div className="mx-auto my-auto flex-row">
               <h4 className="mx-auto my-auto"><strong>Einführungspreis</strong> {price}0 €</h4>
+               <div className="text-xs flex-row justify-center">
+                 <p className="text-center">inkl. 19% MwSt.</p>
+                 <p className="text-center">zzgl.<Link href="/versandinformation"><a className="text-cgblue ">Versand</a></Link></p>
+               </div>
             </div>
             <div className=" p-2">
               {cart?.some((item) => item.productId === id) ? (

@@ -62,14 +62,19 @@ export const Footer = () => {
             Kontakt
             </a>
             </Link>
-            <Link href="/dsvgo">
+            <Link href="/datenschutz">
             <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
-            DSVGO
+            Datenschutz
             </a>
             </Link>
             <Link href="/AGB">
             <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
             AGB
+            </a>
+            </Link>
+            <Link href="/versandinformation">
+            <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
+            Versandinformationen
             </a>
             </Link>
             <Link href="/impressum">
@@ -80,6 +85,11 @@ export const Footer = () => {
             <Link href="/widerrufsrecht">
             <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
             Widerrufsrecht
+            </a>
+            </Link>
+            <Link href="/kontakt">
+            <a className="links text-sm text-cgblue hover:text-gray-900 mb-2 ">
+            Händler werden
             </a>
             </Link>
         </div>
