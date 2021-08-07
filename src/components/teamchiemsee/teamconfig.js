@@ -17,15 +17,10 @@ export const team  = [
     width: 2309,
     height: 3464,
     
-      title: "Daniel Schex – Zwei Gründer & Gin-Liebhaber mit Herzblut",
-      description: "Der Traum von einem regionalen Gin vom Chiemsee, verknüpft mit Nachhaltigkeit, entsprang aus zwei Burschen. Nachdem sie monatelang ihr ganzes Herzblut in das Projekt steckten, gründeten sie Chiemsee Premium Gin.",
+      title: "Daniel Schex - Gründer & Gin-Liebhaber mit Herzblut",
+      description: "Der Traum von einem regionalen Gin vom Chiemsee, verknüpft mit Nachhaltigkeit, entsprang aus zwei Burschen - Daniel Schex und Daniel Heringer Herkner. Nachdem sie monatelang ihr ganzes Herzblut in das Projekt steckten, gründeten sie Chiemsee Premium Gin.",
       author: "Daniel Schex: ",
-      cite: `„Wir wollten einen Premium Gin von und für unsere Heimat machen.
-      Uns war dabei wichtig, dass der Gin qualitativ unschlagbar ist und bei der
-      Herstellung traditionelle chiemgauer Brennkultur gelebt wird. Chiemsee Gin
-      verkörpert unsere bayerische Kultur und Lebensgefühl - und das schmeckt man. Gin
-      (Tonic) ist Kunst. Mit Chiemsee Gin und unseren bayerischen Rezepten wollen wir
-      die Menschen in die facettenreiche Welt des Gin (Tonic) einladen.”`
+      cite: `„Wir wollten einen Premium Gin von und für unsere Heimat machen. Uns war dabei wichtig, dass der Gin qualitativ unschlagbar ist und bei der Herstellung traditionelle chiemgauer Brennkultur gelebt wird.”`
     
   },
   {
@@ -34,15 +29,9 @@ export const team  = [
     width: 454,
     height: 523,
     
-      title: "Daniel H. – Zwei Gründer & Gin-Liebhaber mit Herzblut",
-      description: "Der Traum von einem regionalen Gin vom Chiemsee, verknüpft mit Nachhaltigkeit, entsprang aus zwei Burschen. Nachdem sie monatelang ihr ganzes Herzblut in das Projekt steckten, gründeten sie Chiemsee Premium Gin.",
+      title: "Daniel Heringer Herkner - Gründer & Gin-Liebhaber mit Herzblut",
       author: "Daniel H.: ",
-      cite: `„Wir wollten einen Premium Gin von und für unsere Heimat machen.
-      Uns war dabei wichtig, dass der Gin qualitativ unschlagbar ist und bei der
-      Herstellung traditionelle chiemgauer Brennkultur gelebt wird. Chiemsee Gin
-      verkörpert unsere bayerische Kultur und Lebensgefühl - und das schmeckt man. Gin
-      (Tonic) ist Kunst. Mit Chiemsee Gin und unseren bayerischen Rezepten wollen wir
-      die Menschen in die facettenreiche Welt des Gin (Tonic) einladen.”`
+      cite: `„Chiemsee Gin verkörpert unsere bayerische Kultur und Lebensgefühl - und das schmeckt man. Gin (Tonic) ist Kunst. Mit Chiemsee Gin und unseren bayerischen Rezepten wollen wir die Menschen in die facettenreiche Welt des Gin (Tonic) einladen.”`
     
   },
   {
@@ -51,7 +40,7 @@ export const team  = [
     width: 3024,
     height: 4032,
    
-      title: "Sina – Künstlerin aus dem Chiemgau",
+      title: "Sina Obermaier – Künstlerin aus dem Chiemgau",
       description: `Sina, eine regionale Künstlerin aus dem Chiemgau. Mit viel Liebe gestaltete sie für
       den Chiemsee Gin ein Gemälde aus Acrylfarben. Der Chiemsee mit seiner
       unverkennbaren Fraueninsel und den chiemgauer Alpen im Hintergrund ziert heute
@@ -71,7 +60,7 @@ export const team  = [
     width: 3193,
     height: 4843,
   
-      title: "Marcus – Der Mann hinter der Kamera und das kreative Designertalent",
+      title: "Marcus Lange – Der Mann hinter der Kamera und das kreative Designertalent",
       description: `Marcus ist für Video & Foto sowie das Design bei Chiemsee Gin verantwortlich.
       Seine Kreativität spiegelt sich nicht nur in unseren Videos & Fotos, sondern auch im
       Logo und dem Etikettendesign wider.`,
