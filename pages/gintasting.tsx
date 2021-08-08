@@ -14,7 +14,7 @@ export default function gintasting() {
     pathmd: '/images/headers/winter.jpeg',
     pathlg: '/images/headers/winter.jpeg',
     pathxl: '/images/headers/winter.jpeg',
-    path2xl: '/images/headers/landscape.jpeg',
+    path2xl: '/images/headers/winter.jpeg',
    
   }
   return (
@@ -26,7 +26,7 @@ export default function gintasting() {
       <Header header={header} />
       
       <section className="flex flex-col  pt-16 space-y-3">
-        <h3 className ="text-center mb-20 mt-0  page-title" >Gin ist Kunst</h3>
+        <h3 className ="text-center mb-20 mt-0  page-title" >Ginverkostung</h3>
         </section>
       <section className="grid grid-cols-6 md:grid-cols-12 pyz-4 mx-auto w-full md:w-5/6 lg:w-3/4 ">
         <div className="px-12 md:px-10 lg:px-20 my-auto col-span-6" >
@@ -35,12 +35,12 @@ export default function gintasting() {
         </Link>
       </div>
       <div className="p-5 mx-auto flex flex-col justify-items-center my-auto col-span-6">
-      <p>text fuer tasting</p>
+      <p>Hol dir unseren Gin Tasting Guide 	&amp; Bewertungsbogen für das perfekte Gin Tasting.</p>
       </div>
       <div className='flex justify-center col-span-6'>
       <Link href="/Gin_Tasting_Guide_und_Bewertungsbogen_Chiemsee_Gin.pdf">
-        <a className="text-cgblue">
-        Unser Bewertungsbogen
+        <a className="text-cgblue text-underline">
+        Hier als PDF
         </a>
       </Link>
       </div>

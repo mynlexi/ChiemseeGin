@@ -51,9 +51,9 @@ export default function TeamMember({info}) {
   const text = (
       <div className="p-5 mx-auto flex flex-col justify-items-center my-auto">
         <h3>{title}</h3>
-        <p>{description}</p>
+        <p className='not-justify'>{description}</p>
         <div>
-          <p>{author}<cite>{cite}</cite></p>
+          <p className='not-justify'>{author}<cite>{cite}</cite></p>
         </div>
         {socialMedia &&
         <a href={socialMediaLink} rel="external noreferrer noopener" target="_blank" className="my-2 hover:underline text-cgblue">{socialMedia}</a>}

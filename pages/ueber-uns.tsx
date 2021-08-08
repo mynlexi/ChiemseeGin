@@ -10,9 +10,9 @@ export default function Geschichte() {
     path: '/images/headers/winter-small.jpeg',
     pathxs: '/images/headers/winter-small.jpeg',
     pathsm: '/images/headers/winter-small.jpeg',
-    pathmd: '/images/headers/winter.jpeg',
-    pathlg: '/images/headers/winter.jpeg',
-    pathxl: '/images/headers/winter.jpeg',
+    pathmd: '/images/headers/landscape.jpeg',
+    pathlg: '/images/headers/landscape.jpeg',
+    pathxl: '/images/headers/landscape.jpeg',
     path2xl: '/images/headers/landscape.jpeg',
    
   }

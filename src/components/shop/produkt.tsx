@@ -60,9 +60,9 @@ function Product({ product }) {
           <div className="flex flex-col md:flex-row md:space-x-5 space-y-3 my-8 mx-auto ">
             <div className="mx-auto my-auto flex-row">
               <h4 className="mx-auto my-auto"><strong>Einführungspreis</strong> {price}0 €</h4>
-               <div className="text-xs flex-row justify-center">
-                 <p className="text-center">inkl. 19% MwSt.</p>
-                 <p className="text-center">zzgl. <Link href="/versandinformation"><a className="text-cgblue ">Versand</a></Link></p>
+               <div className="text-xs flex-row justify-center ">
+                 <span className="text-center">inkl. 19% MwSt.  </span>
+                 <span className="text-center">zzgl. <Link href="/versandinformation"><a className="text-cgblue ">Versand</a></Link></span>
                </div>
             </div>
             <div className=" p-2">

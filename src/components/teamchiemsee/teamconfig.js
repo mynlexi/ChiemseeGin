@@ -73,7 +73,7 @@ export const team  = [
     path: "/images/lorenz-min.jpg",
     width: 2279,
     height: 3108,
-      title: "Lorenz – Webshopentwickler & Prozessperfektionist",
+      title: "Lorenz Westner – Webshopentwickler & Prozessperfektionist",
       description: `Lorenz ist für die Chiemsee Gin Homepage und den Webshop verantwortlich. Individuell angefertigt soll
       der Shop ein schnelles und einfaches Kauferlebnis liefern.`,
       socialMedia: "Zum Portfolio",
