@@ -369,7 +369,7 @@ export default function Header({header}) {
         imageUrlxl={pathxl}
         imageUrl2xl={path2xl}
 
-         className={ header.title ? "bg-blend-soft-light bg-white bg-opacity-40 flex" : ""} placeholder="blur">
+         className={ header.title ? " bg-white bg-opacity-40 flex" : ""} placeholder="blur">
           <div className="mx-auto py-36 md:py-20  md:mb-12 xl:py-36 flex flex-col justify-items-center justify-center text-center ">
             <h1 className="text-4xl">{title}</h1>
             { subtitle && (
