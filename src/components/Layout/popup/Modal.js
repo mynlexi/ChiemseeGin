@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
-import src from '../../../../public/images/johanngugg.png'
+import src from '../../../../public/images/Chiemsee_Gin_Check.jpg'
 import Image from 'next/image'
 
 const Background = styled.div`
