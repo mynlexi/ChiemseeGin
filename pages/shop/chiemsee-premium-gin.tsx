@@ -118,7 +118,7 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
       <p>In der EU-Verordnung zu Spirituosen vom Jahr 2008 ist festgelegt, was sich als <i>London Dry Gin</i> bezeichnen darf. Dazu zählt unter anderem eine mindestens 3-fache Destillation sowie pflanzlich-landwirtschaftliche Ausgangsstoffe wie Getreide oder Melasse. Die Zugabe von Zucker, Aromen und Farbstoffen ist streng untersagt.</p>
       <p>Wir sind stolz, dass sich unser Chiemsee Gin als <i>London Dry Gin</i> betiteln darf.</p>
       </div>
-        </section>1
+        </section>
 
     </div>
     </div>
