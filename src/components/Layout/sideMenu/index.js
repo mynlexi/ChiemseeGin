@@ -157,6 +157,13 @@ const Menu = () => {
                     </a>
                   </Link>
                 </li>
+                <li >
+                  <Link href="/standorte">
+                    <a  onClick={toggleMenu}>
+                      Standorte
+                    </a>
+                  </Link>
+                </li>
               </ol>
   
           <div className="w-5/6 mt-4">

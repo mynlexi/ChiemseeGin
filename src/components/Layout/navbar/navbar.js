@@ -114,7 +114,14 @@ export const Navbar = ({isHome}) => {
               Über Uns
                 
               </Link>
-            </li> 
+            </li>
+            <li>
+              <Link href="/standorte">
+
+                Standorte
+
+              </Link>
+            </li>
           </ol>
           </StyledLinks>
       </StyledNav>
