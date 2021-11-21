@@ -17,6 +17,7 @@ import Header from '../../src/components/general/header';
 
 
 export default function ProductsMain({collections}) {
+    console.log(collections)
 
   const header = {
     path: '/images/backgroundheader.jpg',

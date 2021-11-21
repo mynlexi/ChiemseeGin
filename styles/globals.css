@@ -640,3 +640,49 @@ p {
   
 
 }
+
+.upsell-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 260px;
+  height: 30%;
+  max-height: -webkit-fill-available;
+  transition: 1s ease-in;
+}
+.upsell-close-button{
+  position: absolute;
+  top: -20px;
+  right: 0px;
+}
+
+.upsell-buy-button{
+  padding: 7px}
+
+.upsellimage img{
+  max-height: 125px;
+}
+
+.lowercart {
+  height: 208px;
+  background: white;
+}
+.middlecart{
+  overflow-y: scroll;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.middlecart:last-child{
+  padding-bottom: 208px;
+}
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
