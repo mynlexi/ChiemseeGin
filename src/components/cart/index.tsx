@@ -62,7 +62,7 @@ const SideCart = () => {
     } else if (total < 50 && showUpsell){
       setShowUpsell(false)
     }
-  }, [total])
+  }, [total, disabled, showUpsell])
   const handleDisable =()=> {
     setDisabled(true)
     setShowUpsell(false)

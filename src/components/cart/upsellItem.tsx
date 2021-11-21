@@ -5,10 +5,11 @@ import { useCartUpdateContext } from "../../hooks/useCartStorage";
 import Link from 'next/link'
 
 export function UpsellItem({product, displayed, handleDisable}){
+    const { addCartValue } = useCartUpdateContext();
     if(product == null){
         return (<></>)
     }
-    const { addCartValue } = useCartUpdateContext();
+
     let image = product.images[2].src
     const {
         id = product.Id,

@@ -30,7 +30,7 @@ export default function gintasting() {
         </section>
       <section className="grid grid-cols-6 md:grid-cols-12 pyz-4 mx-auto w-full md:w-5/6 lg:w-3/4 ">
         <div className="px-12 md:px-10 lg:px-20 my-auto col-span-6" >
-        <Link href="/Gin_Tasting_Guide_und_Bewertungsbogen_Chiemsee_Gin.pdf">
+        <Link href="/Gin_Tasting_Guide_und_Bewertungsbogen_Chiemsee_Gin.pdf" passHref>
         <Image src={src} width={617} height={864} layout="responsive"  alt=""/>
         </Link>
       </div>
