@@ -29,14 +29,9 @@ export const Footer = () => {
               Shop
               </a>
           </Link>
-          <Link href="/rezepte">
-              <a className="links text-xl hover:text-gray-900 ">
-              Chiemgauer Rezepte
-              </a>
-          </Link>
           <Link href="/gintasting">
               <a className="links text-xl hover:text-gray-900 ">
-              Gin Tasting
+                  Tasting & Rezepte
               </a>
           </Link>
           <Link href="/ueber-uns">

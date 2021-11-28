@@ -24,24 +24,41 @@ export default function Geschichte() {
       <Header header={header} />
       <section className="py-20 flex flex-col space-y-3">
       <h3 className ="text-center mb-20 mt-0  page-title" >   Hier gibt‘s Chiemsee Gin  </h3>
-        <div className="grid grid-cols-2 gap-y-8 gap-x-4 text-center lg:w-2/3 mx-auto">
+        <div className="grid grid-cols-1 gap-y-8 gap-x-4 text-center lg:w-2/3 mx-auto">
             <div className="flex flex-col">
-                <p><a href={"https://www.edelbrandmanufaktur.com/"} className="hover:text-cgblue hover:underline" target="_blank" rel="noopener noreferrer">Edelbrandmanufaktur Guggenbichler</a></p>
+                <p className={"font-bold"}>Edelbrandmanufaktur Guggenbichler</p>
                     <p>Oberacherting 1</p>
                         <p>83112 Frasdorf</p>
 
 
             </div>
             <div className="flex flex-col">
-                <p className="text-right"><a href={"https://www.dorfladl.de/"} className="hover:text-cgblue hover:underline" target="_blank" rel="noopener noreferrer">Chieminger Dorfladl</a></p>
+                <p className="text-right font-bold">Chieminger Dorfladl</p>
                 <p className="text-right">Stötthamer Straße 7</p>
                     <p className="text-right"> 83339 Chieming</p>
             </div>
             <div className="flex flex-col">
-                <p><a href={"https://www.facebook.com/TanteHertaChiemsee/"} className="hover:text-cgblue hover:underline" target="_blank" rel="noopener noreferrer">Tante Herta</a></p>
+                <p className={"font-bold"}>Tante Herta</p>
                 <p>  Seeplatz 4</p>
             <p>  83257 Gstadt am Chiemsee</p>
+            </div>
 
+            <div className="flex flex-col">
+                <p className="text-right font-bold">Wein & Genuss Schmidtner</p>
+                <p className="text-right">Fridtjof-Nansen-Straße 3</p>
+                <p className="text-right"> 83301 Traunreut</p>
+            </div>
+
+            <div className="flex flex-col">
+                <p className={"font-bold"}>das Garting</p>
+                <p>  Westenriederstraße 16</p>
+                <p>  80331 München</p>
+            </div>
+
+            <div className="flex flex-col">
+                <p className="text-right font-bold">Herrfliege</p>
+                <p className="text-right">Planeggerstr. 11</p>
+                <p className="text-right">81241 München</p>
             </div>
         </div>
 

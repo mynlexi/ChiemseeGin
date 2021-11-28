@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e266b3-d447-473e-94db-aa60cbc39ea4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/upseell.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/upsellItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/upsellItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/general/vimeoplayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/general/vimeoplayer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/gintasting.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/rezepte/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gintasting/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/rezepte/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gintasting/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/standorte.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/standorte.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/navbar/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/navbar/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/sideMenu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/sideMenu/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +52,7 @@
       <workItem from="1633162393076" duration="3220000" />
       <workItem from="1635056926585" duration="191000" />
       <workItem from="1637488515112" duration="15757000" />
-      <workItem from="1638089583686" duration="938000" />
+      <workItem from="1638089583686" duration="3508000" />
     </task>
     <servers />
   </component>

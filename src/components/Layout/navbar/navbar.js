@@ -95,16 +95,9 @@ export const Navbar = ({isHome}) => {
               </Link>
             </li>
             <li>
-              <Link href="/rezepte">
-               
-                  Chiemgauer Rezepte
-                
-              </Link>
-            </li>
-            <li>
               <Link href="/gintasting">
-               
-              Gin Tasting
+
+                Tasting & Rezepte
                 
               </Link>
             </li>

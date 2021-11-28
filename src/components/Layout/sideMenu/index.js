@@ -136,18 +136,11 @@ const Menu = () => {
                     </a>
                   </Link>
                 </li>
-             
-                <li >
-                  <Link href="/rezepte">
-                    <a  onClick={toggleMenu}>
-                      Chiemgauer Rezepte
-                    </a>
-                  </Link>
-                </li>
+
 
                   <Link href="/gintasting">
                   <a  onClick={toggleMenu}>
-                    Gin Tasting
+                    Tasting & Rezepte
                   </a>
                 </Link>
                 <li >
