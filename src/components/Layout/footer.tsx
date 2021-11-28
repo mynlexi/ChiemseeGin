@@ -44,6 +44,12 @@ export const Footer = () => {
               Über Uns
               </a>
           </Link>
+                <Link href="/standorte">
+                    <a className="links text-xl hover:text-gray-900 ">
+                    Standorte
+                    </a>
+                </Link>
+
         
         <div className="my-4 mx-auto md:mx-0">
             <a href="https://www.instagram.com/chiemseegin/" rel="noreferrer noopener" target="_blank" className="flex flex-row ">
