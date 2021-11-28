@@ -660,7 +660,8 @@ p {
   padding: 7px}
 
 .upsellimage img{
-  max-height: 125px;
+  max-height: 165px;
+  max-width: 160px;
 }
 
 .lowercart {

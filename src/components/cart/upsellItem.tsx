@@ -3,6 +3,7 @@ import { CartImage } from "./SideCartElements"
 import { X} from 'react-feather'
 import { useCartUpdateContext } from "../../hooks/useCartStorage";
 import Link from 'next/link'
+import src from '/public/images/upseell.jpeg'
 
 export function UpsellItem({product, displayed, handleDisable}){
     const { addCartValue } = useCartUpdateContext();
@@ -14,7 +15,7 @@ export function UpsellItem({product, displayed, handleDisable}){
     const {
         id = product.Id,
         title = product.title,
-        imageUrl = product.images[2].src,
+        imageUrl = src.src,
         variantId = product.variants[0].id,
         price = Number(product.variants[0].price),
         handle = product.handle,
@@ -46,11 +47,11 @@ export function UpsellItem({product, displayed, handleDisable}){
 
         <div className={'flex relative'}>
             <div className={'flex items-center upsellimage'}>
-                <CartImage src={image} />
+                <CartImage src={src.src} />
             </div>
             <div className={"flex-col flex"}>
                 <div>
-                    <div className="flex flex-col text-base">{description}</div>
+                    <div className="flex flex-col text-base">Vier hochwertige Gin-Kühlsteine aus Edelstahl. Kein verwässern mehr deines Gin Tonics durch Eiswürfel. Das perfekte Upgrade.</div>
                 </div>
                 <div className="flex flex-col md:flex-row md:space-x-5 space-y-3 mx-auto ">
                     {/*<div className="mx-auto my-auto flex-row">
@@ -58,7 +59,7 @@ export function UpsellItem({product, displayed, handleDisable}){
 
                     </div>*/}
                     <div className=" p-2">
-                            <button onClick={addProduct} className=" hover:bg-white hover:text-cgblue text-white transition-colors bg-cgblue upsell-buy-button"> Für nur {price}0 € hinzufügen </button>   <div className="text-xs flex-row justify-center ">
+                            <button onClick={addProduct} className=" hover:bg-white hover:text-cgblue text-white transition-colors bg-cgblue upsell-buy-button"> Für {price}0 € hinzufügen </button>   <div className="text-xs flex-row justify-center ">
                         <span className="text-center">inkl. 19% MwSt.  </span>
                         {/*   <span className="text-center">zzgl. <Link href="/versandinformation"><a className="text-cgblue ">Versand</a></Link></span>*/}
                     </div>

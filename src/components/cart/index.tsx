@@ -57,9 +57,9 @@ const SideCart = () => {
 
   }, [upsellData])
   React.useEffect(()=>{
-    if(total > 50 && !showUpsell && !disabled){
+    if(total > 35 && !showUpsell && !disabled){
         setShowUpsell(true)
-    } else if (total < 50 && showUpsell){
+    } else if (total < 35 && showUpsell){
       setShowUpsell(false)
     }
   }, [total, disabled, showUpsell])

@@ -36,7 +36,7 @@ export default function Vimeoplayer() {
   
        
     <div className="relative mx-auto vimeo-div">
-    <iframe src="https://player.vimeo.com/video/562114431" width={`${windowWith}`} height={`${windowWith/ratio}`}  frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe></div>
+    <iframe src="https://player.vimeo.com/video/645111515" width={`${windowWith}`} height={`${windowWith/ratio}`}  frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe></div>
         {/*  eslint-disable-next-line @next/next/no-sync-scripts */}
         <script src="https://player.vimeo.com/api/player.js"></script>
     </div>
