@@ -32,7 +32,7 @@ export default function Vimeoplayer() {
   
 
   return (
-    <div id="video " className="my-14"> 
+    <div id="video " className="">
   
        
     <div className="relative mx-auto vimeo-div">

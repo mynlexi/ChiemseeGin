@@ -565,8 +565,8 @@ p {
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 834px) 
+@media only screen
+  and (min-device-width: 834px)
   and (max-device-width: 834px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) { .ios-device-col {
@@ -655,8 +655,16 @@ p {
   top: -20px;
   right: 0px;
 }
+@media only screen
+and (max-device-width: 834px) {
+  .upsell-close-button{
+    position: absolute;
+    top: -5px;
+    right:0px;
+  }
+}
 
-.upsell-buy-button{
+  .upsell-buy-button{
   padding: 7px}
 
 .upsellimage img{
