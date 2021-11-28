@@ -44,7 +44,7 @@ export const StyledSidebar = styled.aside`
     top: 0;
     bottom: 0;
     right: 0;
-    padding: 50px 10px;
+    padding: 25px 10px;
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0;
@@ -74,7 +74,7 @@ export const StyledSidebar = styled.aside`
   .cartitem {
     min-height: 125px;
     max-height: 225px;
-
+    width: 370px;
     button:disabled,
     button[disabled]{
       border: 1px solid #999999;

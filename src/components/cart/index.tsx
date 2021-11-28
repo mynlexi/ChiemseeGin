@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ShoppingCart } from "react-feather";
 import Image from 'next/image'
-
+import {client as shopifyClient} from '../../../src/utils/shopify'
 
 import {
   StyledMenu,
@@ -20,6 +20,7 @@ import CartItem from './cartItem'
 import useCalculateTotal from "../../hooks/useCalculateCart";
 import { useSideCart, useSideCartUpdate } from "../../hooks/useOpenSidebar";
 import src from '../../../public/images/bild_sina_scan_600dpi_dunkel.png'
+import { UpsellItem } from "./upsellItem";
 
 const SideCart = () => {
 
@@ -37,6 +38,36 @@ const SideCart = () => {
  
   const [total, setTotal] = React.useState(updateTotal)
   const [ isDisabled, setIsDisabled ] = React.useState(false);
+
+
+  /// getting upsell info through async useEffect
+  const [upsellData, setUpsellData] = React.useState(null)
+  const [showUpsell, setShowUpsell] = React.useState(false)
+  const [disabled, setDisabled] = React.useState(false)
+
+  React.useEffect(()=>{
+    async function getUpsell(product_handle){
+     const upsell = await shopifyClient.product.fetchByHandle(product_handle)
+      setUpsellData(JSON.parse(JSON.stringify(upsell)))
+    }
+
+    if(upsellData == null){
+      getUpsell('gin-kuhlsteine')
+    }
+
+  }, [upsellData])
+  React.useEffect(()=>{
+    if(total > 35 && !showUpsell && !disabled){
+        setShowUpsell(true)
+    } else if (total < 35 && showUpsell){
+      setShowUpsell(false)
+    }
+  }, [total, disabled, showUpsell])
+  const handleDisable =()=> {
+    setDisabled(true)
+    setShowUpsell(false)
+    console.log("handledisable")
+  }
 
 
 
@@ -193,8 +224,9 @@ const SideCart = () => {
              <h1>Dein Warenkorb</h1>
              </button>
           </div>
-           
-            <div className="">
+
+            <div className="middlecart" >
+              <>
             {cart.map((product) => {
             
               return (
@@ -210,13 +242,17 @@ const SideCart = () => {
                    
                   />
               );
-            })}
+            })}</>
+
+                <UpsellItem key={1}  product={upsellData} displayed={showUpsell} handleDisable={handleDisable}/>
+
             </div>
-            <ol>
-            
-  
-             
-            {isDisabled ? 
+
+
+
+
+
+            {isDisabled ?
             <div className=" flex flex-col">
             <div className="text-cgblue mb-20"> Noch nichts zum Einkaufswagen hinzugefügt</div>
               <div className="w-full ">
@@ -224,7 +260,7 @@ const SideCart = () => {
               </div>
             </div>
              :
-            <div className="fixed bottom-0 w-full"> 
+            <div className="fixed bottom-0 w-full lowercart">
             <div className="border-b-2 border-cgblue w-full text-left text-2xl p-5 text-cgblue">
               <h3>Zwischensumme</h3>
               <div
@@ -241,7 +277,7 @@ const SideCart = () => {
               </div>
             </div>
             }
-         </ol> 
+
           </nav>
         </StyledSidebar>
       </div>
