@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e266b3-d447-473e-94db-aa60cbc39ea4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cart/upsellItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/upsellItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/general/homeGin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/general/homeGin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/general/vimeoplayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/general/vimeoplayer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +46,7 @@
       <workItem from="1633162393076" duration="3220000" />
       <workItem from="1635056926585" duration="191000" />
       <workItem from="1637488515112" duration="15757000" />
-      <workItem from="1638089583686" duration="6492000" />
+      <workItem from="1638089583686" duration="6729000" />
     </task>
     <servers />
   </component>

@@ -43,7 +43,7 @@ export function UpsellItem({product, displayed, handleDisable}){
         <>
         {
         displayed ?
-            <div className={"upsell-container overflow-y-scroll w-60 md:w-auto pt-20 md:pt-12"}>
+            <div className={"upsell-container overflow-y-scroll w-60 md:w-auto py-20 md:py-12"}>
 
         <div className={'flex relative grid grid-cols-1 md:grid-cols-2 '}>
             <div className={'flex items-center upsellimage '}>
