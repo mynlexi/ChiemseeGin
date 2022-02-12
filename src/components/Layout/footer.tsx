@@ -31,7 +31,7 @@ export const Footer = () => {
           </Link>
           <Link href="/gintasting">
               <a className="links text-xl hover:text-gray-900 ">
-                  Tasting & Rezepte
+                  Tasting & Besichtigung
               </a>
           </Link>
           <Link href="/ueber-uns">
