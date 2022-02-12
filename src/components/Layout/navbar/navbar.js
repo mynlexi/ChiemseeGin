@@ -97,7 +97,7 @@ export const Navbar = ({isHome}) => {
             <li>
               <Link href="/gintasting">
 
-                Tasting & Rezepte
+                Tasting & Besichtigung
                 
               </Link>
             </li>
