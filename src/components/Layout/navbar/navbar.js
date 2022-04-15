@@ -102,7 +102,7 @@ export const Navbar = ({isHome}) => {
               </Link>
             </li>
             <li>           
-              <Link href="/ueber-uns">
+              <Link href="/chiemgau-gin">
                
               Über Uns
                 
