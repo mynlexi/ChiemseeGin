@@ -112,7 +112,7 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
 
       </section>
       <section className="flex flex-col space-y-6 mt-12">
-      <h3 className="">Unser Gin Reinheitsgebot</h3>
+      <h3 className="">Unser Chiemgauer Gin Reinheitsgebot</h3>
       <div className="flex flex-col space-y-6 "> 
       <p>Chiemsee Gin zählt zur Kategorie <i>London Dry Gin</i> und somit zur Königsklasse unter den Gins. <i>London Dry Gin</i> hat nichts mit einer Herkunftsbezeichnung zu tun, sondern ist eine besondere Kategorie mit bestimmten Regeln für Destillation und Zutaten, die erfüllt werden müssen. Quasi eine Art Reinheitsgebot.</p>
       <p>In der EU-Verordnung zu Spirituosen vom Jahr 2008 ist festgelegt, was sich als <i>London Dry Gin</i> bezeichnen darf. Dazu zählt unter anderem eine mindestens 3-fache Destillation sowie pflanzlich-landwirtschaftliche Ausgangsstoffe wie Getreide oder Melasse. Die Zugabe von Zucker, Aromen und Farbstoffen ist streng untersagt.</p>
