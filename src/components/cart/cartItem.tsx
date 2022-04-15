@@ -80,12 +80,12 @@ const CartItem = ({
         }
 
     return (
-      <div key={`cart ${id}`} className="my-5 cartitem flex align-middle justify-items-center border-b border-cgblue">
+      <div key={`cart ${id}`} className="my-5 cartitem flex align-middle justify-center border-b border-cgblue">
         <div className="flex mt-5 overflow-hidden justify-items-center">
           <div className="w-1/3 justify-items-center flex">
            <CartImage src={image} />
           </div>
-          <div className="z-10  ">
+          <div className="z-10 pl-1 ">
             <div className="justify-items-start flex flex-col text-left"> 
               <p className="font-semibold">{title}</p>
               <p className="text-gray-600">{price}0 €</p>

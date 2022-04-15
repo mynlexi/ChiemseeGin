@@ -34,7 +34,7 @@ export const HomePremiumGin = () => {
     setShow(true);
   }, 100);
   return (
-    <section id="premiumgin" className=" mt-8">
+    <section id="premiumgin" className=" mt-1">
       <h2 className="my-8 text-center">Der Chiemsee Gin</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-8">
               <CSSTransition classNames="fadeup" in={show} timeout={150} appear={true}>

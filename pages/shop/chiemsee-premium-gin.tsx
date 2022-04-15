@@ -69,14 +69,14 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
     <section className="md:ml-auto mr-4 md:w-1/2 w-3/4 mx-auto">
       <div className="flex flex-row ml-0 lg:ml-44 mx-auto">
         <div className="flex items-center mr-4 mb-4 justify-items-end" onClick={(()=> setMultiple(false))}>
-        <input id="radio1" type="radio" name="radio" className="hidden" checked={!multiple} defaultChecked />
+        <input id="radio1" type="radio" name="radio" className="hidden" checked={!multiple} readOnly />
         <label htmlFor="radio1" className="flex items-center cursor-pointer">
         <span className="w-4 h-4 inline-block mr-1 rounded-full border border-grey"></span>
         Flasche</label>
         </div>
 
         <div className="flex items-center mr-4 mb-4" onClick={(()=> setMultiple(true))}>
-          <input id="radio2" type="radio" name="radio" className="hidden" checked={multiple}/>
+          <input id="radio2" type="radio" name="radio" className="hidden" checked={multiple} readOnly/>
           <label htmlFor="radio2" className="flex items-center cursor-pointer">
           <span className="w-4 h-4 inline-block mr-1 rounded-full border border-grey"></span>
           Kiste (6 Flaschen)</label>

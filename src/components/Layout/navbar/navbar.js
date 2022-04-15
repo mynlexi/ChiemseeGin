@@ -95,16 +95,9 @@ export const Navbar = ({isHome}) => {
               </Link>
             </li>
             <li>
-              <Link href="/rezepte">
-               
-                  Chiemgauer Rezepte
-                
-              </Link>
-            </li>
-            <li>
               <Link href="/gintasting">
-               
-              Gin Tasting
+
+                Tasting & Besichtigung
                 
               </Link>
             </li>
@@ -114,7 +107,14 @@ export const Navbar = ({isHome}) => {
               Über Uns
                 
               </Link>
-            </li> 
+            </li>
+            <li>
+              <Link href="/standorte">
+
+                Standorte
+
+              </Link>
+            </li>
           </ol>
           </StyledLinks>
       </StyledNav>

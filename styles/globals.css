@@ -565,8 +565,8 @@ p {
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 834px) 
+@media only screen
+  and (min-device-width: 834px)
   and (max-device-width: 834px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) { .ios-device-col {
@@ -639,4 +639,59 @@ p {
   }
   
 
+}
+
+.upsell-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 260px;
+  height: 45%;
+  max-height: -webkit-fill-available;
+  transition: 1s ease-in;
+}
+.upsell-close-button{
+  position: absolute;
+  top: -20px;
+  right: 0px;
+}
+@media only screen
+and (max-device-width: 834px) {
+  .upsell-close-button{
+    position: absolute;
+    top: -5px;
+    right:0px;
+  }
+}
+
+  .upsell-buy-button{
+  padding: 7px}
+
+.upsellimage img{
+  max-height: 165px;
+  max-width: 160px;
+}
+
+.lowercart {
+  height: 208px;
+  background: white;
+}
+.middlecart{
+  overflow-y: scroll;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.middlecart:last-child{
+  padding-bottom: 208px;
+}
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
 }

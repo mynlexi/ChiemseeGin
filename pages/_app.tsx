@@ -5,7 +5,6 @@ import { ApolloProvider } from "@apollo/client/react";
 import CheckoutIdProvider from "../src/hooks/useCheckoutId";
 import CartProvider from "../src/hooks/useCartStorage";
 import SideCartProvider from "../src/hooks/useOpenSidebar";
-import { AppProps } from "next/dist/next-server/lib/router/router";
 import { useApollo } from "../src/apollo_files/apolloClient";
 import Layout from "../src/components/Layout";
 
@@ -31,7 +30,7 @@ const Providers = ({ components, children }: IProviders) => (
   </>
 );
 
-function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
+function MyApp({ Component, pageProps }: any): React.ReactElement {
   const apolloClient = useApollo(pageProps.initialApolloState);
 
   return (
