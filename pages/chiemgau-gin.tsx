@@ -23,7 +23,7 @@ export default function Geschichte() {
       </Helmet>
       <Header header={header} />
       <section className="py-20 flex flex-col space-y-3">
-      <h3 className ="text-center mb-20 mt-0  page-title" >   Über Uns   </h3>
+      <h3 className ="text-center mb-20 mt-0  page-title" > Gin aus dem Chiemgau – Über Uns</h3>
         <p>Inmitten saftiger Obstbaumwiesen, eingebettet in das Chiemgauer Voralpenland, liegt malerisch schön der Hof von Johann Guggenbichler und Sitz der gleichnamigen Edelbrandmanufaktur.</p>
         <p>Die Brennerei bildet den Hauptteil auf dem landwirtschaftlichen Anwesen, das neben dem Streuobst mit jahrhundertealten Bäumen auch ein Wildgehege beheimatet. </p>
         <p>Es mag ein Fleckchen Erde sein, mit dem Gott es besonders gut gemeint haben muss: grüne, saftige Wiesen, blühende Obstbäume, schützend umrahmt von den chiemgauer Bergen und den sanften Hügeln des Voralpenlandes – und inmitten dieser beruhigend ländlichen Idylle liegt der Guggenbichler Hof.</p>

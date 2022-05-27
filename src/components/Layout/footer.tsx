@@ -34,7 +34,7 @@ export const Footer = () => {
                   Tasting & Besichtigung
               </a>
           </Link>
-          <Link href="/ueber-uns">
+          <Link href="/chiemgau-gin">
               <a className="links text-xl hover:text-gray-900 ">
               Über Uns
               </a>

@@ -83,12 +83,12 @@ export default function RecipeMain() {
       </Head>
       <Header header={header} />
         <section className="flex flex-col  pt-16 space-y-3">
-            <h3 className ="text-center mb-10 mt-0  page-title" >Tasting & Besichtigung</h3>
+            <h3 className ="text-center mb-10 mt-0  page-title" >Gin Tasting & Besichtigung im Chiemgau</h3>
         </section>
 
         <section className={"flex flex-col  pt-16 space-y-3 mb-20"}>
 
-                <h5 className ="text-center mb-20 mt-0 ">Gin-Verkostung & Besichtigung - Eintauchen in die Welt des Gins</h5>
+                <h5 className ="text-center mb-20 mt-0 "> Bayerische Gin-Verkostung & Besichtigung – Eintauchen in die Welt des Gins</h5>
                 <div className='grid grid-cols-1 xl:grid-cols-2 gap-5 my-8'>
                     <div className='hover:w-full w-11/12 relative my-auto text-transparent hover:text-black hidden transform fadeup-enter-done mx-auto'>
                         <Image src={tasting} width={3464} height={2309} layout="responsive"  alt=""/>
