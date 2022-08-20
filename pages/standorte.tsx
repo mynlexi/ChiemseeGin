@@ -24,44 +24,92 @@ export default function Geschichte() {
       <Header header={header} />
       <section className="py-20 flex flex-col space-y-3">
       <h3 className ="text-center mb-10 mt-0  page-title" >   Hier gibt‘s Chiemsee Gin  </h3>
+
+
+
+
+
           <h4 className='text-center text-2xl'>Ausgewählte Läden</h4>
         <div className="grid grid-cols-1 gap-y-8 gap-x-4 text-center lg:w-2/3 mx-auto">
+
+
+
             <div className="flex flex-col">
-                <p className={"font-bold"}>Edelbrandmanufaktur Guggenbichler</p>
-                    <p>Oberacherting 1</p>
-                        <p>83112 Frasdorf</p>
+                <p className={"font-bold"}>MalysLaden</p>
+                    <p>Bahnhofstraße 24</p>
+                        <p>83278 Traunstein</p>
+            </div>
+            <div className="flex flex-col">
+                <p className="text-right font-bold">Tracht & Kram</p>
+                <p className="text-right">Stadtplatz 18</p>
+                <p className="text-right"> 83278 Traunstein</p>
+            </div>
 
-
+            <div className="flex flex-col">
+                <p className={"font-bold"}>Tante Herta</p>
+                <p>  Seeplatz 4</p>
+                <p>  83257 Gstadt am Chiemsee</p>
             </div>
             <div className="flex flex-col">
                 <p className="text-right font-bold">Chieminger Dorfladl</p>
                 <p className="text-right">Stötthamer Straße 7</p>
-                    <p className="text-right"> 83339 Chieming</p>
+                <p className="text-right"> 83339 Chieming</p>
             </div>
             <div className="flex flex-col">
-                <p className={"font-bold"}>Tante Herta</p>
-                <p>  Seeplatz 4</p>
-            <p>  83257 Gstadt am Chiemsee</p>
+                <p className={"font-bold"}>EDEKA Summerer</p>
+                <p>Bahnhofstraße 43</p>
+                <p>83253 Rimsting</p>
+            </div>
+            <div className="flex flex-col">
+                <p className="text-right font-bold">InnKaufhaus Wasserburg</p>
+                <p className="text-right">Ledererzeile 1-5</p>
+                <p className="text-right">83512 Wasserburg am Inn</p>
+            </div>
+            <div className="flex flex-col">
+                <p className={"font-bold"}>Faires Zeug - Genuss aus der Region</p>
+                <p>Hauptstr. 10</p>
+                <p>83308 Trostberg</p>
+            </div>
+            <div className="flex flex-col">
+                <p className="text-right font-bold">Truchtlachinger Ladl</p>
+                <p className="text-right">Seeoner Str. 7</p>
+                <p className="text-right">83376 Seeon-Seebruck</p>
             </div>
 
             <div className="flex flex-col">
-                <p className="text-right font-bold">Wein & Genuss Schmidtner</p>
-                <p className="text-right">Fridtjof-Nansen-Straße 3</p>
-                <p className="text-right"> 83301 Traunreut</p>
+                <p className={"font-bold"}>Helmut’s edles & feines
+                </p>
+                <p>St. Sebastian 6b</p>
+                <p>84307 Eggenfelden</p>
+            </div>
+            <div className="flex flex-col">
+                <p className="text-right font-bold">Edelbrandmanufaktur Guggenbichler</p>
+                <p className="text-right">Oberacherting 1</p>
+                <p className="text-right">83112 Frasdorf</p>
             </div>
 
-            <div className="flex flex-col">
-                <p className={"font-bold"}>das Garting</p>
-                <p>  Westenriederstraße 16</p>
-                <p>  80331 München</p>
-            </div>
+
 
             <div className="flex flex-col">
-                <p className="text-right font-bold">Herrfliege</p>
-                <p className="text-right">Planeggerstr. 11</p>
-                <p className="text-right">81241 München</p>
+                <p className={"font-bold"}>Herrfliege</p>
+                <p>  Planeggerstr. 11</p>
+                <p>  81241 München</p>
             </div>
+
+
+
+            <div className="flex flex-col">
+                <p className="text-right font-bold">das Garting</p>
+                <p className="text-right"> Westenriederstraße 16</p>
+                <p className="text-right"> 80331 Münchent</p>
+            </div>
+
+
         </div>
+
+
+
+
           <h4 className='text-center text-2xl pt-10'>Besondere Bars & Restaurants</h4>
           <div className="grid grid-cols-1 gap-y-8 gap-x-4 text-center lg:w-2/3 mx-auto">
               <div className="flex flex-col">
@@ -75,6 +123,34 @@ export default function Geschichte() {
                   <p className="text-right font-bold">Weisses Rössl</p>
                   <p className="text-right">Herrengasse 1</p>
                   <p className="text-right"> 83512 Wasserburg a. Inn</p>
+              </div>
+
+
+              <div className="flex flex-col">
+                  <p className={"font-bold"}>El Paso Cocktails & Food</p>
+                  <p>Schustergasse 11</p>
+                  <p>83512 Wasserburg am Inn</p>
+
+
+              </div>
+              <div className="flex flex-col">
+                  <p className="text-right font-bold">Coppa Brazil Restaurant & Cocktailbar</p>
+                  <p className="text-right">Adlzreiterstraße 11</p>
+                  <p className="text-right"> 83022 Rosenheim</p>
+              </div>
+
+
+              <div className="flex flex-col">
+                  <p className={"font-bold"}>Oscars Bar</p>
+                  <p>Adlzreiterstraße 11</p>
+                  <p>83022 Rosenheim</p>
+
+
+              </div>
+              <div className="flex flex-col">
+                  <p className="text-right font-bold">Zum Fischer am See</p>
+                  <p className="text-right">Harrasser Str. 145</p>
+                  <p className="text-right"> 83209 Prien am Chiemsee</p>
               </div>
 
           </div>

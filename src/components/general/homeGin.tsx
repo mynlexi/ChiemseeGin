@@ -10,7 +10,8 @@ const Content = ()=> {
   return(
     <div className="md:border-l border-gray-700 md:pl-12 hidden my-auto not-justify" >
       <p className="not-justify">
-        Handverlesene Kräuter, kristallklares Gebirgsquellwasser und über 5 Generationen überlieferte Destillationskunst der Edelbrandmanufaktur Guggenbichler in Frasdorf am Chiemsee ergeben einen bayerischen Premium Gin der Extraklasse. Mit viel Liebe und Herzblut wird der Chiemsee Gin in kleinen exklusiven Chargen hergestellt. Qualität steht für uns an erster Stelle.
+        Handverlesene Kräuter, kristallklares Gebirgsquellwasser und über 5 Generationen überlieferte Destillationskunst unserer Edelbrandmanufaktur in Frasdorf am Chiemsee ergeben einen bayerischen Premium Gin der Extraklasse. Mit viel Liebe und Herzblut wird der Chiemsee Gin in kleinen exklusiven Chargen hergestellt. Qualität
+          steht für uns an erster Stelle.
       </p>
     </div>
   )
