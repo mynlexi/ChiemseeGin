@@ -244,7 +244,7 @@ const SideCart = () => {
               );
             })}</>
 
-                <UpsellItem key={1}  product={upsellData} displayed={showUpsell} handleDisable={handleDisable}/>
+                {/*<UpsellItem key={1}  product={upsellData} displayed={showUpsell} handleDisable={handleDisable}/>*/}
 
             </div>
 
