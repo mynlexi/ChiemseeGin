@@ -40,34 +40,34 @@ const SideCart = () => {
   const [ isDisabled, setIsDisabled ] = React.useState(false);
 
 
-  /// getting upsell info through async useEffect
-  const [upsellData, setUpsellData] = React.useState(null)
-  const [showUpsell, setShowUpsell] = React.useState(false)
-  const [disabled, setDisabled] = React.useState(false)
+  // /// getting upsell info through async useEffect
+  // const [upsellData, setUpsellData] = React.useState(null)
+  // const [showUpsell, setShowUpsell] = React.useState(false)
+  // const [disabled, setDisabled] = React.useState(false)
+  //
+  // React.useEffect(()=>{
+  //   async function getUpsell(product_handle){
+  //    const upsell = await shopifyClient.product.fetchByHandle(product_handle)
+  //     setUpsellData(JSON.parse(JSON.stringify(upsell)))
+  //   }
 
-  React.useEffect(()=>{
-    async function getUpsell(product_handle){
-     const upsell = await shopifyClient.product.fetchByHandle(product_handle)
-      setUpsellData(JSON.parse(JSON.stringify(upsell)))
-    }
-
-    if(upsellData == null){
-      getUpsell('gin-kuhlsteine')
-    }
-
-  }, [upsellData])
-  React.useEffect(()=>{
-    if(total > 35 && !showUpsell && !disabled){
-        setShowUpsell(true)
-    } else if (total < 35 && showUpsell){
-      setShowUpsell(false)
-    }
-  }, [total, disabled, showUpsell])
-  const handleDisable =()=> {
-    setDisabled(true)
-    setShowUpsell(false)
-    console.log("handledisable")
-  }
+  //   if(upsellData == null){
+  //     getUpsell('gin-kuhlsteine')
+  //   }
+  //
+  // }, [upsellData])
+  // React.useEffect(()=>{
+  //   if(total > 35 && !showUpsell && !disabled){
+  //       setShowUpsell(true)
+  //   } else if (total < 35 && showUpsell){
+  //     setShowUpsell(false)
+  //   }
+  // }, [total, disabled, showUpsell])
+  // const handleDisable =()=> {
+  //   setDisabled(true)
+  //   setShowUpsell(false)
+  //   console.log("handledisable")
+  // }
 
 
 
