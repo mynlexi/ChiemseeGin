@@ -22,14 +22,16 @@ export default function Geschichte() {
         <title>Standorte</title>
       </Helmet>
       <Header header={header} />
-      <section className="py-20 flex flex-col space-y-3">
+      <section className="py-20 flex flex-col ">
       <h3 className ="text-center mb-10 mt-0  page-title" >   Hier gibt‘s Chiemsee Gin  </h3>
+          <p className={"text-left lg:w-2/3 mx-auto"}>Chiemsee Gin gibt es ausschließlich in exklusiven Feinkostläden, regionalen Geschäften und Concept Stores sowie hochwertigen Lebensmittelgeschäften.</p>
+          <p className={"text-left lg:w-2/3 mx-auto"}>Außerdem in erstklassigen Bars & Restaurant. </p>
 
 
 
 
 
-          <h4 className='text-center text-2xl'>Ausgewählte Läden</h4>
+          <h4 className='text-center text-2xl mt-16'>Ausgewählte Läden</h4>
         <div className="grid grid-cols-1 gap-y-8 gap-x-4 text-center lg:w-2/3 mx-auto">
 
 
@@ -99,9 +101,25 @@ export default function Geschichte() {
 
 
             <div className="flex flex-col">
-                <p className="text-right font-bold">das Garting</p>
-                <p className="text-right"> Westenriederstraße 16</p>
-                <p className="text-right"> 80331 Münchent</p>
+                <p className="text-right font-bold">Andor‘s Feinkost & Geschenkladen</p>
+                <p className="text-right"> Fridtjof-Nansen-Straße 3
+                </p>
+                <p className="text-right"> 83301 Traunreut
+                </p>
+            </div>
+
+            <div className="flex flex-col">
+                <p className={"font-bold"}>De Kramerin 3.0 - Unverpackt, Regional, Bio</p>
+                <p>  Baumburger Leite 38</p>
+                <p>  83352 Altenmarkt an der Alz</p>
+            </div>
+
+
+
+            <div className="flex flex-col">
+                <p className="text-right font-bold">Schwendl</p>
+                <p className="text-right">Trostberger Str. 134-136</p>
+                <p className="text-right"> 83342 Tacherting</p>
             </div>
 
 
@@ -110,7 +128,7 @@ export default function Geschichte() {
 
 
 
-          <h4 className='text-center text-2xl pt-10'>Besondere Bars & Restaurants</h4>
+          <h4 className='text-center text-2xl pt-16 mb-8'>Besondere Bars & Restaurants</h4>
           <div className="grid grid-cols-1 gap-y-8 gap-x-4 text-center lg:w-2/3 mx-auto">
               <div className="flex flex-col">
                   <p className={"font-bold"}>Raspl’s Genuss.Schmiede</p>

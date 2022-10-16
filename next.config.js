@@ -3,4 +3,7 @@ module.exports = {
     domains: ['media.graphcms.com', 'cdn.shopify.com',
     'media.graphassets.com'],
   },
+  experimental: {
+    forceSwcTransforms: true,
+  },
 }

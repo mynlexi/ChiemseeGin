@@ -101,6 +101,13 @@ export const Navbar = ({isHome}) => {
                 
               </Link>
             </li>
+            <li>
+              <Link href="/rezepte">
+
+                Rezepte
+
+              </Link>
+            </li>
             <li>           
               <Link href="/chiemgau-gin">
                

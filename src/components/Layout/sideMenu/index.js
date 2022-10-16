@@ -137,12 +137,20 @@ const Menu = () => {
                   </Link>
                 </li>
 
-
+              <li>
                   <Link href="/gintasting">
                   <a  onClick={toggleMenu}>
                     Tasting & Besichtigung
                   </a>
                 </Link>
+              </li>
+                <li>
+                  <Link href="/rezepte">
+                    <a  onClick={toggleMenu}>
+                    Rezepte
+                    </a>
+                  </Link>
+                </li>
                 <li >
                   <Link href="/chiemgau-gin">
                     <a  onClick={toggleMenu}>
