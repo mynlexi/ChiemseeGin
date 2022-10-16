@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import src from "/public/images/Gin_Bewertungsbogen_01.png"
 import tasting from '/public/images/Gin-Tasting-Chiemsee-Gin.jpg'
+import {Recipes} from "./rezepte";
 
 export default function  Gintasting(){
     const header = {
@@ -87,7 +88,7 @@ export default function  Gintasting(){
 
 
                 <section className="flex flex-col  pt-16 space-y-3">
-                    <h5 className ="text-center mb-20 mt-0 ">Home Tasting</h5>
+                    <h5 className ="text-center mb-20 mt-0 ">Home Tasting & Rezepte</h5>
                 </section>
                 <section className="grid grid-cols-6 md:grid-cols-12 pyz-4 mx-auto w-full md:w-5/6 lg:w-3/4 ">
                     <div className="px-12 md:px-10 lg:px-20 my-auto col-span-6" >
@@ -105,6 +106,18 @@ export default function  Gintasting(){
                         </Link>
                     </div>
 
+                </section>
+                <section className="flex flex-col pb-20 pt-16 space-y-3">
+                    <p>Gin ist Kunst. Gin ist unglaublich vielfältig – mit unseren bayerischen Rezepten wollen wir in die facettenreiche Welt des Gins einladen.</p>
+                    <p>Das Mischverhältnis von Gin zu Tonic Water kann zwischen 1:1 und 1:4 variieren. Wir schreiben bei unseren Rezepten bewusst keine Mengenangabe für das Tonic Water. Warum? Weil jeder seinen Gin gerne anders trinkt. Der eine mag’s etwas stärker, der andere etwas leichter. Die Menge des Tonic Waters liegt also ganz bei Dir – hier gibt es kein <i>richtig </i>oder <i>falsch</i>. Am besten mit etwas weniger Tonic Water starten und bei Bedarf weiter auffüllen.</p>
+                    <p>Wir lieben Gin Tonic schlicht. Premium Gin + Premium Tonic Water + passendes Topping. Fertig. Mit unseren chiemgauer Rezepten wollen wir jedoch etwas Inspiration geben, wie facettenreich Gin sein kann.</p>
+
+
+
+
+                </section>
+                <section>
+                    <Recipes />
                 </section>
             </div>
         </div>

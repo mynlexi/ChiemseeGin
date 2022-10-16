@@ -12,7 +12,7 @@ import tasting from '/public/images/Gin-Tasting-Chiemsee-Gin.jpg'
 
 
 
-function Recipes() {
+export function Recipes() {
   const { loading, error, data } = useQuery(RECIPE_INDEX);
   console.log(data, error)
   if (loading) return <p>Loading...</p>;
@@ -140,9 +140,25 @@ export default function RecipeMain() {
 
         {/*</section>*/}
 
-        <h3 className ="text-center mt-20  page-title" > Rezepte</h3>
+        <h3 className ="text-center my-20  page-title" >Home Tasting & Rezepte</h3>
 
+        <section className="grid grid-cols-6 md:grid-cols-12 pyz-4 mx-auto w-full md:w-5/6 lg:w-3/4 ">
+            <div className="px-12 md:px-10 lg:px-20 my-auto col-span-6" >
+                <Link href="/Gin_Tasting_Guide_und_Bewertungsbogen_Chiemsee_Gin.pdf" passHref>
+                    <Image src={src} width={617} height={864} layout="responsive"  alt=""/>
+                </Link>
+            </div>
+            <div className="p-5 mx-auto flex flex-col justify-items-center my-auto col-span-6 space-y-1.5">
+                <p>Hol dir unseren Gin Tasting Guide &  Bewertungsbogen für das perfekte Gin Tasting.</p>
+                <Link href="/Gin_Tasting_Guide_und_Bewertungsbogen_Chiemsee_Gin.pdf">
+                    <a className="text-cgblue font-bold hover:underline" target="_blank"
+                       rel="noopener noreferrer">
+                        Hier als PDF
+                    </a>
+                </Link>
+            </div>
 
+        </section>
 
         <section className="flex flex-col pb-20 pt-16 space-y-3">
             <p>Gin ist Kunst. Gin ist unglaublich vielfältig – mit unseren bayerischen Rezepten wollen wir in die facettenreiche Welt des Gins einladen.</p>
