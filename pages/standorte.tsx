@@ -24,9 +24,8 @@ export default function Geschichte() {
       <Header header={header} />
       <section className="py-20 flex flex-col ">
       <h3 className ="text-center mb-10 mt-0  page-title" >   Hier gibt‘s Chiemsee Gin  </h3>
-          <p className={"text-left lg:w-2/3 mx-auto"}>Chiemsee Gin gibt es ausschließlich in exklusiven Feinkostläden, regionalen Geschäften und Concept Stores sowie hochwertigen Lebensmittelgeschäften.</p>
-          <p className={"text-left lg:w-2/3 mx-auto"}>Außerdem in erstklassigen Bars & Restaurant. </p>
-
+          <p className={"text-left lg:w-2/3 mx-auto"}>Chiemsee Gin gibt es ausschließlich in exklusiven Feinkostläden, regionalen Geschäften und Concept Stores sowie hochwertigen Lebensmittelgeschäften.
+         Außerdem in erstklassigen Bars & Restaurant. </p>
 
 
 
@@ -122,7 +121,23 @@ export default function Geschichte() {
                 <p className="text-right"> 83342 Tacherting</p>
             </div>
 
+            <div className="flex flex-col">
+                <p className={"font-bold"}>Servus.Heimat am Chiemsee
+                </p>
+                <p> Bernauer Str. 3
+                </p>
+                <p> 83209 Prien am Chiemsee
+                </p>
+            </div>
 
+
+
+            <div className="flex flex-col">
+                <p className="text-right font-bold">La Cantina
+                </p>
+                <p className="text-right">Elisabethstraße 53</p>
+                <p className="text-right">80796 München</p>
+            </div>
         </div>
 
 

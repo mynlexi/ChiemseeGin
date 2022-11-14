@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const ShopCartContainer = styled.div`
   display: flex;
-  flex-direction: column;
-
+  flex-direction: column; 
+ 
   min-height: 25rem;
   @media (min-width: 768px) {
-    flex-direction: row;
+    flex-direction:  ${props => props.reverse ? "row-reverse" : "row"};
   }
 `
 

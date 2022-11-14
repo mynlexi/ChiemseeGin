@@ -8,7 +8,7 @@ import { useSideCartUpdate } from "../../hooks/useOpenSidebar";
 import { ShopCartContainer } from "./StyledElements";
 import ProductImageBG from "./productImage";
 
-function Product({ product }) {
+function Product({ product, right }) {
   let { cart } = useCartContext();
   if (cart === null) {
     cart = [];
@@ -46,7 +46,7 @@ function Product({ product }) {
 
   return (
     <div key={`product at product/index ${id}`}>
-      <ShopCartContainer className=" mx-14">
+      <ShopCartContainer className={" mx-14"} reverse={!!right}>
         <div className="w-full md:w-1/2 relative">
           <ProductImageBG imageUrl={imageUrl} />
          
@@ -59,7 +59,7 @@ function Product({ product }) {
           </div>
           <div className="flex flex-col md:flex-row md:space-x-5 space-y-3 my-8 mx-auto ">
             <div className="mx-auto my-auto flex-row">
-              <h4 className="mx-auto my-auto"><strong>Einführungspreis</strong> {price}0 €</h4>
+              <h4 className="mx-auto my-auto"><strong>Preis</strong> {price}0 €</h4>
                <div className="text-xs flex-row justify-center ">
                  <span className="text-center">inkl. 19% MwSt.  </span>
                  <span className="text-center">zzgl. <Link href="/versandinformation"><a className="text-cgblue ">Versand</a></Link></span>

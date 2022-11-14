@@ -8,13 +8,15 @@ import Product from '../../src/components/shop/produkt'
 import { IngList } from "../../styles/utilstyled";
 import Helmet from 'react-helmet'
 import Head from "next/head";
+import ImageBlur from "../../src/components/shop/ImageBlur";
 
-const ProductPage: NextPage<any> = ({product, productPackage}) => {
+const ProductPage: NextPage<any> = (props) => {
+const{classicGin,  alpengluehen,
+      probierpacket } =props
 
-  const productMultiple = productPackage
   const [multiple, setMultiple] = React.useState(false)
 
-  const dynamicImage = product.images[0].src
+  const dynamicImage = classicGin.images[0].src
 
   return (
     <div>
@@ -61,12 +63,16 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
       </Helmet> */}
 
     <div>
-      {multiple ?
+     {/* {multiple ?
         <Product product={productMultiple} />
-      :
-      <Product product={product}/>}
+      :*/}
+      <Product product={classicGin} right={false}/>
+      <Product product={alpengluehen} right={true}/>
+    {/*  }*/}
     </div>
-    <section className="md:ml-auto mr-4 md:w-1/2 w-3/4 mx-auto">
+      <ImageBlur src={dynamicImage}/>
+      <div>Banner probier</div>
+    {/*<section className="md:ml-auto mr-4 md:w-1/2 w-3/4 mx-auto">
       <div className="flex flex-row ml-0 lg:ml-44 mx-auto">
         <div className="flex items-center mr-4 mb-4 justify-items-end" onClick={(()=> setMultiple(false))}>
         <input id="radio1" type="radio" name="radio" className="hidden" checked={!multiple} readOnly />
@@ -82,7 +88,7 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
           Kiste (6 Flaschen)</label>
         </div>
       </div>
-   </section>
+   </section>*/}
     <div>
       <div className="w-full border-b border-cgblue font-bold ml-17 flex">
         <div className="ml-14 border-b-2 border-cgblue">
@@ -92,7 +98,7 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
 
       <section className="flex flex-col space-y-6 mt-12">
           <div className="flex flex-col space-y-6 ">
-          <p>Chiemsee Gin ist der Premium Gin vom bayerischen Meer. Unser Wachilderschnaps wird in unserer seit 1829 bestehenden Edelbrandmanufaktur in traditioneller Handarbeit destilliert. Alle Zutaten für unseren Gin werden mit größter Sorgfalt und mit Blick auf Nachhaltigkeit handverlesen. Ein außergewöhnlicher und facettenreicher Gin von und für seine bayerische Heimat und die Menschen, die diese so sehr lieben.</p>
+          <p>Chiemsee Gin ist der Premium Gin vom bayerischen Meer. Unser Wacholderschnaps wird in unserer seit 1829 bestehenden Edelbrandmanufaktur in traditioneller Handarbeit destilliert. Alle Zutaten für unseren Gin werden mit größter Sorgfalt und mit Blick auf Nachhaltigkeit handverlesen. Ein außergewöhnlicher und facettenreicher Gin von und für seine bayerische Heimat und die Menschen, die diese so sehr lieben.</p>
 
           <p>Handverlesene Kräuter, kristallklares Gebirgsquellwasser und über 5 Generationen überlieferte Destillationskunst unserer Edelbrandmanufaktur in Frasdorf am Chiemsee ergeben einen bayerischen Premium Gin der Extraklasse. Mit viel Liebe und Herzblut wird Chiemsee Gin in kleinen exklusiven Chargen hergestellt. Qualität steht für uns an erster Stelle.</p>
           <p>Mit jeder verkauften Flasche spenden wir 1 € für den chiemgauer Naturschutz und unterstützen somit die Erhaltung unserer einzigartigen Heimat.</p>
@@ -130,13 +136,17 @@ const ProductPage: NextPage<any> = ({product, productPackage}) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   
-  const product = await shopifyClient.product.fetchByHandle('chiemsee-gin')
+  const classicGin = await shopifyClient.product.fetchByHandle('chiemsee-gin')
   const productPackage = await shopifyClient.product.fetchByHandle('chiemsee-gin-kiste-6-flaschen')
+  const alpengluehen = await shopifyClient.product.fetchByHandle('chiemsee-gin-alpengluhen')
+  const probierpacket = await  shopifyClient.product.fetchByHandle('kombi-probierpaket')
   
   return {
     props: {
-      product: JSON.parse(JSON.stringify(product)),
-      productPackage: JSON.parse(JSON.stringify(productPackage))
+      classicGin: JSON.parse(JSON.stringify(classicGin)),
+      productPackage: JSON.parse(JSON.stringify(productPackage)),
+      alpengluehen: JSON.parse(JSON.stringify(alpengluehen)),
+      probierpacket : JSON.parse(JSON.stringify(probierpacket))
     }, 
   }
   

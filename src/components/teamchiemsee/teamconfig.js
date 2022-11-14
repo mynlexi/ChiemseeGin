@@ -6,8 +6,8 @@ export const team  = [
     height: 3464,
 
     title: "Daniel Schex - Gründer & Gin-Liebhaber mit Herzblut",
-    description: "Der Traum von einem regionalen Gin vom Chiemsee, verknüpft mit Nachhaltigkeit, entsprang aus zwei Burschen - Daniel Schex und Daniel Heringer Herkner. Nachdem sie monatelang ihr ganzes Herzblut in das Projekt steckten, gründeten sie Chiemsee Premium Gin.",
-    author: "Daniel Schex: ",
+    description: "",
+    author: "Daniel:",
     cite: `„Wir wollten einen Premium Gin von und für unsere Heimat machen. Uns war dabei wichtig, dass der Gin qualitativ unschlagbar ist und bei der Herstellung traditionelle chiemgauer Brennkultur gelebt wird.”`
 
   },
@@ -18,7 +18,7 @@ export const team  = [
     height: 523,
 
     title: "Daniel Heringer Herkner - Gründer & Gin-Liebhaber mit Herzblut",
-    author: "Daniel H.: ",
+    author: "Daniel: ",
     cite: `„Chiemsee Gin verkörpert unsere bayerische Kultur und Lebensgefühl - und das schmeckt man. Gin (Tonic) ist Kunst. Mit Chiemsee Gin und unseren bayerischen Rezepten wollen wir die Menschen in die facettenreiche Welt des Gin (Tonic) einladen.”`
 
   },
