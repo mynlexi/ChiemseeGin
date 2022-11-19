@@ -66,8 +66,8 @@ const{classicGin,  alpengluehen,
      {/* {multiple ?
         <Product product={productMultiple} />
       :*/}
-      <Product product={classicGin} right={false}/>
-      <Product product={alpengluehen} right={true}/>
+      <Product product={classicGin}  sorte={"original"}/>
+      <Product product={alpengluehen} sorte={"alpen"}/>
     {/*  }*/}
     </div>
       <ImageBlur src={dynamicImage}/>
