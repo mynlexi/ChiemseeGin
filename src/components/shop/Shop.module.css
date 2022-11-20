@@ -52,7 +52,7 @@
 
 .product_image{
 
-    min-height: 40vh;
+    min-height: 570px;
     position: relative;
     width: 0;
     transition: width 500ms ease-out 200ms;
