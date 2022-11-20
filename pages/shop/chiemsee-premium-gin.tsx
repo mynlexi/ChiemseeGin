@@ -70,8 +70,8 @@ const{classicGin,  alpengluehen,
       <Product product={alpengluehen} sorte={"alpen"}/>
     {/*  }*/}
     </div>
-      <ImageBlur src={dynamicImage}/>
-      <div>Banner probier</div>
+
+      <div>Banner double</div>
     {/*<section className="md:ml-auto mr-4 md:w-1/2 w-3/4 mx-auto">
       <div className="flex flex-row ml-0 lg:ml-44 mx-auto">
         <div className="flex items-center mr-4 mb-4 justify-items-end" onClick={(()=> setMultiple(false))}>
