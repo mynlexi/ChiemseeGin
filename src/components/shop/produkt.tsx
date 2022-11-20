@@ -9,7 +9,7 @@ import { useSideCartUpdate } from "../../hooks/useOpenSidebar";
 import { ShopCartContainer } from "./StyledElements";
 import ProductImageBG from "./productImage";
 import style from "./Shop.module.css"
-import premium from "../../../public/images/products/premiumGin.jpg"
+import premium from "../../../public/images/products/premiumGin.jpeg"
 import alpen from "../../../public/images/products/alpengluehen-min-min.webp"
 
 
@@ -118,7 +118,7 @@ function Product(props: ProductProps) {
             <i>London Dry Gin</i> {productDetails.temperament}
         </div>
         <div className={[style.product_info_details, sorte == "alpen" ?style.product_align_end : ""].join(" ")}>
-         <div className={style.product_info_details_title + " text-lg"}>
+         <div className={style.product_info_details_title}>
            {title}
          </div>
           <div className={style.product_info_details_subtitle + " text-lg"}>
