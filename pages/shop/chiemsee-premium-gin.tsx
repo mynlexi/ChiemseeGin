@@ -8,7 +8,6 @@ import Product from '../../src/components/shop/produkt'
 import { IngList } from "../../styles/utilstyled";
 import Helmet from 'react-helmet'
 import Head from "next/head";
-import ImageBlur from "../../src/components/shop/ImageBlur";
 
 const ProductPage: NextPage<any> = (props) => {
 const{classicGin,  alpengluehen,
