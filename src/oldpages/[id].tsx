@@ -9,7 +9,7 @@ import Product from '../../src/components/shop/produkt'
 
  const ProductPage: NextPage<any> = ({product}) => {
    return (
-     <Product product={product} sorte={"original"}/>
+     <Product product={product} sorte={"original"} mobile={false}/>
 
    )
  }
