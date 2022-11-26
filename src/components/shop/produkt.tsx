@@ -33,10 +33,11 @@ const details ={
 type Sorte = "original" | "alpen"
 interface ProductProps{
   product: any;
-  sorte: Sorte
+  sorte: Sorte;
+  mobile: boolean;
 }
 function Product(props: ProductProps) {
-  const  {product, sorte} = props
+  const  {product, sorte, mobile} = props
   let { cart } = useCartContext();
   if (cart === null) {
     cart = [];
@@ -44,7 +45,7 @@ function Product(props: ProductProps) {
   const {
     id = product.Id,
     title = product.title,
-    imageUrl = product.images[2].src,
+    imageUrl = product.images[1].src,
     variantId = product.variants[0].id,
     price = Number(product.variants[0].price),
     handle = product.handle,
@@ -76,6 +77,7 @@ function Product(props: ProductProps) {
   const [productHovered, setProductHovered] = useState(false)
 
   const onMouseEnter =()=>{
+      if(mobile)return
     setProductHovered(true)
   }
 
@@ -90,11 +92,13 @@ function Product(props: ProductProps) {
 
   return (
     <div key={`product at product/index ${id}`}>
-      <div className={[ style.product_container, sorte == "alpen" ? style.product_flexreverse: ""].join(" ")}
+      <div className={mobile? style.mobile_container: [ style.product_container, sorte == "alpen" ? style.product_flexreverse: ""].join(" ")}
        onMouseEnter={onMouseEnter}
            onMouseLeave={onMouseLeave}
       >
-
+          {!mobile ? null :  <div
+              className={ [ "text-2xl text-cgblue", style.product_info_details_title,
+                  productHovered ? style.product_info_details_title_hover : "" ].join( " " ) }>{ title }</div>}
         <div className={[ style.product_image, addonRender ? style.product_image_render : "" ].join(" ")}>
 
             <div className={[ style.product_image_absolute,sorte == "alpen" ? style.product_position_left: ""].join(" ")}>
@@ -105,41 +109,57 @@ function Product(props: ProductProps) {
                 layout="fill"
                 objectFit="cover"
                 placeholder="blur"
-                quality={75}
+                quality={ 75}
 
             />
           </div>
 
       </div>
-         
-      <div className={[ style.product_info_box, sorte == "alpen" ?style.product_align_end : ""].join(" ")}>
 
-        <div className={[style.product_info_temperament, sorte == "alpen" ?style.product_align_end : ""].join(" ")}>
-            <i>London Dry Gin</i> {productDetails.temperament}
-        </div>
-        <div className={[style.product_info_details, sorte == "alpen" ?style.product_align_end : ""].join(" ")}>
-         <div className={style.product_info_details_title}>
-           {title}
-         </div>
-          <div className={style.product_info_details_subtitle + " text-lg"}>
-            Alkohol: <span><strong>45% vol</strong></span> | Inhalt: <span><strong>0.5 Liter</strong></span> | Preis pro Liter: <span><strong>{price * 2} €</strong></span>
-        </div>
+          <div
+              className={ mobile ? style.product_info_box_mobile : [ style.product_info_box,
+                  sorte == "alpen" ? style.product_align_end : "" ].join( " " ) }>
+              {mobile ? null :  <div
+                  className={ [ "text-2xl text-cgblue", style.product_info_details_title,
+                      productHovered ? style.product_info_details_title_hover : "" ].join( " " ) }>{ title }</div>}
+              <div
+                  className={mobile ? style.product_info_temperament:  [
+                      sorte == "alpen" ? style.product_align_end : "" ].join( " " ) }>
+                  <i>London Dry Gin</i> { productDetails.temperament }
+              </div>
+              <div
+                  className={ [ style.product_info_details,
+                      sorte == "alpen" ? style.product_align_end : "" ].join( " " ) }>
+                  <div className={ style.product_info_details_title }>
 
-        </div>
-        <div className={style.product_addTo}>
-          <div className={style.product_addTo_details}>
-            <div className={style.product_addTo_details_title}>Preis <strong>{price}0 €</strong></div>
-            <div className={style.product_addTo_details_subtitle + " text-xs "}>   <span className="text-center">inkl. 19% MwSt.  </span>
-              <span className="text-center">zzgl. <Link href="/versandinformation"><a className="text-cgblue ">Versand</a></Link></span></div>
+                  </div>
+                  <div className={ style.product_info_details_subtitle + " text-lg px-4 md:p-0" }>
+                      Alkohol: <span><strong>45% vol</strong></span> | Inhalt: <span><strong>0.5 Liter</strong></span> |
+                      Preis pro Liter: <span><strong>{ price * 2 } €</strong></span>
+                  </div>
+
+              </div>
+              <div className={ style.product_addTo }>
+                  <div className={ style.product_addTo_details }>
+                      <div className={ style.product_addTo_details_title }>Preis <strong>{ price }0 €</strong></div>
+                      <div className={ style.product_addTo_details_subtitle + " text-xs " }>
+                          <span className="text-center">inkl. 19% MwSt.  </span>
+                          <span className="text-center">zzgl. <Link href="/versandinformation"><a className="text-cgblue ">Versand</a></Link></span>
+                      </div>
+                  </div>
+                  { cart?.some( (item) => item.productId === id ) ? (
+                      <button
+                          onClick={ openSideCart }
+                          className="text-gray-800 bg-gray-100 p-4">Warenkorb anzeigen</button>
+                  ) : (
+                        <button
+                            onClick={ addProduct }
+                            className=" hover:bg-white hover:text-cgblue text-white p-4 transition-colors bg-cgblue"> In
+                            den Warenkorb </button>
+                    ) }
+
+              </div>
           </div>
-          {cart?.some((item) => item.productId === id) ? (
-              <button onClick={openSideCart} className="text-gray-800 bg-gray-100 p-4">Warenkorb anzeigen</button>
-          ) : (
-               <button onClick={addProduct} className=" hover:bg-white hover:text-cgblue text-white p-4 transition-colors bg-cgblue"> In den Warenkorb </button>
-           )}
-
-        </div>
-      </div>
       </div>
     </div>
   );

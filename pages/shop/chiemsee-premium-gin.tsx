@@ -1,5 +1,5 @@
 import { GetServerSideProps, NextPage } from "next"
-
+import { parse } from "next-useragent";
 import {client as shopifyClient} from '../../src/utils/shopify'
 
 import React from "react";
@@ -8,10 +8,11 @@ import Product from '../../src/components/shop/produkt'
 import { IngList } from "../../styles/utilstyled";
 import Helmet from 'react-helmet'
 import Head from "next/head";
+import {DoubleTry} from "../../src/components/shop/DoubleTry";
 
 const ProductPage: NextPage<any> = (props) => {
 const{classicGin,  alpengluehen,
-      probierpacket } =props
+      probierpacket, uparsed } =props
 
   const [multiple, setMultiple] = React.useState(false)
 
@@ -65,12 +66,12 @@ const{classicGin,  alpengluehen,
      {/* {multiple ?
         <Product product={productMultiple} />
       :*/}
-      <Product product={classicGin}  sorte={"original"}/>
-      <Product product={alpengluehen} sorte={"alpen"}/>
+      <Product product={classicGin}  sorte={"original"} mobile={uparsed.isMobile} />
+      <Product product={alpengluehen} sorte={"alpen"} mobile={uparsed.isMobile}/>
     {/*  }*/}
     </div>
 
-      <div>Banner double</div>
+     <DoubleTry product={probierpacket}/>
     {/*<section className="md:ml-auto mr-4 md:w-1/2 w-3/4 mx-auto">
       <div className="flex flex-row ml-0 lg:ml-44 mx-auto">
         <div className="flex items-center mr-4 mb-4 justify-items-end" onClick={(()=> setMultiple(false))}>
@@ -133,19 +134,31 @@ const{classicGin,  alpengluehen,
 
 
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   
   const classicGin = await shopifyClient.product.fetchByHandle('chiemsee-gin')
   const productPackage = await shopifyClient.product.fetchByHandle('chiemsee-gin-kiste-6-flaschen')
   const alpengluehen = await shopifyClient.product.fetchByHandle('chiemsee-gin-alpengluhen')
   const probierpacket = await  shopifyClient.product.fetchByHandle('kombi-probierpaket')
-  
+
+  let uastring = context.req.headers["user-agent"];
+  let uparsed = parse(uastring);
+
+  if (uparsed.browser == "Mobile Safari") {
+    uparsed = {
+      ...uparsed,
+      isMobile: true,
+      isSafari: true,
+    };
+  }
+
   return {
     props: {
       classicGin: JSON.parse(JSON.stringify(classicGin)),
       productPackage: JSON.parse(JSON.stringify(productPackage)),
       alpengluehen: JSON.parse(JSON.stringify(alpengluehen)),
-      probierpacket : JSON.parse(JSON.stringify(probierpacket))
+      probierpacket : JSON.parse(JSON.stringify(probierpacket)),
+      uparsed: uparsed
     }, 
   }
   
