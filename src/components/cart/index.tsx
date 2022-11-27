@@ -262,7 +262,7 @@ const SideCart = () => {
              :
             <div className="fixed bottom-0 w-full lowercart">
             <div className="border-b-2 border-cgblue w-full text-left text-2xl p-5 text-cgblue">
-              <h3>Zwischensumme</h3>
+              <h3>Zwischensumme <br/><span className="text-sm">Kostenloser Versand ab 90.00 €</span></h3>
               <div
                 id="cart-total"
                   >

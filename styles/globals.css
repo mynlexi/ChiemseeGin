@@ -94,6 +94,7 @@ a {
   --white: #fcfcfc;
   --green: #64ffda;
   --blue: #223669;
+  --blue-opac: rgb(61, 88, 243);
   --green-tint: rgba(100,255,218,0.1);
   --font-sans: "Calibre","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
   --font-mono: "Essonnes", monospace;
@@ -101,6 +102,7 @@ a {
   --fz-xs: 13px;
   --fz-sm: 14px;
   --fz-md: 16px;
+  --fz-lg: 18px;
   --fz-lg: 18px;
   --fz-xl: 20px;
   --fz-xxl: 22px;

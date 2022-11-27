@@ -101,8 +101,10 @@ function Product(props: ProductProps) {
                   productHovered ? style.product_info_details_title_hover : "" ].join( " " ) }>{ title }</div>}
         <div className={[ style.product_image, addonRender ? style.product_image_render : "" ].join(" ")}>
 
-            <div className={[ style.product_image_absolute,sorte == "alpen" ? style.product_position_left: ""].join(" ")}>
-                <div className={[ style.bluredImage, productHovered ? style.blured_onHover:"" ].join(" ")} style={{backgroundImage:   `url(${productDetails.src.src})`}}/>   </div>
+          { !mobile &&  <div className={[ style.product_image_absolute,sorte == "alpen" ? style.product_position_left: ""].join(" ")}>
+                <div className={[ style.bluredImage, productHovered ? style.blured_onHover:"" ].join(" ")}
+                     style={{backgroundImage:   `url(${productDetails.src.src})`}}/>
+            </div> }
               <div className={[ style.product_image_absolute, style.product_img_absolute_real, productHovered ? style.product_img_absolute_hover : ""].join(" ")}>
             <Image
                 src={productDetails.src}
@@ -123,23 +125,23 @@ function Product(props: ProductProps) {
                   className={ [ "text-2xl text-cgblue", style.product_info_details_title,
                       productHovered ? style.product_info_details_title_hover : "" ].join( " " ) }>{ title }</div>}
               <div
-                  className={mobile ? style.product_info_temperament:  [
+                  className={mobile ? [ style.product_info_temperament,style.padding_20 ].join(" "):  [
                       sorte == "alpen" ? style.product_align_end : "" ].join( " " ) }>
                   <i>London Dry Gin</i> { productDetails.temperament }
               </div>
               <div
-                  className={ [ style.product_info_details,
+                  className={ mobile? [style.product_info_details,style.padding_20 ].join(" ") : [ style.product_info_details,
                       sorte == "alpen" ? style.product_align_end : "" ].join( " " ) }>
                   <div className={ style.product_info_details_title }>
 
                   </div>
-                  <div className={ style.product_info_details_subtitle + " text-lg px-4 md:p-0" }>
-                      Alkohol: <span><strong>45% vol</strong></span> | Inhalt: <span><strong>0.5 Liter</strong></span> |
-                      Preis pro Liter: <span><strong>{ price * 2 } €</strong></span>
+                  <div className={ style.product_info_details_subtitle + " text-lg md:p-0" }>
+                {/*      Alkohol: <span><strong>45% vol</strong></span>  Inhalt: <span><strong>0.5 Liter</strong></span> |*/}
+                      Preis pro Liter: <span><strong>{ price * 2 }0 €</strong></span>
                   </div>
 
               </div>
-              <div className={ style.product_addTo }>
+              <div className={[style.product_addTo,mobile ? style.padding_20:   sorte == "alpen" ? style.flex_end: style.flex_start ].join(" ") }>
                   <div className={ style.product_addTo_details }>
                       <div className={ style.product_addTo_details_title }>Preis <strong>{ price }0 €</strong></div>
                       <div className={ style.product_addTo_details_subtitle + " text-xs " }>
