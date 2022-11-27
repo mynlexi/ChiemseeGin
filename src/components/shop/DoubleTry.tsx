@@ -76,7 +76,7 @@ export function DoubleTry(props: DoubleTryProps){
 
                 <div className={style.double_try_box_end_lower}>
                 <div className={ style.product_addTo_details }>
-                    <div className={ style.product_addTo_details_title +" text-gray-700" }>Preis <strong>{ price }0  {/*€*/}</strong></div>
+                    <div className={ style.product_addTo_details_title +" text-gray-700" }><strong>{ price }0  {/*€*/}</strong></div>
                     <div className={ style.product_addTo_details_subtitle + " text-xs " +" text-gray-700" }>
                         <span className="text-center">inkl. 19% MwSt.  </span>
                         <span className="text-center">zzgl. <Link href="/versandinformation"><a className=" text-gray-700" >Versand</a></Link></span>

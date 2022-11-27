@@ -46,13 +46,13 @@ export const Navbar = ({isHome}) => {
   let {sideCartOpen} = useSideCart();
 
   useEffect(()=> {
-    if(sideCartOpen == true){
+    if(sideCartOpen === true){
       setScrolledToTop(true)
     }
   }, [sideCartOpen])
 
   return (
-    <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
+    <StyledHeader scrollDirection={sideCartOpen ? "up": scrollDirection} scrolledToTop={scrolledToTop}>
       <StyledNav>
       <Menu />
       <div className="mx-auto md:ml-0" >

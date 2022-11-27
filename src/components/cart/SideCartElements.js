@@ -72,7 +72,7 @@ export const StyledSidebar = styled.aside`
   }
 
   .cartitem {
-    min-height: 125px;
+    min-height: 150px;
     max-height: 225px;
     width: 370px;
     button:disabled,

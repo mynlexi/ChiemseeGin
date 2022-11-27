@@ -219,7 +219,7 @@ const SideCart = () => {
         >
          
           <nav ref={navRef} className="hidden h-full"> 
-          <div className="fixed top-0 my-10 border-b-2 border-cgblue w-full">
+          <div className="fixed top-0 my-10 border-b-2 border-cgblue w-full z-40 bg-white">
             <button onClick={toggleSideCart}>
              <h1>Dein Warenkorb</h1>
              </button>

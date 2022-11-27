@@ -132,7 +132,7 @@ function Product(props: ProductProps) {
 
               <div className={[style.product_addTo,mobile ? style.padding_20:   sorte == "alpen" ? style.flex_end: style.flex_start ].join(" ") }>
                   <div className={ style.product_addTo_details }>
-                      <div className={ style.product_addTo_details_title }>Preis <strong>{ price }0  {/*€*/}</strong></div>
+                      <div className={ style.product_addTo_details_title }><strong>{ price }0  {/*€*/}</strong></div>
                       <div className={ style.product_addTo_details_subtitle + " text-xs " }>
                           <span className="text-center">inkl. 19% MwSt.  </span>
                           <span className="text-center">zzgl. <Link href="/versandinformation"><a className="text-cgblue ">Versand</a></Link></span>
