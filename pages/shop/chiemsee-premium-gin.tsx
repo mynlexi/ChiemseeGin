@@ -104,16 +104,7 @@ const{classicGin,  alpengluehen,
           <p>Mit jeder verkauften Flasche spenden wir 1 € für den chiemgauer Naturschutz und unterstützen somit die Erhaltung unserer einzigartigen Heimat.</p>
           </div>
 
-          <div>
-            <IngList>
-              <li>
-              Alkohol: 45% VOL
-              </li>
-              <li>
-              Füllmenge: 0,5L Flasche
-              </li>
-            </IngList>
-          </div>
+
 
 
       </section>        <DoubleTry product={probierpacket} mobile={uparsed.isMobile}/>

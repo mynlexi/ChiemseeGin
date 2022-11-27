@@ -129,21 +129,10 @@ function Product(props: ProductProps) {
                       sorte == "alpen" ? style.product_align_end : "" ].join( " " ) }>
                   <i>London Dry Gin</i> { productDetails.temperament }
               </div>
-              <div
-                  className={ mobile? [style.product_info_details,style.padding_20 ].join(" ") : [ style.product_info_details,
-                      sorte == "alpen" ? style.product_align_end : "" ].join( " " ) }>
-                  <div className={ style.product_info_details_title }>
 
-                  </div>
-                  <div className={ style.product_info_details_subtitle + " text-lg md:p-0" }>
-                {/*      Alkohol: <span><strong>45% vol</strong></span>  Inhalt: <span><strong>0.5 Liter</strong></span> |*/}
-                      Preis pro Liter: <span><strong>{ price * 2 }0 €</strong></span>
-                  </div>
-
-              </div>
               <div className={[style.product_addTo,mobile ? style.padding_20:   sorte == "alpen" ? style.flex_end: style.flex_start ].join(" ") }>
                   <div className={ style.product_addTo_details }>
-                      <div className={ style.product_addTo_details_title }>Preis <strong>{ price }0 €</strong></div>
+                      <div className={ style.product_addTo_details_title }>Preis <strong>{ price }0  {/*€*/}</strong></div>
                       <div className={ style.product_addTo_details_subtitle + " text-xs " }>
                           <span className="text-center">inkl. 19% MwSt.  </span>
                           <span className="text-center">zzgl. <Link href="/versandinformation"><a className="text-cgblue ">Versand</a></Link></span>
@@ -159,6 +148,18 @@ function Product(props: ProductProps) {
                             className=" hover:bg-white hover:text-cgblue text-white p-4 transition-colors bg-cgblue"> In
                             den Warenkorb </button>
                     ) }
+
+              </div>
+              <div
+                  className={ mobile? [style.product_info_details,style.padding_20 ].join(" ") : [ style.product_info_details,
+                      sorte == "alpen" ? style.product_align_end : "" ].join( " " ) }>
+                  <div className={ style.product_info_details_title }>
+
+                  </div>
+                  <div className={ style.product_info_details_subtitle + " text-lg md:p-0" }>
+                      <span><strong>45% vol</strong></span> | <span><strong>0.5 Liter</strong></span> |
+                      Literpreis: <span>{ price * 2 }0  {/*€*/}</span>
+                  </div>
 
               </div>
           </div>

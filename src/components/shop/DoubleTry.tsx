@@ -73,13 +73,10 @@ export function DoubleTry(props: DoubleTryProps){
                 </div>
             </div>
             <div className={ (mobile? style.double_try_box_end_mobile:style.double_try_box_end) + " bg-blue-100"}>
-                <div className={ mobile ? " text-lg p-0 w-full text-left ":" text-lg px-4 md:p-0" }>
-                    Inhalt: <span><strong>2x 0.2 Liter</strong></span>  <br/>
-                    Preis pro Liter: <span><strong>99.50 €</strong></span>
-                </div>
+
                 <div className={style.double_try_box_end_lower}>
                 <div className={ style.product_addTo_details }>
-                    <div className={ style.product_addTo_details_title +" text-gray-700" }>Preis <strong>{ price }0 €</strong></div>
+                    <div className={ style.product_addTo_details_title +" text-gray-700" }>Preis <strong>{ price }0  {/*€*/}</strong></div>
                     <div className={ style.product_addTo_details_subtitle + " text-xs " +" text-gray-700" }>
                         <span className="text-center">inkl. 19% MwSt.  </span>
                         <span className="text-center">zzgl. <Link href="/versandinformation"><a className=" text-gray-700" >Versand</a></Link></span>
@@ -96,6 +93,11 @@ export function DoubleTry(props: DoubleTryProps){
 
                           den Warenkorb </button>
                   ) }
+            </div>  <div className={ mobile ? " text-lg p-0 w-full text-center ":" text-lg px-4 md:p-0" }>
+                <span><strong>2x 0.2 Liter</strong></span>  |
+                Literpreis: <span>99.50
+                {/*€*/}
+                 </span>
             </div>
             </div>
         </div> </section>
