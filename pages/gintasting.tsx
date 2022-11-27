@@ -107,7 +107,7 @@ export default function  Gintasting(){
                     </div>
 
                 </section>
-                <section className="flex flex-col pb-20 pt-16 space-y-3">
+               {/* <section className="flex flex-col pb-20 pt-16 space-y-3">
                     <p>Gin ist Kunst. Gin ist unglaublich vielfältig – mit unseren bayerischen Rezepten wollen wir in die facettenreiche Welt des Gins einladen.</p>
                     <p>Das Mischverhältnis von Gin zu Tonic Water kann zwischen 1:1 und 1:4 variieren. Wir schreiben bei unseren Rezepten bewusst keine Mengenangabe für das Tonic Water. Warum? Weil jeder seinen Gin gerne anders trinkt. Der eine mag’s etwas stärker, der andere etwas leichter. Die Menge des Tonic Waters liegt also ganz bei Dir – hier gibt es kein <i>richtig </i>oder <i>falsch</i>. Am besten mit etwas weniger Tonic Water starten und bei Bedarf weiter auffüllen.</p>
                     <p>Wir lieben Gin Tonic schlicht. Premium Gin + Premium Tonic Water + passendes Topping. Fertig. Mit unseren chiemgauer Rezepten wollen wir jedoch etwas Inspiration geben, wie facettenreich Gin sein kann.</p>
@@ -118,7 +118,7 @@ export default function  Gintasting(){
                 </section>
                 <section>
                     <Recipes />
-                </section>
+                </section>*/}
             </div>
         </div>
             )

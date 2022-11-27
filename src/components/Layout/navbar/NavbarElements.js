@@ -29,7 +29,7 @@ display: flex;
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: var(--white);
+  background-color: transparent;
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
