@@ -138,6 +138,17 @@ export default function Geschichte() {
                 <p className="text-right">Elisabethstraße 53</p>
                 <p className="text-right">80796 München</p>
             </div>
+
+
+            <div className="flex flex-col">
+                <p className={"font-bold"}>Fridolfinger Genussladerl
+                </p>
+                <p> Rupertistraße 15
+                </p>
+                <p> 83413 Fridolfing
+                </p>
+            </div>
+
         </div>
 
 
