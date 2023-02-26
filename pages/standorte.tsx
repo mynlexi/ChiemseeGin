@@ -148,6 +148,12 @@ export default function Geschichte() {
                 <p> 83413 Fridolfing
                 </p>
             </div>
+            <div className="flex flex-col">
+                <p className="text-right font-bold">Urgibl (Feinkostabteilung)
+                </p>
+                <p className="text-right">Riederinger Str. 2</p>
+                <p className="text-right">85614 Kirchseeonn</p>
+            </div>
 
         </div>
 
