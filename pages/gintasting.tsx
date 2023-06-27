@@ -63,6 +63,9 @@ export default function  Gintasting(){
                                     Sonderwünsche nach Vereinbarung
                                 </li>
                                 <li>
+                                Ort: Oberacherting 1, 83112 Frasdorf
+                                </li>
+                                <li>
                                     Dauer: 3-3,5 Stunden
                                 </li>
                                 <li>

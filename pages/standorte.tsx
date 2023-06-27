@@ -66,16 +66,12 @@ export default function Geschichte() {
                 <p className="text-right">Ledererzeile 1-5</p>
                 <p className="text-right">83512 Wasserburg am Inn</p>
             </div>
-            <div className="flex flex-col">
-                <p className={"font-bold"}>Faires Zeug - Genuss aus der Region</p>
-                <p>Hauptstr. 10</p>
-                <p>83308 Trostberg</p>
-            </div>
-            <div className="flex flex-col">
-                <p className="text-right font-bold">Truchtlachinger Ladl</p>
-                <p className="text-right">Seeoner Str. 7</p>
-                <p className="text-right">83376 Seeon-Seebruck</p>
-            </div>
+
+            {/*<div className="flex flex-col">*/}
+            {/*    <p className="text-right font-bold">Truchtlachinger Ladl</p>*/}
+            {/*    <p className="text-right">Seeoner Str. 7</p>*/}
+            {/*    <p className="text-right">83376 Seeon-Seebruck</p>*/}
+            {/*</div>*/}
 
             <div className="flex flex-col">
                 <p className={"font-bold"}>Helmut’s edles & feines
@@ -107,19 +103,19 @@ export default function Geschichte() {
                 </p>
             </div>
 
-            <div className="flex flex-col">
-                <p className={"font-bold"}>De Kramerin 3.0 - Unverpackt, Regional, Bio</p>
-                <p>  Baumburger Leite 38</p>
-                <p>  83352 Altenmarkt an der Alz</p>
-            </div>
+            {/*<div className="flex flex-col">*/}
+            {/*    <p className={"font-bold"}>De Kramerin 3.0 - Unverpackt, Regional, Bio</p>*/}
+            {/*    <p>  Baumburger Leite 38</p>*/}
+            {/*    <p>  83352 Altenmarkt an der Alz</p>*/}
+            {/*</div>*/}
 
 
 
-            <div className="flex flex-col">
-                <p className="text-right font-bold">Schwendl</p>
-                <p className="text-right">Trostberger Str. 134-136</p>
-                <p className="text-right"> 83342 Tacherting</p>
-            </div>
+            {/*<div className="flex flex-col">*/}
+            {/*    <p className="text-right font-bold">Schwendl</p>*/}
+            {/*    <p className="text-right">Trostberger Str. 134-136</p>*/}
+            {/*    <p className="text-right"> 83342 Tacherting</p>*/}
+            {/*</div>*/}
 
             <div className="flex flex-col">
                 <p className={"font-bold"}>Servus.Heimat am Chiemsee
@@ -148,13 +144,18 @@ export default function Geschichte() {
                 <p> 83413 Fridolfing
                 </p>
             </div>
+
             <div className="flex flex-col">
                 <p className="text-right font-bold">Urgibl (Feinkostabteilung)
                 </p>
                 <p className="text-right">Riederinger Str. 2</p>
                 <p className="text-right">85614 Kirchseeonn</p>
             </div>
-
+            <div className="flex flex-col">
+                <p className={"font-bold"}>Faires Zeug - Genuss aus der Region</p>
+                <p>Hauptstr. 10</p>
+                <p>83308 Trostberg</p>
+            </div>
         </div>
 
 
