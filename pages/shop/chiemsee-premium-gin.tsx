@@ -16,7 +16,7 @@ const{classicGin,  alpengluehen,
 
   const [multiple, setMultiple] = React.useState(false)
 
-  const dynamicImage = classicGin.images[0].src
+  const dynamicImage = classicGin ? classicGin.images[0].src: null;
 
   return (
     <div>
@@ -126,12 +126,14 @@ const{classicGin,  alpengluehen,
 
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  
   const classicGin = await shopifyClient.product.fetchByHandle('chiemsee-gin')
   const productPackage = await shopifyClient.product.fetchByHandle('chiemsee-gin-kiste-6-flaschen')
   const alpengluehen = await shopifyClient.product.fetchByHandle('chiemsee-gin-alpengluhen')
   const probierpacket = await  shopifyClient.product.fetchByHandle('kombi-probierpaket')
-
+  const client = shopifyClient.product.fetchAll().then((products) => {
+    // Do something with the products
+    console.log(products);
+  });  //
   let uastring = context.req.headers["user-agent"];
   let uparsed = parse(uastring);
 
@@ -142,15 +144,23 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       isSafari: true,
     };
   }
+  // console.log(classicGin, probierpacket, alpengluehen, productPackage)
 
   return {
+    // props: {
+    //   classicGin: null,
+    //   productPackage: null,
+    //   alpengluehen: null,
+    //   probierpacket : null,
+    //   uparsed: uparsed
+    // },
     props: {
       classicGin: JSON.parse(JSON.stringify(classicGin)),
       productPackage: JSON.parse(JSON.stringify(productPackage)),
       alpengluehen: JSON.parse(JSON.stringify(alpengluehen)),
       probierpacket : JSON.parse(JSON.stringify(probierpacket)),
       uparsed: uparsed
-    }, 
+    },
   }
   
   

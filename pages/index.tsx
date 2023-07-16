@@ -98,7 +98,7 @@ export default function Home() {
           <h3 className ="text-center my-10 text-2xl" >Ein Chiemgauer Gin so einzigartig wie seine Heimat
 </h3>
             <div className="py-8">
-              <p className="">Chiemsee Gin ist der Premium Gin vom bayerischen Meer. Unser Wachilderschnaps wird in unserer seit 1829 bestehenden Edelbrandmanufaktur in traditioneller Handarbeit destilliert. Alle Zutaten für unseren Chiemgauer Gin werden mit größter Sorgfalt und mit Blick auf Nachhaltigkeit handverlesen. Ein außergewöhnlicher und facettenreicher Gin von und für seine bayerische Heimat und die Menschen, die diese so sehr lieben.
+              <p className="">Chiemsee Gin ist der Premium Gin vom bayerischen Meer. Unser Wacholderschnaps wird in unserer seit 1829 bestehenden Edelbrandmanufaktur in traditioneller Handarbeit destilliert. Alle Zutaten für unseren Chiemgauer Gin werden mit größter Sorgfalt und mit Blick auf Nachhaltigkeit handverlesen. Ein außergewöhnlicher und facettenreicher Gin von und für seine bayerische Heimat und die Menschen, die diese so sehr lieben.
               Mit jeder verkauften Flasche spenden wir 1 € für den Chiemgauer Naturschutz und unterstützen somit die Erhaltung unserer einzigartigen Heimat.</p>
             </div>
         </section>
