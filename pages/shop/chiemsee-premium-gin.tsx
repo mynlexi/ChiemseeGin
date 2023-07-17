@@ -130,10 +130,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const productPackage = await shopifyClient.product.fetchByHandle('chiemsee-gin-kiste-6-flaschen')
   const alpengluehen = await shopifyClient.product.fetchByHandle('chiemsee-gin-alpengluhen')
   const probierpacket = await  shopifyClient.product.fetchByHandle('kombi-probierpaket')
-  const client = shopifyClient.product.fetchAll().then((products) => {
-    // Do something with the products
-    console.log(products);
-  });  //
+
   let uastring = context.req.headers["user-agent"];
   let uparsed = parse(uastring);
 

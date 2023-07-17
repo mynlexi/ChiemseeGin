@@ -23,7 +23,7 @@ export function DoubleTry(props: DoubleTryProps){
         title = product.title,
         imageUrl = product.images[1].src,
         variantId = product.variants[0].id,
-        price = Number(product.variants[0].price),
+        price = Number(product.variants[0].price.amount),
         handle = product.handle,
         descriptionH = product.descriptionHtml,
         description = product.description,

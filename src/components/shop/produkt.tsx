@@ -38,16 +38,18 @@ interface ProductProps{
 }
 function Product(props: ProductProps) {
   const  {product, sorte, mobile} = props
+    // console.log(product, "product")
   let { cart } = useCartContext();
   if (cart === null) {
     cart = [];
   }
+  // console.log(product.variants[0])
   const {
     id = product.Id,
     title = product.title,
     imageUrl = product.images[1].src,
     variantId = product.variants[0].id,
-    price = Number(product.variants[0].price),
+    price = Number(product.variants[0].price.amount),
     handle = product.handle,
     descriptionH = product.descriptionHtml,
     description = product.description,
