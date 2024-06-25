@@ -95,7 +95,7 @@ export function DoubleTry(props: DoubleTryProps){
                   ) }
             </div>  <div className={ mobile ? " text-lg p-0 w-full text-center ":" text-lg px-4 md:p-0" }>
                 <span><strong>2x 0.2 Liter</strong></span>  |
-                Literpreis: <span>99.50
+                Literpreis: <span>112.25
                 {/*€*/}
                  </span>
             </div>

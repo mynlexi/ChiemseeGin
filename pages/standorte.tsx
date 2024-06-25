@@ -33,13 +33,18 @@ export default function Geschichte() {
           <h4 className='text-center text-2xl mt-16'>Ausgewählte Läden</h4>
         <div className="grid grid-cols-1 gap-y-8 gap-x-4 text-center lg:w-2/3 mx-auto">
 
-
-
             <div className="flex flex-col">
-                <p className={"font-bold"}>MalysLaden</p>
-                    <p>Bahnhofstraße 24</p>
-                        <p>83278 Traunstein</p>
+                <p className={"font-bold"}>Faires Zeug - Genuss aus der Region</p>
+                <p>Hauptstr. 10</p>
+                <p>83308 Trostberg</p>
             </div>
+
+
+            {/*<div className="flex flex-col">*/}
+            {/*    <p className={"font-bold"}>MalysLaden</p>*/}
+            {/*        <p>Bahnhofstraße 24</p>*/}
+            {/*            <p>83278 Traunstein</p>*/}
+            {/*</div>*/}
             <div className="flex flex-col">
                 <p className="text-right font-bold">Tracht & Kram</p>
                 <p className="text-right">Stadtplatz 18</p>
@@ -151,11 +156,6 @@ export default function Geschichte() {
                 <p className="text-right">Riederinger Str. 2</p>
                 <p className="text-right">85614 Kirchseeonn</p>
             </div>
-            <div className="flex flex-col">
-                <p className={"font-bold"}>Faires Zeug - Genuss aus der Region</p>
-                <p>Hauptstr. 10</p>
-                <p>83308 Trostberg</p>
-            </div>
         </div>
 
 
@@ -195,13 +195,17 @@ export default function Geschichte() {
                   <p className={"font-bold"}>Oscars Bar</p>
                   <p>Adlzreiterstraße 11</p>
                   <p>83022 Rosenheim</p>
-
-
               </div>
               <div className="flex flex-col">
                   <p className="text-right font-bold">Zum Fischer am See</p>
                   <p className="text-right">Harrasser Str. 145</p>
                   <p className="text-right"> 83209 Prien am Chiemsee</p>
+              </div>
+
+              <div className="flex flex-col">
+                  <p className={"font-bold"}>Landhotel Gabriele</p>
+                  <p>Bründlsberggasse 14</p>
+                  <p>83246 Unterwössen</p>
               </div>
 
           </div>
