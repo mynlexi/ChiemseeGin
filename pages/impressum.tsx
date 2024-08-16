@@ -10,7 +10,7 @@ function impressum() {
         <div>83349 Palling</div>
         <div>vertreten durch den Geschäftsführer Daniel Schex</div>
       </div>
-      <div className="flex">Telefon: <div className="select-all ml-2"> +49 (0)175 – 571 94 27</div></div>
+      {/*<div className="flex">Telefon: <div className="select-all ml-2"> +49 (0)175 – 571 94 27</div></div>*/}
       <div className="flex flex-col my-4">
         <div className="flex">E-Mail: <div className="select-all ml-2"> info (at) chiemseegin.de</div></div>
         <div className="flex">USt-IdNr.: <div className="select-all ml-2">DE342398748</div></div>
