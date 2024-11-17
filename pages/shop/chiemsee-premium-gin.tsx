@@ -13,6 +13,7 @@ import {DoubleTry} from "../../src/components/shop/DoubleTry";
 const ProductPage: NextPage<any> = (props) => {
 const{classicGin,  alpengluehen,
       probierpacket, uparsed } =props
+  console.log(probierpacket)
 
   const [multiple, setMultiple] = React.useState(false)
 
@@ -107,7 +108,10 @@ const{classicGin,  alpengluehen,
 
 
 
-      </section>        <DoubleTry product={probierpacket} mobile={uparsed.isMobile}/>
+      </section>
+      { probierpacket != null  ?
+      <DoubleTry product={probierpacket} mobile={uparsed.isMobile}/>
+        : null}
       <section className="flex flex-col space-y-6 mt-12">
       <h3 className="">Unser Chiemgauer Gin Reinheitsgebot</h3>
       <div className="flex flex-col space-y-6 "> 
@@ -142,7 +146,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     };
   }
   // console.log(classicGin, probierpacket, alpengluehen, productPackage)
-
+let  probierpacketParsed = probierpacket ?  JSON.parse(JSON.stringify(probierpacket)) : null
   return {
     // props: {
     //   classicGin: null,
@@ -151,11 +155,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     //   probierpacket : null,
     //   uparsed: uparsed
     // },
+
+
     props: {
       classicGin: JSON.parse(JSON.stringify(classicGin)),
       productPackage: JSON.parse(JSON.stringify(productPackage)),
       alpengluehen: JSON.parse(JSON.stringify(alpengluehen)),
-      probierpacket : JSON.parse(JSON.stringify(probierpacket)),
+      probierpacket : probierpacketParsed,
       uparsed: uparsed
     },
   }
