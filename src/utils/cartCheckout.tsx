@@ -30,7 +30,7 @@ export const addProductsCheckout = (items: ProductStorage[], checkoutId?: string
     shopifyClient.checkout.addLineItems(checkoutId, variants)
     .then((checkout) => {
         console.log('checkout ', checkout)
-      // window.location.assign(checkout.webUrl);
+      window.location.assign(checkout.webUrl);
     })
 
   }
