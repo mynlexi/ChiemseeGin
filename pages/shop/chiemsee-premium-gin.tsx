@@ -169,4 +169,15 @@ let  probierpacketParsed = probierpacket ?  JSON.parse(JSON.stringify(probierpac
   
 }
 
+
+const productQuery = `
+  query ProductQuery($handle: String) {
+    product(handle: $handle) {
+      id
+      title
+      handle
+    }
+  }
+`;
+
 export default ProductPage

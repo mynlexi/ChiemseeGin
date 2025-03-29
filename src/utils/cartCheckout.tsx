@@ -21,14 +21,18 @@ export const addProductsCheckout = (items: ProductStorage[], checkoutId?: string
     shopifyClient.checkout.create().then((checkout) => {
       shopifyClient.checkout.addLineItems(checkoutId, variants)
       .then((checkout) => {
+        console.log('checkout ', checkout)
         window.location.assign(checkout.webUrl);
       })
     })
   } else {
+
     shopifyClient.checkout.addLineItems(checkoutId, variants)
     .then((checkout) => {
-      window.location.assign(checkout.webUrl);
+        console.log('checkout ', checkout)
+      // window.location.assign(checkout.webUrl);
     })
+
   }
 }
 
