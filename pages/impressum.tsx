@@ -8,7 +8,7 @@ function impressum() {
         <div>Chiemsee Premium Gin UG (haftungsbeschränkt)</div>
         <div>Haigermooser Str. 17</div>
         <div>83349 Palling</div>
-        <div>vertreten durch den Geschäftsführer Daniel Schex</div>
+          <div>vertreten durch den Geschäftsführer Daniel Heringer Herkner</div>
       </div>
       {/*<div className="flex">Telefon: <div className="select-all ml-2"> +49 (0)175 – 571 94 27</div></div>*/}
       <div className="flex flex-col my-4">
